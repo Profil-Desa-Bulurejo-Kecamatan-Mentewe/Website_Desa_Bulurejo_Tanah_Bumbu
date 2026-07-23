@@ -1,1 +1,328 @@
+/* ===========================
+   RESET
+=========================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+
+    font-family:'Poppins',sans-serif;
+
+    background:#ffffff;
+
+    color:#333;
+
+    line-height:1.7;
+
+}
+
+/* ===========================
+   CONTAINER
+=========================== */
+
+.container{
+
+    width:90%;
+
+    max-width:1200px;
+
+    margin:auto;
+
+}
+
+/* ===========================
+   SECTION
+=========================== */
+
+section{
+
+    padding:100px 0;
+
+}
+
+/* ===========================
+   TITLE
+=========================== */
+
+.section-title{
+
+    text-align:center;
+
+    margin-bottom:60px;
+
+}
+
+.section-title span{
+
+    color:#2E7D32;
+
+    font-weight:600;
+
+    letter-spacing:2px;
+
+    text-transform:uppercase;
+
+}
+
+.section-title h2{
+
+    margin-top:10px;
+
+    font-size:40px;
+
+    font-weight:700;
+
+}
+
+.section-title p{
+
+    width:60%;
+
+    margin:auto;
+
+    margin-top:15px;
+
+    color:#777;
+
+}
+/*=============================
+NAVBAR
+=============================*/
+
+.header{
+
+    position:fixed;
+
+    top:0;
+
+    left:0;
+
+    width:100%;
+
+    z-index:999;
+
+    transition:.4s;
+
+}
+
+.navbar{
+
+    width:90%;
+
+    max-width:1200px;
+
+    margin:auto;
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    padding:20px 0;
+
+}
+
+.logo{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:15px;
+
+    text-decoration:none;
+
+}
+
+.logo img{
+
+    width:55px;
+
+}
+
+.logo h2{
+
+    color:white;
+
+    font-size:20px;
+
+}
+
+.logo span{
+
+    color:white;
+
+    font-size:13px;
+
+}
+
+.nav-menu{
+
+    display:flex;
+
+    list-style:none;
+
+    gap:35px;
+
+}
+
+.nav-menu a{
+
+    color:white;
+
+    text-decoration:none;
+
+    font-weight:500;
+
+}
+
+.nav-right{
+
+    display:flex;
+
+    gap:15px;
+
+}
+
+.search-btn,
+.menu-toggle{
+
+    border:none;
+
+    background:none;
+
+    color:white;
+
+    font-size:22px;
+
+    cursor:pointer;
+
+}
+/*=============================
+HERO
+=============================*/
+
+#hero{
+
+    height:100vh;
+
+    background:url("../assets/img/hero.jpg");
+
+    background-size:cover;
+
+    background-position:center;
+
+    position:relative;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    text-align:center;
+
+}
+
+.hero-overlay{
+
+    position:absolute;
+
+    inset:0;
+
+    background:rgba(0,0,0,.55);
+
+}
+
+.hero-content{
+
+    position:relative;
+
+    z-index:2;
+
+    color:white;
+
+}
+
+.hero-subtitle{
+
+    display:inline-block;
+
+    margin-bottom:15px;
+
+    padding:8px 18px;
+
+    background:#2E7D32;
+
+    border-radius:30px;
+
+}
+
+.hero-content h1{
+
+    font-size:70px;
+
+    margin-bottom:15px;
+
+}
+
+.hero-desc{
+
+    width:700px;
+
+    max-width:90%;
+
+    margin:auto;
+
+    margin-top:20px;
+
+}
+
+.hero-button{
+
+    margin-top:40px;
+
+}
+.btn-primary{
+
+    display:inline-block;
+
+    padding:14px 35px;
+
+    background:#2E7D32;
+
+    color:white;
+
+    text-decoration:none;
+
+    border-radius:40px;
+
+    margin-right:15px;
+
+}
+
+.btn-secondary{
+
+    display:inline-block;
+
+    padding:14px 35px;
+
+    border:2px solid white;
+
+    color:white;
+
+    text-decoration:none;
+
+    border-radius:40px;
+
+}
 
