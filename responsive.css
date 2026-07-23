@@ -1,1 +1,512 @@
+/*==========================================================
+  RESPONSIVE WEBSITE DESA BULUREJO
+==========================================================*/
 
+
+/*==========================================================
+  DESKTOP BESAR
+==========================================================*/
+
+@media (max-width:1400px){
+
+.container{
+
+    width:92%;
+
+}
+
+}
+
+
+/*==========================================================
+  LAPTOP
+==========================================================*/
+
+@media (max-width:1200px){
+
+.hero-content h1{
+
+    font-size:60px;
+
+}
+
+.hero-content h3{
+
+    font-size:24px;
+
+}
+
+.hero-content p{
+
+    font-size:17px;
+
+}
+
+.sigap-wrapper{
+
+    grid-template-columns:1fr;
+
+}
+
+.location-wrapper{
+
+    grid-template-columns:1fr;
+
+}
+
+.footer-grid{
+
+    grid-template-columns:repeat(2,1fr);
+
+}
+
+.welcome-container{
+
+    grid-template-columns:1fr;
+
+    text-align:center;
+
+}
+
+.welcome-image{
+
+    max-width:420px;
+
+    margin:auto;
+
+}
+
+.welcome-content p{
+
+    text-align:center;
+
+}
+
+}
+
+
+/*==========================================================
+  TABLET
+==========================================================*/
+
+@media (max-width:992px){
+
+.section-title h2{
+
+    font-size:34px;
+
+}
+
+.hero-content h1{
+
+    font-size:48px;
+
+}
+
+.hero-content h3{
+
+    font-size:22px;
+
+}
+
+.hero-content p{
+
+    font-size:16px;
+
+}
+
+.statistics-grid{
+
+    grid-template-columns:repeat(2,1fr);
+
+}
+
+.about-grid{
+
+    grid-template-columns:repeat(2,1fr);
+
+}
+
+.program-grid{
+
+    grid-template-columns:repeat(2,1fr);
+
+}
+
+.news-grid{
+
+    grid-template-columns:1fr;
+
+}
+
+.gallery-grid{
+
+    grid-template-columns:repeat(2,1fr);
+
+}
+
+.sigap-feature{
+
+    grid-template-columns:1fr;
+
+}
+
+.potensi-grid{
+
+    grid-template-columns:repeat(2,1fr);
+
+}
+
+.service-grid{
+
+    grid-template-columns:repeat(2,1fr);
+
+}
+
+}
+
+
+/*==========================================================
+  MOBILE MENU
+==========================================================*/
+
+@media (max-width:768px){
+
+#menu-button{
+
+    display:block;
+
+}
+
+#navbar{
+
+    position:fixed;
+
+    top:85px;
+
+    right:-100%;
+
+    width:280px;
+
+    height:calc(100vh - 85px);
+
+    background:#ffffff;
+
+    transition:.35s;
+
+    box-shadow:-10px 0 30px rgba(0,0,0,.08);
+
+    padding:30px;
+
+}
+
+#navbar.active{
+
+    right:0;
+
+}
+
+#navbar ul{
+
+    flex-direction:column;
+
+    align-items:flex-start;
+
+    gap:25px;
+
+}
+
+#navbar ul li{
+
+    width:100%;
+
+}
+
+#navbar ul li a{
+
+    color:#333 !important;
+
+    display:block;
+
+    width:100%;
+
+}
+
+.menu-special{
+
+    text-align:center;
+
+}
+
+.hero{
+
+    height:auto;
+
+    min-height:100vh;
+
+    padding:160px 0 100px;
+
+}
+
+.hero-content{
+
+    text-align:center;
+
+}
+
+.hero-content h1{
+
+    font-size:42px;
+
+}
+
+.hero-content h3{
+
+    font-size:20px;
+
+}
+
+.hero-button{
+
+    flex-direction:column;
+
+}
+
+.btn-primary,
+
+.btn-secondary{
+
+    width:100%;
+
+    justify-content:center;
+
+}
+
+.statistics-grid{
+
+    grid-template-columns:1fr;
+
+}
+
+.about-grid{
+
+    grid-template-columns:1fr;
+
+}
+
+.program-grid{
+
+    grid-template-columns:1fr;
+
+}
+
+.potensi-grid{
+
+    grid-template-columns:1fr;
+
+}
+
+.service-grid{
+
+    grid-template-columns:1fr;
+
+}
+
+.footer-grid{
+
+    grid-template-columns:1fr;
+
+}
+
+.gallery-grid{
+
+    grid-template-columns:1fr;
+
+}
+
+.location-wrapper{
+
+    grid-template-columns:1fr;
+
+}
+
+.section-title h2{
+
+    font-size:30px;
+
+}
+
+.welcome-content h2{
+
+    font-size:32px;
+
+}
+
+.sigap-content h3{
+
+    font-size:32px;
+
+}
+
+.logo img{
+
+    width:50px;
+
+}
+
+.logo-text h2{
+
+    font-size:18px;
+
+}
+
+.logo-text span{
+
+    font-size:12px;
+
+}
+
+}
+
+
+/*==========================================================
+  MOBILE KECIL
+==========================================================*/
+
+@media (max-width:576px){
+
+section{
+
+    padding:70px 0;
+
+}
+
+.hero-content h1{
+
+    font-size:34px;
+
+}
+
+.hero-content h3{
+
+    font-size:18px;
+
+}
+
+.hero-content p{
+
+    font-size:15px;
+
+}
+
+.section-title h2{
+
+    font-size:28px;
+
+}
+
+.section-title p{
+
+    font-size:15px;
+
+}
+
+.stat-card{
+
+    padding:30px 20px;
+
+}
+
+.about-card{
+
+    padding:30px 20px;
+
+}
+
+.program-card{
+
+    padding:30px 20px;
+
+}
+
+.service-card{
+
+    padding:25px;
+
+}
+
+.news-content{
+
+    padding:22px;
+
+}
+
+.potensi-content{
+
+    padding:22px;
+
+}
+
+.info-box{
+
+    flex-direction:column;
+
+    text-align:center;
+
+}
+
+.info-box i{
+
+    margin:auto;
+
+}
+
+.footer-about{
+
+    text-align:center;
+
+}
+
+.footer-about img{
+
+    margin:auto;
+
+    margin-bottom:20px;
+
+}
+
+.social-media{
+
+    justify-content:center;
+
+}
+
+#backToTop{
+
+    width:48px;
+
+    height:48px;
+
+    font-size:18px;
+
+}
+
+}
+
+/*==========================================================
+  ANIMATION OFF
+==========================================================*/
+
+@media (prefers-reduced-motion:reduce){
+
+*{
+
+    animation:none !important;
+
+    transition:none !important;
+
+    scroll-behavior:auto;
+
+}
+
+}
