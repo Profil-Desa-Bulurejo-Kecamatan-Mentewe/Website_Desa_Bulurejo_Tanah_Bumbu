@@ -1,6 +1,8 @@
-/* ===========================
-   RESET
-=========================== */
+:selection{
+    background:var(--primary);
+    color:var(--white);
+}
+
 :root{
 
     --primary:#2E7D32;
@@ -115,10 +117,16 @@ NAVBAR
     background:rgba(255,255,255,.95);
     backdrop-filter:blur(10px);
     box-shadow:var(--shadow);
+   .header.scrolled .logo h2,
+.header.scrolled .logo span,
+.header.scrolled .nav-menu a,
+.header.scrolled .search-btn,
+.header.scrolled .menu-toggle{
+    color:var(--black);
 }
 
 .navbar{
-    width:90%;
+    width:min(90%,1200px);
     max-width:1200px;
     margin:auto;
     display:flex;
@@ -139,12 +147,12 @@ NAVBAR
 }
 
 .logo h2{
-    color:white;
+   color:var(--white);
     font-size:20px;
 }
 
 .logo span{
-    color:white;
+    color:var(--white);
     font-size:13px;
 }
 
@@ -175,6 +183,10 @@ NAVBAR
 .nav-menu a:hover::after{
     width:100%;
 }
+   
+.nav-menu a:hover{
+    color:var(--secondary);
+}
 
 .nav-right{
     display:flex;
@@ -183,11 +195,18 @@ NAVBAR
 
 .search-btn,
 .menu-toggle{
+   
     border:none;
     background:none;
-    color:white;
+    color:var(--white);
     font-size:22px;
     cursor:pointer;
+    transition:var(--transition);
+}
+
+.search-btn:hover,
+.menu-toggle:hover{
+    color:var(--secondary);
 }
 
 /*=============================
@@ -195,7 +214,6 @@ HERO
 =============================*/
 
 #hero{
-
   min-height:100vh;
     background:url("../assets/img/hero.jpg");
     background-size:cover;
@@ -211,22 +229,25 @@ HERO
     position:absolute;
     inset:0;
     background:
-linear-gradient(
-rgba(0,0,0,.65),
-rgba(0,0,0,.45)
-);
+    linear-gradient(
+        rgba(0,0,0,.65),
+        rgba(0,0,0,.45)
+    );
 
+}
 .hero-content{
     position:relative;
     z-index:2;
-    color:white;
+    color:var(--white);
+    max-width:900px;
+    padding:0 20px;
 }
 
 .hero-subtitle{
     display:inline-block;
     margin-bottom:15px;
     padding:8px 18px;
-    background:#2E7D32;
+   background:var(--primary);
     border-radius:30px;
 }
 
@@ -238,15 +259,17 @@ rgba(0,0,0,.45)
 }
 
 .hero-desc{
-    width:700px;
-    max-width:90%;
+    max-width:700px;
+    width:90%;
     margin:auto;
     margin-top:20px;
 }
 
 .hero-button{
-    margin-top:40px;
-
+    display:flex;
+    justify-content:center;
+    gap:20px;
+    flex-wrap:wrap;
 }
    
 .btn-primary{
@@ -257,6 +280,7 @@ rgba(0,0,0,.45)
     border-radius:40px;
     margin-right:15px;
     transition:var(--transition);
+    box-shadow:0 10px 25px rgba(46,125,50,.35);
 }
 
 .btn-secondary{
@@ -270,7 +294,8 @@ rgba(0,0,0,.45)
    
 .btn-primary:hover{
     background:var(--primary-dark);
-    transform:translateY(-3px);
+     transform:translateY(-4px);
+   box-shadow:0 15px 30px rgba(0,0,0,.2);
 }
 
 .btn-secondary:hover{
@@ -283,13 +308,56 @@ rgba(0,0,0,.45)
     .nav-menu{
         display:none;
     }
-
+   
+   .menu-toggle{
+    display:block;
+   display:none;
+}
+   
     .hero-content h1{
         font-size:48px;
     }
 
     .section-title p{
         width:90%;
+    }
+
+}
+
+/*=============================
+LOADER
+=============================*/
+
+#loader{
+    position:fixed;
+    inset:0;
+    background:var(--white);
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    z-index:9999;
+}
+
+/*=============================
+SCROLL DOWN
+=============================*/
+
+.scroll-down{
+    position:absolute;
+    left:50%;
+    bottom:35px;
+    transform:translateX(-50%);
+    color:var(--white);
+    font-size:30px;
+    animation:bounce 1.5s infinite;
+}
+
+@keyframes bounce{
+    0%,100%{
+        transform:translate(-50%,0);
+    }
+    50%{
+        transform:translate(-50%,10px);
     }
 
 }
