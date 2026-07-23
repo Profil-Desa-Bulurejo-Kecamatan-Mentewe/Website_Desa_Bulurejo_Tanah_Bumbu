@@ -1,7 +1,27 @@
 /* ===========================
    RESET
 =========================== */
+:root{
 
+    --primary:#2E7D32;
+    --primary-dark:#1B5E20;
+    --secondary:#4CAF50;
+
+    --white:#ffffff;
+    --black:#222;
+
+    --text:#555;
+    --text-light:#777;
+
+    --bg:#F8F9FA;
+
+    --shadow:0 15px 40px rgba(0,0,0,.08);
+
+    --radius:18px;
+
+    --transition:.35s ease;
+
+}
 *{
     margin:0;
     padding:0;
