@@ -3,15 +3,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Website Resmi Desa Bulurejo</title>
+    <title>Website Resmi Desa Bulurejo - Portal Informasi & Potensi Desa</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
+    <!-- Top Bar Informasi -->
+    <div class="top-bar">
+        <span>📍 Kecamatan Rawa Pening, Kabupaten Semarang</span>
+        <span>✉️ pemdes@bulurejo.desa.id</span>
+    </div>
+
     <!-- Header & Navigasi -->
     <header>
-        <div class="logo">
-            <h2>Desa Bulurejo</h2>
+        <div class="brand">
+            <div class="brand-logo">DB</div>
+            <div class="brand-text">
+                <h2>DESA BULUREJO</h2>
+                <p>Portal Resmi Pemerintah Desa</p>
+            </div>
         </div>
         <nav>
             <ul>
@@ -24,57 +34,94 @@
         </nav>
     </header>
 
-    <!-- Hero Section -->
+    <!-- Hero Section (Background Foto Kantor Desa) -->
     <section class="hero">
-        <div class="hero-text">
-            <h1>Selamat Datang di Website Resmi Desa Bulurejo</h1>
-            <p>Mewujudkan Desa Mandiri, Berbudaya, dan Berkelanjutan.</p>
-            <a href="potensi.html" class="btn">Jelajahi Potensi Desa</a>
+        <div class="hero-content">
+            <span class="hero-badge">Selamat Datang di Portal Resmi</span>
+            <h1>Mewujudkan Desa Bulurejo yang Mandiri, Asri, & Sejahtera</h1>
+            <p>Pusat informasi publik, layanan pemerintah desa, serta eksplorasi potensi lokal pertanian, peternakan, dan agro-ekowisata.</p>
+            <div class="hero-buttons">
+                <a href="potensi.html" class="btn-primary">Jelajahi Potensi Desa</a>
+                <a href="profil.html" class="btn-outline">Profil & Sejarah</a>
+            </div>
         </div>
     </section>
 
-    <!-- Ringkasan Statistik Desa Bulurejo -->
-    <section class="stats">
-        <div class="stat-box">
-            <h3>Luas Wilayah</h3>
-            <p>692 Ha</p>
+    <!-- Statistik Floating Cards -->
+    <div class="stats-container">
+        <div class="stats-grid">
+            <div class="stat-item">
+                <div class="stat-number">692 Ha</div>
+                <div class="stat-label">Luas Wilayah</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-number">3.697</div>
+                <div class="stat-label">Jumlah Penduduk</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-number">4</div>
+                <div class="stat-label">Dusun Wilayah</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-number">12+</div>
+                <div class="stat-label">Kelompok Tani/KWT</div>
+            </div>
         </div>
-        <div class="stat-box">
-            <h3>Jumlah Penduduk</h3>
-            <p>3.697 Jiwa</p>
-        </div>
-        <div class="stat-box">
-            <h3>Jumlah Dusun</h3>
-            <p>4 Dusun</p>
-        </div>
-    </section>
+    </div>
 
     <!-- Sorotan Potensi Desa Bulurejo -->
-    <section class="potensi-highlight">
-        <h2>Potensi Unggulan Desa</h2>
+    <section class="section-padding">
+        <div class="section-header">
+            <span class="section-subtitle">Potensi Lokal</span>
+            <h2 class="section-title">Sektor Unggulan Desa Bulurejo</h2>
+        </div>
         <div class="grid-potensi">
-            <div class="card">
-                <h3>Pertanian & Agroforestri</h3>
-                <p>Penghasil padi, tanaman hortikultura, dan potensi kayu sengon serta kelapa.</p>
+            <div class="card-potensi">
+                <div class="card-icon">🌾</div>
+                <h3>Pertanian & Hortikultura</h3>
+                <p>Pusat penghasil padi unggulan, jagung, serta sayuran komersial dengan pengelolaan kelompok tani modern.</p>
             </div>
-            <div class="card">
+            <div class="card-potensi">
+                <div class="card-icon">🐄</div>
                 <h3>Peternakan & Perikanan</h3>
-                <p>Penggemukan sapi, domba, serta budidaya ikan air tawar dan tambak.</p>
+                <p>Kawasan budidaya ternak sapi, domba, serta pengelolaan pasar hewan dan tambak ikan air tawar.</p>
             </div>
-            <div class="card">
-                <h3>Seni & Budaya</h3>
-                <p>Tradisi Hajat Bumi, kerajinan lokal, dan pelestarian seni pertunjukan.</p>
+            <div class="card-potensi">
+                <div class="card-icon">🎭</div>
+                <h3>Seni & Seni Budaya</h3>
+                <p>Pelestarian tradisi Hajat Bumi, seni pertunjukan lokal, dan produk kerajinan tangan khas warga desa.</p>
             </div>
-            <div class="card">
+            <div class="card-potensi">
+                <div class="card-icon">🏞️</div>
                 <h3>Agro-Ekowisata</h3>
-                <p>Pemandangan sawah yang asri, keindahan sungai, dan wisata edukasi.</p>
+                <p>Keindahan lanskap sawah yang asri, keindahan sungai, dan potensi destinasi wisata edukasi terpadu.</p>
             </div>
         </div>
     </section>
 
     <!-- Footer -->
     <footer>
-        <p>&copy; 2026 Pemerintah Desa Bulurejo. All Rights Reserved.</p>
+        <div class="footer-content">
+            <div class="footer-col">
+                <h4>Pemerintah Desa Bulurejo</h4>
+                <p>Melayani warga dengan sepenuh hati, transparan, dan akuntabel demi terwujudnya kemajuan desa yang berkelanjutan.</p>
+            </div>
+            <div class="footer-col">
+                <h4>Navigasi Cepat</h4>
+                <p><a href="profil.html" style="color: inherit; text-decoration: none;">Profil Desa</a></p>
+                <p><a href="potensi.html" style="color: inherit; text-decoration: none;">Potensi & UMKM</a></p>
+                <p><a href="peta-potensi.html" style="color: inherit; text-decoration: none;">Peta & Lokasi</a></p>
+            </div>
+            <div class="footer-col">
+                <h4>Kontak Pelayanan</h4>
+                <p>📍 Kantor Desa Bulurejo</p>
+                <p>📞 (024) 123-4567</p>
+                <p>⏰ Senin - Jumat: 08.00 - 15.00 WIB</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Pemerintah Desa Bulurejo. All Rights Reserved.</p>
+        </div>
     </footer>
 
 </body>
