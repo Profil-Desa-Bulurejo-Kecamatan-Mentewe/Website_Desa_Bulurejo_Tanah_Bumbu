@@ -5,7 +5,12 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Website Resmi Desa  Bulurejo</title>
+<title>Sistem Informasi Desa Bulurejo</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
 <link rel="stylesheet"
 href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
@@ -16,48 +21,76 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
 margin:0;
 padding:0;
 box-sizing:border-box;
-font-family:'Segoe UI',sans-serif;
+font-family:'Poppins',sans-serif;
+scroll-behavior:smooth;
 }
 
 body{
-background:#f5f7fa;
-display:flex;
-min-height:100vh;
+
+background:#f5f7fb;
 color:#333;
+display:flex;
+
 }
 
-/* ======================
+/* ===========================
+WARNA WEBSITE
+=========================== */
+
+:root{
+
+--primary:#2E7D32;
+--primary-light:#4CAF50;
+--secondary:#E8F5E9;
+--white:#ffffff;
+--dark:#1f2937;
+--text:#555;
+--border:#e5e7eb;
+--shadow:0 10px 30px rgba(0,0,0,.08);
+
+}
+
+/* ===========================
 SIDEBAR
-====================== */
+=========================== */
 
 .sidebar{
-width:280px;
+
+width:290px;
 height:100vh;
-background:#ffffff;
-color:#333;
 position:fixed;
+left:0;
+top:0;
+background:#ffffff;
+border-right:1px solid var(--border);
 overflow-y:auto;
-border-right:1px solid #e5e7eb;
-box-shadow:0 4px 20px rgba(0,0,0,.08);
+box-shadow:var(--shadow);
+z-index:999;
+
 }
 
 .logo{
-padding:25px;
+padding:30px 20px;
 text-align:center;
-border-bottom:1px solid #e5e7eb;
-background:#f8fafc;
+background:linear-gradient(180deg,#ffffff,#f8fafc);
+}
+
+.logo img{
+width:75px;
+margin-bottom:15px;
 }
 
 .logo h2{
-color:#2E7D32;
-font-size:24px;
-font-weight:bold;
+font-size:30px;
+color:var(--primary);
+font-weight:700;
+margin-bottom:5px;
 }
 
 .logo p{
 font-size:13px;
-opacity:.85;
-line-height:1.5;
+color:#666;
+line-height:1.7;
 }
 
 .menu{
@@ -69,143 +102,107 @@ list-style:none;
 }
 
 .menu li{
-margin-bottom:5px;
+margin-bottom:6px;
 }
 
 .menu a{
-color:#374151;
-
-.menu a:hover{
-background:#2E7D32;
-color:#fff;
+display:flex;
+align-items:center;
+gap:12px;
+padding:13px 15px;
+text-decoration:none;
+border-radius:14px;
+color:#444;
+transition:.35s;
+font-size:15px;
 }
 
-/* SUB MENU */
+.menu a:hover{
+background:var(--primary);
+color:white;
+transform:translateX(6px);
+}
+
+.menu i{
+width:20px;
+text-align:center;
+}
+
+/* ===========================
+SUBMENU
+=========================== */
 
 .submenu{
 display:none;
 margin-left:15px;
-margin-top:5px;
-}
-
-.submenu li{
-margin-bottom:4px;
+margin-top:8px;
 }
 
 .submenu a{
-display:block;
-padding:10px 12px;
+background:#f8fafc;
 font-size:14px;
-background:#f1f5f9;
-border-left:4px solid #2E7D32;
-border-radius:8px;
+padding:10px 15px;
+border-left:4px solid var(--primary);
+margin-bottom:6px;
 }
 
 .submenu a:hover{
-background:#16a34a;
+background:var(--primary);
 }
 
-/* ======================
+/* ===========================
 MAIN
-====================== */
+=========================== */
 
 .main{
-margin-left:280px;
-width:calc(100% - 280px);
+margin-left:290px;
+width:calc(100% - 290px);
+min-height:100vh;
 }
 
-/* ======================
+/* ===========================
 TOPBAR
-====================== */
+=========================== */
 
 .topbar{
-background:#ffffff;
-padding:18px 30px;
+height:80px;
+background:white;
 display:flex;
 justify-content:space-between;
 align-items:center;
-box-shadow:0 2px 10px rgba(0,0,0,.08);
+padding:0 35px;
+box-shadow:0 4px 15px rgba(0,0,0,.05);
+position:sticky;
+top:0;
+z-index:100;
 }
 
 .topbar h2{
-color:#2E7D32;
 font-size:28px;
+color:var(--primary);
 font-weight:700;
 }
 
-.content{
-padding:25px;
-}
-
-/* ======================
-HERO
-====================== */
-
-.hero{
-background:#ffffff;
-padding:20px;
-border-radius:20px;
-box-shadow:0 5px 20px rgba(0,0,0,.08);
-margin-bottom:25px;
-}
-
-.hero img{
-width:100%;
-height:390px;
-object-fit:cover;
-object-position:center;
-display:block;
-border-radius:16px;
-margin-bottom:18px;
-box-shadow:0 10px 30px rgba(0,0,0,.25);
-}
-
-.hero-content{
-padding:0 10px 10px;
-}
-
-.hero-content h2{
-color:#1f2937;
-font-size:30px;
-margin-bottom:15px;
-}
-
-.hero-content p{
-color:#4b5563;
-line-height:1.9;
-}
-
-.footer{
-padding:25px;
-text-align:center;
-color:#6b7280;
+.topbar .right{
+display:flex;
+align-items:center;
+gap:15px;
 font-size:15px;
+color:#555;
 }
 
-/* RESPONSIVE */
-
-@media(max-width:768px){
-
-body{
-flex-direction:column;
+.topbar .right i{
+font-size:28px;
+color:var(--primary);
 }
 
-.sidebar{
-width:100%;
-height:auto;
-position:relative;
+/* ===========================
+CONTENT
+=========================== */
+
+.content{
+padding:35px;
 }
-
-.main{
-margin-left:0;
-width:100%;
-}
-
-}
-
-</style>
-
-</head>
 
 <body>
 
@@ -506,35 +503,227 @@ Sosial Ekonomi Perikanan
 
 <div class="hero">
 
-<img src="fpik.jpg"
-alt="POKLAHSAR">
+<img src="kantor-desa.jpg" alt="Kantor Desa">
 
-<div class="hero-content">
+<div class="hero-overlay">
 
-<h2>
-Selamat Datang di Sistem Informasi POKLAHSAR
-</h2>
-
-<p>
-POKLAHSAR (Kelompok Pengolah dan Pemasar Hasil Perikanan)
-merupakan kelompok masyarakat yang bergerak dalam kegiatan
-pengolahan dan pemasaran hasil perikanan untuk meningkatkan
-nilai tambah produk, memperluas pasar, dan meningkatkan
-kesejahteraan anggota kelompok.
-</p>
+<h1>
+Sistem Informasi Desa Bulurejo
+</h1>
 
 <p>
-Aplikasi ini digunakan untuk membantu pengelolaan
-administrasi kelompok, data anggota, keuangan, produksi,
-inventaris, pertemuan, pemasaran, serta penyusunan dokumen
-usaha secara digital sehingga lebih efektif, efisien,
-dan transparan.
+Kecamatan Mentewe • Kabupaten Tanah Bumbu
 </p>
 
 </div>
 
 </div>
 
+<!-- SAMBUTAN -->
+
+<div class="welcome-card">
+
+<h2>Selamat Datang</h2>
+
+<p>
+
+Website resmi Desa Bulurejo merupakan media informasi digital yang
+menyediakan informasi pemerintahan desa, potensi desa, data
+demografi, kegiatan masyarakat, serta pelayanan informasi secara
+terbuka, cepat, dan transparan.
+
+</p>
+
+</div>
+
+<!-- STATISTIK -->
+
+<div class="stats">
+
+<div class="card">
+
+<i class="fas fa-users"></i>
+
+<h2>0</h2>
+
+<p>Penduduk</p>
+
+</div>
+
+<div class="card">
+
+<i class="fas fa-home"></i>
+
+<h2>0</h2>
+
+<p>RT</p>
+
+</div>
+
+<div class="card">
+
+<i class="fas fa-store"></i>
+
+<h2>0</h2>
+
+<p>UMKM</p>
+
+</div>
+
+<div class="card">
+
+<i class="fas fa-seedling"></i>
+
+<h2>0</h2>
+
+<p>Potensi</p>
+
+</div>
+
+</div>
+
+<!-- TENTANG -->
+
+<div class="about">
+
+<h2>Tentang Sistem Informasi Desa</h2>
+
+<p>
+
+Sistem Informasi Desa Bulurejo dikembangkan sebagai media digital
+untuk mendukung pelayanan publik, penyajian informasi desa,
+transparansi pemerintahan, serta promosi potensi desa secara
+terintegrasi.
+
+</p>
+
+</div>
+/* ===========================
+HERO
+=========================== */
+
+.hero{
+position:relative;
+overflow:hidden;
+border-radius:25px;
+box-shadow:var(--shadow);
+margin-bottom:30px;
+}
+
+.hero img{
+width:100%;
+height:520px;
+object-fit:cover;
+display:block;
+}
+
+.hero-overlay{
+position:absolute;
+left:50%;
+top:50%;
+transform:translate(-50%,-50%);
+background:rgba(255,255,255,.88);
+padding:35px;
+border-radius:25px;
+text-align:center;
+width:70%;
+backdrop-filter:blur(10px);
+}
+
+.hero-overlay h1{
+font-size:42px;
+color:var(--primary);
+margin-bottom:15px;
+}
+
+.hero-overlay p{
+font-size:18px;
+color:#555;
+}
+
+/* ===========================
+WELCOME
+=========================== */
+
+.welcome-card{
+background:white;
+padding:35px;
+border-radius:20px;
+margin-bottom:30px;
+box-shadow:var(--shadow);
+}
+
+.welcome-card h2{
+color:var(--primary);
+margin-bottom:15px;
+}
+
+.welcome-card p{
+line-height:1.9;
+color:#555;
+}
+
+/* ===========================
+STATISTIK
+=========================== */
+
+.stats{
+display:grid;
+grid-template-columns:repeat(4,1fr);
+gap:25px;
+margin-bottom:35px;
+}
+
+.card{
+background:white;
+padding:30px;
+text-align:center;
+border-radius:20px;
+box-shadow:var(--shadow);
+transition:.35s;
+}
+
+.card:hover{
+transform:translateY(-10px);
+}
+
+.card i{
+font-size:45px;
+color:var(--primary);
+margin-bottom:20px;
+}
+
+.card h2{
+font-size:40px;
+color:var(--primary);
+}
+
+.card p{
+margin-top:10px;
+color:#555;
+}
+
+/* ===========================
+ABOUT
+=========================== */
+
+.about{
+background:white;
+padding:35px;
+border-radius:20px;
+box-shadow:var(--shadow);
+margin-bottom:30px;
+}
+
+.about h2{
+color:var(--primary);
+margin-bottom:20px;
+}
+
+.about p{
+line-height:2;
+color:#555;
+}
 <!-- FOOTER -->
 
 <div class="footer">
