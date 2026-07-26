@@ -203,7 +203,133 @@ CONTENT
 .content{
 padding:35px;
 }
+/* ===========================
+HERO
+=========================== */
 
+.hero{
+position:relative;
+overflow:hidden;
+border-radius:25px;
+box-shadow:var(--shadow);
+margin-bottom:30px;
+}
+
+.hero img{
+width:100%;
+height:520px;
+object-fit:cover;
+display:block;
+}
+
+.hero-overlay{
+position:absolute;
+left:50%;
+top:50%;
+transform:translate(-50%,-50%);
+background:rgba(255,255,255,.88);
+padding:35px;
+border-radius:25px;
+text-align:center;
+width:70%;
+backdrop-filter:blur(10px);
+}
+
+.hero-overlay h1{
+font-size:42px;
+color:var(--primary);
+margin-bottom:15px;
+}
+
+.hero-overlay p{
+font-size:18px;
+color:#555;
+}
+
+/* ===========================
+WELCOME
+=========================== */
+
+.welcome-card{
+background:white;
+padding:35px;
+border-radius:20px;
+margin-bottom:30px;
+box-shadow:var(--shadow);
+}
+
+.welcome-card h2{
+color:var(--primary);
+margin-bottom:15px;
+}
+
+.welcome-card p{
+line-height:1.9;
+color:#555;
+}
+
+/* ===========================
+STATISTIK
+=========================== */
+
+.stats{
+display:grid;
+grid-template-columns:repeat(4,1fr);
+gap:25px;
+margin-bottom:35px;
+}
+
+.card{
+background:white;
+padding:30px;
+text-align:center;
+border-radius:20px;
+box-shadow:var(--shadow);
+transition:.35s;
+}
+
+.card:hover{
+transform:translateY(-10px);
+}
+
+.card i{
+font-size:45px;
+color:var(--primary);
+margin-bottom:20px;
+}
+
+.card h2{
+font-size:40px;
+color:var(--primary);
+}
+
+.card p{
+margin-top:10px;
+color:#555;
+}
+
+/* ===========================
+ABOUT
+=========================== */
+
+.about{
+background:white;
+padding:35px;
+border-radius:20px;
+box-shadow:var(--shadow);
+margin-bottom:30px;
+}
+
+.about h2{
+color:var(--primary);
+margin-bottom:20px;
+}
+
+.about p{
+line-height:2;
+color:#555;
+}
+ 
 <body>
 
 <!-- SIDEBAR -->
@@ -411,54 +537,6 @@ onclick="toggleMenu('tugasMenu',this);return false;">
 <ul id="tugasMenu" class="submenu">
 
 <li>
-<a href="https://fitrianty1211-droid.github.io/fitriaty/" target="_blank">
-Fitriaty
-</a>
-</li>
-
-<li>
-<a href="https://alfirajingga-13.github.io/ALFIRA-JINGGAWATI-TAMAA/" target="_blank">
-Alfira Jinggawati Tama
-</a>
-</li>
-
-<li>
-<a href="https://7kheynzs7.github.io/Khaila-Nazila-/index.html" target="_blank">
-Khaila Nazila Shofa
-</a>
-</li>
-
-<li>
-<a href="https://haikalaja99.github.io/profil-biodata/" target="_blank">
-Muhammad Haikal
-</a>
-</li>
-
-<li>
-<a href="https://ginagina28.github.io/Gina-Zahiraaa/" target="_blank">
-Gina Zahira
-</a>
-</li>
-
-<li>
-<a href="https://asrilestari99.github.io/Asri_Lestari/" target="_blank">
-Asri Lestari
-</a>
-</li>
-
-<li>
-<a href="https://herny-noor-aziziah.github.io/HERNY-NOOR-AZIZIAHH/" target="_blank">
-Herny Noor Aziziah
-</a>
-</li>
-
-<li>
-<a href="https://salmanajima.github.io/Salma.Najima/" target="_blank">
-Salma Najima
-</a>
-</li>
-
-<li>
 <a href="https://tiaraisya-akbar.github.io/TiaraisyaAkbar/" target="_blank">
 Tiaraisya Akbar
 </a>
@@ -485,7 +563,7 @@ Noer Mayadha
 
 <div class="topbar">
 
-<h2>Sistem Informasi POKLAHSAR</h2>
+<h2>Websitw Resmi Desa Bulurejo</h2>
 
 <div>
 
@@ -598,138 +676,13 @@ terintegrasi.
 </p>
 
 </div>
-/* ===========================
-HERO
-=========================== */
 
-.hero{
-position:relative;
-overflow:hidden;
-border-radius:25px;
-box-shadow:var(--shadow);
-margin-bottom:30px;
-}
-
-.hero img{
-width:100%;
-height:520px;
-object-fit:cover;
-display:block;
-}
-
-.hero-overlay{
-position:absolute;
-left:50%;
-top:50%;
-transform:translate(-50%,-50%);
-background:rgba(255,255,255,.88);
-padding:35px;
-border-radius:25px;
-text-align:center;
-width:70%;
-backdrop-filter:blur(10px);
-}
-
-.hero-overlay h1{
-font-size:42px;
-color:var(--primary);
-margin-bottom:15px;
-}
-
-.hero-overlay p{
-font-size:18px;
-color:#555;
-}
-
-/* ===========================
-WELCOME
-=========================== */
-
-.welcome-card{
-background:white;
-padding:35px;
-border-radius:20px;
-margin-bottom:30px;
-box-shadow:var(--shadow);
-}
-
-.welcome-card h2{
-color:var(--primary);
-margin-bottom:15px;
-}
-
-.welcome-card p{
-line-height:1.9;
-color:#555;
-}
-
-/* ===========================
-STATISTIK
-=========================== */
-
-.stats{
-display:grid;
-grid-template-columns:repeat(4,1fr);
-gap:25px;
-margin-bottom:35px;
-}
-
-.card{
-background:white;
-padding:30px;
-text-align:center;
-border-radius:20px;
-box-shadow:var(--shadow);
-transition:.35s;
-}
-
-.card:hover{
-transform:translateY(-10px);
-}
-
-.card i{
-font-size:45px;
-color:var(--primary);
-margin-bottom:20px;
-}
-
-.card h2{
-font-size:40px;
-color:var(--primary);
-}
-
-.card p{
-margin-top:10px;
-color:#555;
-}
-
-/* ===========================
-ABOUT
-=========================== */
-
-.about{
-background:white;
-padding:35px;
-border-radius:20px;
-box-shadow:var(--shadow);
-margin-bottom:30px;
-}
-
-.about h2{
-color:var(--primary);
-margin-bottom:20px;
-}
-
-.about p{
-line-height:2;
-color:#555;
-}
 <!-- FOOTER -->
 
 <div class="footer">
 
-© 2026 Sistem Informasi POKLAHSAR |
-Fakultas Perikanan dan Ilmu Kelautan
+© 2026 Desa Bulurejo |
+KKNTLH Kelompok 8
 
 </div>
 
