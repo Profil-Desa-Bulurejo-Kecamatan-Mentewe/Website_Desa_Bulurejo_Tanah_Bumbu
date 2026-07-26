@@ -1,1321 +1,596 @@
 <!DOCTYPE html>
 <html lang="id">
-
 <head>
 
-    <!-- ===================================================== -->
-    <!-- META -->
-    <!-- ===================================================== -->
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sistem Informasi POKLAHSAR</title>
 
-    <title>Website Resmi Desa Bulurejo</title>
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
-    <meta name="description"
-        content="Website Resmi Desa Bulurejo Kecamatan Mentewe Kabupaten Tanah Bumbu">
+<style>
 
-    <meta name="keywords"
-        content="Desa Bulurejo, SIGAP Desa, Website Desa, Mentewe, Tanah Bumbu">
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Segoe UI',sans-serif;
+}
 
-    <meta name="author"
-        content="Kelompok 8 KKN Tematik Lingkungan Universitas Lambung Mangkurat">
+body{
+background:linear-gradient(135deg,#0b3d2e,#14532d,#1f6b3a,#2e7d32);
+background-attachment:fixed;
+display:flex;
+min-height:100vh;
+color:#fff;
+}
 
-    <!-- ===================================================== -->
-    <!-- GOOGLE FONT -->
-    <!-- ===================================================== -->
+/* ======================
+SIDEBAR
+====================== */
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
+.sidebar{
+width:280px;
+height:100vh;
+background:rgba(8,48,25,.95);
+backdrop-filter:blur(12px);
+color:white;
+position:fixed;
+overflow-y:auto;
+border-right:1px solid rgba(255,255,255,.08);
+box-shadow:8px 0 25px rgba(0,0,0,.25);
+}
 
-    <link rel="preconnect"
-        href="https://fonts.gstatic.com"
-        crossorigin>
+.logo{
+padding:25px;
+text-align:center;
+border-bottom:1px solid rgba(255,255,255,.15);
+background:rgba(255,255,255,.04);
+}
 
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
-        rel="stylesheet">
+.logo h2{
+font-size:24px;
+margin-bottom:5px;
+}
 
-    <!-- ===================================================== -->
-    <!-- FONT AWESOME -->
-    <!-- ===================================================== -->
+.logo p{
+font-size:13px;
+opacity:.85;
+line-height:1.5;
+}
 
-    <link rel="stylesheet"
-        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+.menu{
+padding:15px;
+}
 
-    <!-- ===================================================== -->
-    <!-- CSS -->
-    <!-- ===================================================== -->
+.menu ul{
+list-style:none;
+}
 
-    <link rel="stylesheet"
-        href="css/style.css">
+.menu li{
+margin-bottom:5px;
+}
 
-    <link rel="stylesheet"
-        href="css/responsive.css">
+.menu a{
+display:block;
+padding:13px 16px;
+color:#fff;
+text-decoration:none;
+border-radius:12px;
+transition:.35s;
+}
+
+.menu a:hover{
+background:#22c55e;
+transform:translateX(6px);
+}
+
+/* SUB MENU */
+
+.submenu{
+display:none;
+margin-left:15px;
+margin-top:5px;
+}
+
+.submenu li{
+margin-bottom:4px;
+}
+
+.submenu a{
+display:block;
+padding:10px 12px;
+font-size:14px;
+background:rgba(255,255,255,.05);
+border-left:4px solid #4ade80;
+border-radius:8px;
+}
+
+.submenu a:hover{
+background:#16a34a;
+}
+
+/* ======================
+MAIN
+====================== */
+
+.main{
+margin-left:280px;
+width:calc(100% - 280px);
+}
+
+/* ======================
+TOPBAR
+====================== */
+
+.topbar{
+background:rgba(255,255,255,.08);
+backdrop-filter:blur(14px);
+padding:18px 30px;
+display:flex;
+justify-content:space-between;
+align-items:center;
+border-bottom:1px solid rgba(255,255,255,.1);
+box-shadow:0 6px 20px rgba(0,0,0,.18);
+}
+
+.topbar h2{
+color:#dcfce7;
+font-size:28px;
+font-weight:700;
+}
+
+.content{
+padding:25px;
+}
+
+/* ======================
+HERO
+====================== */
+
+.hero{
+background:rgba(255,255,255,.08);
+backdrop-filter:blur(15px);
+padding:18px;
+border-radius:22px;
+overflow:hidden;
+border:1px solid rgba(255,255,255,.12);
+box-shadow:0 8px 30px rgba(0,0,0,.25);
+margin-bottom:25px;
+}
+
+.hero img{
+width:100%;
+height:390px;
+object-fit:cover;
+object-position:center;
+display:block;
+border-radius:16px;
+margin-bottom:18px;
+box-shadow:0 10px 30px rgba(0,0,0,.25);
+}
+
+.hero-content{
+padding:0 10px 10px;
+}
+
+.hero-content h2{
+color:#ffffff;
+font-size:30px;
+margin-bottom:15px;
+}
+
+.hero-content p{
+color:#ecfdf5;
+line-height:1.9;
+}
+
+.footer{
+padding:25px;
+text-align:center;
+color:#d1fae5;
+font-size:15px;
+}
+
+/* RESPONSIVE */
+
+@media(max-width:768px){
+
+body{
+flex-direction:column;
+}
+
+.sidebar{
+width:100%;
+height:auto;
+position:relative;
+}
+
+.main{
+margin-left:0;
+width:100%;
+}
+
+}
+
+</style>
 
 </head>
 
 <body>
 
-<!-- ===================================================== -->
-<!-- HEADER -->
-<!-- ===================================================== -->
+<!-- SIDEBAR -->
 
-<header id="header">
+<div class="sidebar">
 
-    <div class="container">
+<div class="logo">
 
-        <div class="logo">
+<h2>POKLAHSAR</h2>
 
-            <img src="images/logo/logo-desa.png"
-                alt="Logo Desa">
+<p>
+Kelompok Pengolah dan Pemasar Hasil Perikanan
+</p>
 
-            <div class="logo-text">
+</div>
 
-                <h2>Desa Bulurejo</h2>
+<div class="menu">
 
-                <span>
-                    Kecamatan Mentewe
-                </span>
+<ul>
 
-            </div>
+<!-- MENU -->
 
-        </div>
+<li>
 
-        <!-- MENU -->
+<a href="index.html">
 
-        <nav id="navbar">
+<i class="fas fa-home"></i>
+ Menu
 
-            <ul>
+</a>
 
-                <li>
-                    <a href="#" class="active">
-                        Beranda
-                    </a>
-                </li>
+</li>
 
-                <li class="dropdown">
+<!-- INDIVIDU -->
 
-                    <a href="#">
+<li>
 
-                        Profil
+<a href="#"
+onclick="toggleMenu('individuMenu',this);return false;">
 
-                        <i class="fa-solid fa-chevron-down"></i>
+<i class="fas fa-user"></i>
+ Individu
 
-                    </a>
+<span style="float:right;">
+<i class="fas fa-chevron-down"></i>
+</span>
 
-                </li>
+</a>
 
-                <li class="dropdown">
+<ul id="individuMenu" class="submenu">
 
-                    <a href="#">
+<a href="#"
+onclick="toggleMenu('bukuMenu',this);return false;">
 
-                        Pemerintahan
+<i class="fas fa-book"></i>
+ Buku
 
-                        <i class="fa-solid fa-chevron-down"></i>
+<span style="float:right;">
+<i class="fas fa-chevron-down"></i>
+</span>
 
-                    </a>
+</a>
 
-                </li>
+<ul id="bukuMenu" class="submenu level2">
 
-                <li>
+<li>
+<a href="tamukelompok.html">
+Tamu Kelompok & Agenda Surat
+</a>
+</li>
 
-                    <a href="#sigap" class="menu-special">
+<li>
+<a href="kaskelompok.html">
+Kas Kelompok
+</a>
+</li>
 
-                        SIGAP DESA
+<li>
+<a href="notulenrapat.html">
+Notulen Rapat
+</a>
+</li>
 
-                    </a>
+<li>
+<a href="ruk.html">
+RUK
+</a>
+</li>
 
-                </li>
+<li>
+<a href="rub.html">
+RUB
+</a>
+</li>
 
-                <li class="dropdown">
+</ul>
 
-                    <a href="#">
+</li>
+ 
+<li><a href="rencanakegiatan.html">
+Rencana Kegiatan
+</a></li>
 
-                        Potensi
+<li><a href="produksikelompok.html">
+Produksi Kelompok & Pola Produksi
+</a></li>
 
-                        <i class="fa-solid fa-chevron-down"></i>
+<li><a href="inventarisbarang.html">
+Inventaris Barang
+</a></li>
 
-                    </a>
+<li><a href="iurankelompok.html">
+Iuran Kelompok
+</a></li>
 
-                </li>
+<li><a href="pinjamananggota.html">
+Pinjaman Anggota
+</a></li>
 
-                <li>
+</ul>
 
-                    <a href="#">
-                        Berita
-                    </a>
+</li>
 
-                </li>
+<!-- KELOMPOK -->
 
-                <li>
+<li>
 
-                    <a href="#">
-                        Galeri
-                    </a>
+<a href="#"
+onclick="toggleMenu('kelompokMenu',this);return false;">
 
-                </li>
+<i class="fas fa-users"></i>
+ Kelompok
 
-                <li>
+<span style="float:right;">
+<i class="fas fa-chevron-down"></i>
+</span>
 
-                    <a href="#">
-                        Kontak
-                    </a>
+</a>
 
-                </li>
+<ul id="kelompokMenu" class="submenu">
 
-            </ul>
+<li>
+    <a href="pendaftarankelompok.html">
+        Pendaftaran Kelompok
+    </a>
+</li>
+ 
+<li>
+<a href="sejarahkelompok.html">
+Sejarah Kelompok
+</a>
+</li>
 
-        </nav>
+<li>
+<a href="datadasarkelompok.html">
+Data Dasar Kelompok
+</a>
+</li>
 
-        <!-- MOBILE MENU -->
+<li>
+<a href="dataanggotakelompok.html">
+Data Anggota Kelompok
+</a>
+</li>
 
-        <div id="menu-button">
+<li>
+<a href="datakomoditasperikanan.html">
+Data Komoditas Perikanan
+</a>
+</li>
 
-            <i class="fa-solid fa-bars"></i>
+</ul>
 
-        </div>
+</li>
 
-    </div>
+<!-- HASIL DATA KELOMPOK -->
 
-</header>
+<li>
 
-<!-- ===================================================== -->
+<a href="hasildatakelompok.html">
+
+<i class="fas fa-chart-bar"></i>
+ Hasil Data Kelompok
+
+</a>
+
+</li>
+
+<!-- HASIL TUGAS INDIVIDU -->
+
+<li>
+
+<a href="#"
+onclick="toggleMenu('tugasMenu',this);return false;">
+
+<i class="fas fa-laptop-code"></i>
+ Hasil Tugas Individu
+
+<span style="float:right;">
+<i class="fas fa-chevron-down"></i>
+</span>
+
+</a>
+
+<ul id="tugasMenu" class="submenu">
+
+<li>
+<a href="https://fitrianty1211-droid.github.io/fitriaty/" target="_blank">
+Fitriaty
+</a>
+</li>
+
+<li>
+<a href="https://alfirajingga-13.github.io/ALFIRA-JINGGAWATI-TAMAA/" target="_blank">
+Alfira Jinggawati Tama
+</a>
+</li>
+
+<li>
+<a href="https://7kheynzs7.github.io/Khaila-Nazila-/index.html" target="_blank">
+Khaila Nazila Shofa
+</a>
+</li>
+
+<li>
+<a href="https://haikalaja99.github.io/profil-biodata/" target="_blank">
+Muhammad Haikal
+</a>
+</li>
+
+<li>
+<a href="https://ginagina28.github.io/Gina-Zahiraaa/" target="_blank">
+Gina Zahira
+</a>
+</li>
+
+<li>
+<a href="https://asrilestari99.github.io/Asri_Lestari/" target="_blank">
+Asri Lestari
+</a>
+</li>
+
+<li>
+<a href="https://herny-noor-aziziah.github.io/HERNY-NOOR-AZIZIAHH/" target="_blank">
+Herny Noor Aziziah
+</a>
+</li>
+
+<li>
+<a href="https://salmanajima.github.io/Salma.Najima/" target="_blank">
+Salma Najima
+</a>
+</li>
+
+<li>
+<a href="https://tiaraisya-akbar.github.io/TiaraisyaAkbar/" target="_blank">
+Tiaraisya Akbar
+</a>
+</li>
+
+<li>
+<a href="https://noermayadhaa-star.github.io/NOER-MAYADHAA/" target="_blank">
+Noer Mayadha
+</a>
+</li>
+
+</ul>
+
+</li>
+ 
+</ul>
+
+</div>
+</div>
+
+<!-- MAIN -->
+
+<div class="main">
+
+<div class="topbar">
+
+<h2>Sistem Informasi POKLAHSAR</h2>
+
+<div>
+
+<i class="fas fa-user-circle"></i>
+
+Sosial Ekonomi Perikanan
+
+</div>
+
+</div>
+
+<div class="content">
+
 <!-- HERO -->
-<!-- ===================================================== -->
 
-<section class="hero">
+<div class="hero">
 
-    <div class="overlay"></div>
+<img src="fpik.jpg"
+alt="POKLAHSAR">
 
-    <img src="images/hero/kantor-desa.jpg"
-        alt="Kantor Desa Bulurejo"
-        class="hero-image">
+<div class="hero-content">
 
-    <div class="hero-content">
+<h2>
+Selamat Datang di Sistem Informasi POKLAHSAR
+</h2>
 
-        <span class="subtitle">
+<p>
+POKLAHSAR (Kelompok Pengolah dan Pemasar Hasil Perikanan)
+merupakan kelompok masyarakat yang bergerak dalam kegiatan
+pengolahan dan pemasaran hasil perikanan untuk meningkatkan
+nilai tambah produk, memperluas pasar, dan meningkatkan
+kesejahteraan anggota kelompok.
+</p>
 
-            WEBSITE RESMI
+<p>
+Aplikasi ini digunakan untuk membantu pengelolaan
+administrasi kelompok, data anggota, keuangan, produksi,
+inventaris, pertemuan, pemasaran, serta penyusunan dokumen
+usaha secara digital sehingga lebih efektif, efisien,
+dan transparan.
+</p>
 
-        </span>
+</div>
 
-        <h1>
+</div>
 
-            DESA BULUREJO
-
-        </h1>
-
-        <h3>
-
-            Kecamatan Mentewe • Kabupaten Tanah Bumbu
-
-        </h3>
-
-        <p>
-
-            Portal informasi desa yang menyajikan profil desa,
-            potensi wilayah, berita terkini, serta Sistem
-            Informasi Geospasial (SIGAP Desa) sebagai pusat
-            informasi digital Desa Bulurejo.
-
-        </p>
-
-        <div class="hero-button">
-
-            <a href="#profil"
-                class="btn-primary">
-
-                Jelajahi Desa
-
-            </a>
-
-            <a href="#sigap"
-                class="btn-secondary">
-
-                <i class="fa-solid fa-map-location-dot"></i>
-
-                SIGAP DESA
-
-            </a>
-
-        </div>
-
-    </div>
-
-</section>
-<!-- ===================================================== -->
-<!-- STATISTIK DESA -->
-<!-- ===================================================== -->
-
-<section class="statistics" id="profil">
-
-    <div class="container">
-
-        <div class="section-title">
-
-            <span>DATA DESA</span>
-
-            <h2>Statistik Singkat Desa Bulurejo</h2>
-
-            <p>
-                Gambaran umum kondisi Desa Bulurejo berdasarkan data terbaru.
-            </p>
-
-        </div>
-
-        <div class="statistics-grid">
-
-            <div class="stat-card">
-
-                <i class="fa-solid fa-users"></i>
-
-                <h3 class="counter">0</h3>
-
-                <p>Jumlah Penduduk</p>
-
-            </div>
-
-            <div class="stat-card">
-
-                <i class="fa-solid fa-house"></i>
-
-                <h3 class="counter">0</h3>
-
-                <p>Kepala Keluarga</p>
-
-            </div>
-
-            <div class="stat-card">
-
-                <i class="fa-solid fa-map-location-dot"></i>
-
-                <h3 class="counter">0</h3>
-
-                <p>Luas Wilayah (Ha)</p>
-
-            </div>
-
-            <div class="stat-card">
-
-                <i class="fa-solid fa-school"></i>
-
-                <h3 class="counter">0</h3>
-
-                <p>Fasilitas Pendidikan</p>
-
-            </div>
-
-            <div class="stat-card">
-
-                <i class="fa-solid fa-hospital"></i>
-
-                <h3 class="counter">0</h3>
-
-                <p>Fasilitas Kesehatan</p>
-
-            </div>
-
-            <div class="stat-card">
-
-                <i class="fa-solid fa-store"></i>
-
-                <h3 class="counter">0</h3>
-
-                <p>UMKM Desa</p>
-
-            </div>
-
-        </div>
-
-    </div>
-
-</section>
-
-<!-- ===================================================== -->
-<!-- SAMBUTAN KEPALA DESA -->
-<!-- ===================================================== -->
-
-<section class="welcome">
-
-    <div class="container welcome-container">
-
-        <div class="welcome-image">
-
-            <img src="images/perangkat/kepala-desa.jpg"
-                 alt="Kepala Desa Bulurejo">
-
-        </div>
-
-        <div class="welcome-content">
-
-            <span>SAMBUTAN KEPALA DESA</span>
-
-            <h2>Selamat Datang di Website Resmi Desa Bulurejo</h2>
-
-            <p>
-                Assalamu'alaikum Warahmatullahi Wabarakatuh.
-            </p>
-
-            <p>
-                Dengan memanjatkan puji syukur ke hadirat Allah SWT,
-                kami menyambut baik hadirnya Website Resmi Desa Bulurejo
-                sebagai media informasi, pelayanan, transparansi,
-                dan promosi potensi desa kepada masyarakat luas.
-            </p>
-
-            <p>
-                Website ini diharapkan menjadi sarana komunikasi
-                antara pemerintah desa dengan masyarakat, sekaligus
-                mendukung transformasi digital menuju desa yang maju,
-                mandiri, transparan, dan berkelanjutan.
-            </p>
-
-            <h4>
-
-                Kepala Desa Bulurejo
-
-            </h4>
-
-        </div>
-
-    </div>
-
-</section>
-
-<!-- ===================================================== -->
-<!-- TENTANG DESA -->
-<!-- ===================================================== -->
-
-<section class="about">
-
-    <div class="container">
-
-        <div class="section-title">
-
-            <span>TENTANG DESA</span>
-
-            <h2>Mengenal Desa Bulurejo</h2>
-
-            <p>
-                Desa Bulurejo merupakan salah satu desa di Kecamatan
-                Mentewe Kabupaten Tanah Bumbu yang memiliki berbagai
-                potensi di bidang pertanian, perkebunan, peternakan,
-                UMKM, serta sumber daya manusia yang terus berkembang.
-            </p>
-
-        </div>
-
-        <div class="about-grid">
-
-            <div class="about-card">
-
-                <i class="fa-solid fa-landmark"></i>
-
-                <h3>Sejarah Desa</h3>
-
-                <p>
-                    Mengenal sejarah terbentuknya Desa Bulurejo,
-                    perkembangan wilayah, serta perjalanan pemerintahan desa.
-                </p>
-
-                <a href="#">
-                    Selengkapnya
-                </a>
-
-            </div>
-
-            <div class="about-card">
-
-                <i class="fa-solid fa-bullseye"></i>
-
-                <h3>Visi & Misi</h3>
-
-                <p>
-                    Komitmen Pemerintah Desa dalam mewujudkan desa yang
-                    maju, mandiri, sejahtera, dan berkelanjutan.
-                </p>
-
-                <a href="#">
-                    Selengkapnya
-                </a>
-
-            </div>
-
-            <div class="about-card">
-
-                <i class="fa-solid fa-sitemap"></i>
-
-                <h3>Struktur Organisasi</h3>
-
-                <p>
-                    Menampilkan perangkat desa, struktur organisasi,
-                    tugas pokok, serta fungsi masing-masing perangkat.
-                </p>
-
-                <a href="#">
-                    Selengkapnya
-                </a>
-
-            </div>
-
-            <div class="about-card">
-
-                <i class="fa-solid fa-chart-column"></i>
-
-                <h3>Data Desa</h3>
-
-                <p>
-                    Menyajikan data kependudukan, pendidikan,
-                    pekerjaan, serta kondisi sosial ekonomi masyarakat.
-                </p>
-
-                <a href="#">
-                    Selengkapnya
-                </a>
-
-            </div>
-
-        </div>
-
-    </div>
-
-</section>
-<!-- ===================================================== -->
-<!-- SECTION SIGAP DESA -->
-<!-- ===================================================== -->
-
-<section class="sigap" id="sigap">
-
-    <div class="container">
-
-        <div class="section-title">
-
-            <span>SIGAP DESA</span>
-
-            <h2>Sistem Informasi Geospasial Desa Bulurejo</h2>
-
-            <p>
-                SIGAP Desa merupakan sistem informasi digital berbasis
-                geospasial yang memudahkan masyarakat memperoleh informasi
-                mengenai lokasi fasilitas umum, potensi desa, UMKM,
-                pelayanan publik, serta berbagai data spasial Desa Bulurejo.
-            </p>
-
-        </div>
-
-        <div class="sigap-wrapper">
-
-            <!-- KIRI -->
-
-            <div class="sigap-content">
-
-                <h3>
-                    Jelajahi Desa Bulurejo Secara Digital
-                </h3>
-
-                <p>
-                    Melalui SIGAP Desa, masyarakat dapat melihat lokasi
-                    penting secara interaktif lengkap dengan informasi,
-                    foto, deskripsi, dan titik koordinat.
-                </p>
-
-                <div class="sigap-feature">
-
-                    <div class="feature-item">
-
-                        <i class="fa-solid fa-school"></i>
-
-                        <div>
-
-                            <h4>Sekolah</h4>
-
-                            <p>Informasi seluruh fasilitas pendidikan.</p>
-
-                        </div>
-
-                    </div>
-
-                    <div class="feature-item">
-
-                        <i class="fa-solid fa-hospital"></i>
-
-                        <div>
-
-                            <h4>Kesehatan</h4>
-
-                            <p>Puskesmas, Posyandu, Klinik, dan layanan kesehatan.</p>
-
-                        </div>
-
-                    </div>
-
-                    <div class="feature-item">
-
-                        <i class="fa-solid fa-store"></i>
-
-                        <div>
-
-                            <h4>UMKM Desa</h4>
-
-                            <p>Produk unggulan serta lokasi pelaku UMKM.</p>
-
-                        </div>
-
-                    </div>
-
-                    <div class="feature-item">
-
-                        <i class="fa-solid fa-fish"></i>
-
-                        <div>
-
-                            <h4>Potensi Perikanan</h4>
-
-                            <p>Informasi potensi budidaya dan usaha perikanan.</p>
-
-                        </div>
-
-                    </div>
-
-                    <div class="feature-item">
-
-                        <i class="fa-solid fa-seedling"></i>
-
-                        <div>
-
-                            <h4>Pertanian & Perkebunan</h4>
-
-                            <p>Pemetaan potensi sektor pertanian desa.</p>
-
-                        </div>
-
-                    </div>
-
-                    <div class="feature-item">
-
-                        <i class="fa-solid fa-trash"></i>
-
-                        <div>
-
-                            <h4>TPS3R & Lingkungan</h4>
-
-                            <p>Lokasi pengelolaan sampah dan fasilitas lingkungan.</p>
-
-                        </div>
-
-                    </div>
-
-                </div>
-
-                <div class="sigap-button">
-
-                    <a href="pages/sigap.html" class="btn-primary">
-
-                        <i class="fa-solid fa-map-location-dot"></i>
-
-                        Jelajahi SIGAP Desa
-
-                    </a>
-
-                </div>
-
-            </div>
-
-            <!-- KANAN -->
-
-            <div class="sigap-image">
-
-                <img src="images/sigap/mockup-peta.png"
-                     alt="SIGAP Desa Bulurejo">
-
-            </div>
-
-        </div>
-
-    </div>
-
-</section>
-
-<!-- ===================================================== -->
-<!-- LAYANAN CEPAT -->
-<!-- ===================================================== -->
-
-<section class="quick-service">
-
-    <div class="container">
-
-        <div class="section-title">
-
-            <span>LAYANAN CEPAT</span>
-
-            <h2>Akses Informasi Desa</h2>
-
-        </div>
-
-        <div class="service-grid">
-
-            <a href="#" class="service-card">
-
-                <i class="fa-solid fa-map"></i>
-
-                <h3>Peta Desa</h3>
-
-            </a>
-
-            <a href="#" class="service-card">
-
-                <i class="fa-solid fa-building"></i>
-
-                <h3>Fasilitas Umum</h3>
-
-            </a>
-
-            <a href="#" class="service-card">
-
-                <i class="fa-solid fa-store"></i>
-
-                <h3>UMKM</h3>
-
-            </a>
-
-            <a href="#" class="service-card">
-
-                <i class="fa-solid fa-seedling"></i>
-
-                <h3>Pertanian</h3>
-
-            </a>
-
-            <a href="#" class="service-card">
-
-                <i class="fa-solid fa-fish"></i>
-
-                <h3>Perikanan</h3>
-
-            </a>
-
-            <a href="#" class="service-card">
-
-                <i class="fa-solid fa-leaf"></i>
-
-                <h3>Lingkungan</h3>
-
-            </a>
-
-            <a href="#" class="service-card">
-
-                <i class="fa-solid fa-school"></i>
-
-                <h3>Pendidikan</h3>
-
-            </a>
-
-            <a href="#" class="service-card">
-
-                <i class="fa-solid fa-hospital"></i>
-
-                <h3>Kesehatan</h3>
-
-            </a>
-
-        </div>
-
-    </div>
-
-</section>
-<!-- ===================================================== -->
-<!-- POTENSI DESA -->
-<!-- ===================================================== -->
-
-<section class="potensi" id="potensi">
-
-    <div class="container">
-
-        <div class="section-title">
-
-            <span>POTENSI DESA</span>
-
-            <h2>Potensi Unggulan Desa Bulurejo</h2>
-
-            <p>
-                Desa Bulurejo memiliki berbagai potensi yang menjadi
-                penggerak pembangunan dan perekonomian masyarakat.
-            </p>
-
-        </div>
-
-        <div class="potensi-grid">
-
-            <div class="potensi-card">
-
-                <img src="images/potensi/pertanian.jpg" alt="Pertanian">
-
-                <div class="potensi-content">
-
-                    <i class="fa-solid fa-seedling"></i>
-
-                    <h3>Pertanian</h3>
-
-                    <p>
-                        Sektor pertanian sebagai salah satu penopang
-                        utama perekonomian masyarakat desa.
-                    </p>
-
-                    <a href="#">Selengkapnya</a>
-
-                </div>
-
-            </div>
-
-            <div class="potensi-card">
-
-                <img src="images/potensi/perkebunan.jpg" alt="Perkebunan">
-
-                <div class="potensi-content">
-
-                    <i class="fa-solid fa-tree"></i>
-
-                    <h3>Perkebunan</h3>
-
-                    <p>
-                        Potensi perkebunan dengan hasil yang mendukung
-                        kesejahteraan masyarakat.
-                    </p>
-
-                    <a href="#">Selengkapnya</a>
-
-                </div>
-
-            </div>
-
-            <div class="potensi-card">
-
-                <img src="images/potensi/umkm.jpg" alt="UMKM">
-
-                <div class="potensi-content">
-
-                    <i class="fa-solid fa-store"></i>
-
-                    <h3>UMKM</h3>
-
-                    <p>
-                        Berbagai usaha mikro, kecil, dan menengah yang
-                        menjadi kebanggaan Desa Bulurejo.
-                    </p>
-
-                    <a href="#">Selengkapnya</a>
-
-                </div>
-
-            </div>
-
-            <div class="potensi-card">
-
-                <img src="images/potensi/perikanan.jpg" alt="Perikanan">
-
-                <div class="potensi-content">
-
-                    <i class="fa-solid fa-fish"></i>
-
-                    <h3>Perikanan</h3>
-
-                    <p>
-                        Potensi budidaya dan usaha perikanan yang terus
-                        berkembang di desa.
-                    </p>
-
-                    <a href="#">Selengkapnya</a>
-
-                </div>
-
-            </div>
-
-        </div>
-
-    </div>
-
-</section>
-
-<!-- ===================================================== -->
-<!-- PROGRAM UNGGULAN -->
-<!-- ===================================================== -->
-
-<section class="program">
-
-    <div class="container">
-
-        <div class="section-title">
-
-            <span>PROGRAM UNGGULAN</span>
-
-            <h2>Inovasi Desa Bulurejo</h2>
-
-        </div>
-
-        <div class="program-grid">
-
-            <div class="program-card">
-
-                <i class="fa-solid fa-map-location-dot"></i>
-
-                <h3>SIGAP DESA</h3>
-
-                <p>
-                    Sistem Informasi Geospasial Desa berbasis digital.
-                </p>
-
-            </div>
-
-            <div class="program-card">
-
-                <i class="fa-solid fa-recycle"></i>
-
-                <h3>Pengelolaan Sampah</h3>
-
-                <p>
-                    Mendorong pengelolaan sampah berkelanjutan.
-                </p>
-
-            </div>
-
-            <div class="program-card">
-
-                <i class="fa-solid fa-users"></i>
-
-                <h3>Pemberdayaan Masyarakat</h3>
-
-                <p>
-                    Pengembangan kapasitas masyarakat desa.
-                </p>
-
-            </div>
-
-            <div class="program-card">
-
-                <i class="fa-solid fa-chart-line"></i>
-
-                <h3>Digitalisasi Desa</h3>
-
-                <p>
-                    Pemanfaatan teknologi informasi dalam pelayanan desa.
-                </p>
-
-            </div>
-
-        </div>
-
-    </div>
-
-</section>
-
-<!-- ===================================================== -->
-<!-- BERITA -->
-<!-- ===================================================== -->
-
-<section class="news" id="berita">
-
-    <div class="container">
-
-        <div class="section-title">
-
-            <span>BERITA DESA</span>
-
-            <h2>Informasi dan Kegiatan Terbaru</h2>
-
-        </div>
-
-        <div class="news-grid">
-
-            <article class="news-card">
-
-                <img src="images/berita/berita1.jpg" alt="Berita">
-
-                <div class="news-content">
-
-                    <span>20 Juli 2026</span>
-
-                    <h3>
-                        Musyawarah Desa Dalam Penyusunan Program Kerja
-                    </h3>
-
-                    <p>
-                        Pemerintah Desa bersama masyarakat melaksanakan
-                        musyawarah desa...
-                    </p>
-
-                    <a href="#">Baca Selengkapnya</a>
-
-                </div>
-
-            </article>
-
-            <article class="news-card">
-
-                <img src="images/berita/berita2.jpg" alt="Berita">
-
-                <div class="news-content">
-
-                    <span>18 Juli 2026</span>
-
-                    <h3>
-                        Gotong Royong Membersihkan Lingkungan Desa
-                    </h3>
-
-                    <p>
-                        Kegiatan gotong royong diikuti oleh masyarakat
-                        dan perangkat desa...
-                    </p>
-
-                    <a href="#">Baca Selengkapnya</a>
-
-                </div>
-
-            </article>
-
-            <article class="news-card">
-
-                <img src="images/berita/berita3.jpg" alt="Berita">
-
-                <div class="news-content">
-
-                    <span>15 Juli 2026</span>
-
-                    <h3>
-                        Sosialisasi Pengelolaan Sampah Berbasis Masyarakat
-                    </h3>
-
-                    <p>
-                        Edukasi mengenai pemilahan sampah dan lingkungan
-                        berkelanjutan...
-                    </p>
-
-                    <a href="#">Baca Selengkapnya</a>
-
-                </div>
-
-            </article>
-
-        </div>
-
-    </div>
-
-</section>
-
-<!-- ===================================================== -->
-<!-- GALERI -->
-<!-- ===================================================== -->
-
-<section class="gallery" id="galeri">
-
-    <div class="container">
-
-        <div class="section-title">
-
-            <span>GALERI</span>
-
-            <h2>Dokumentasi Kegiatan Desa</h2>
-
-        </div>
-
-        <div class="gallery-grid">
-
-            <img src="images/galeri/1.jpg" alt="">
-            <img src="images/galeri/2.jpg" alt="">
-            <img src="images/galeri/3.jpg" alt="">
-            <img src="images/galeri/4.jpg" alt="">
-            <img src="images/galeri/5.jpg" alt="">
-            <img src="images/galeri/6.jpg" alt="">
-            <img src="images/galeri/7.jpg" alt="">
-            <img src="images/galeri/8.jpg" alt="">
-
-        </div>
-
-        <div class="gallery-button">
-
-            <a href="#" class="btn-primary">
-
-                Lihat Semua Galeri
-
-            </a>
-
-        </div>
-
-    </div>
-
-</section>
-<!-- ===================================================== -->
-<!-- LOKASI DESA -->
-<!-- ===================================================== -->
-
-<section class="location" id="kontak">
-
-    <div class="container">
-
-        <div class="section-title">
-
-            <span>LOKASI DESA</span>
-
-            <h2>Temukan Desa Bulurejo</h2>
-
-            <p>
-                Desa Bulurejo, Kecamatan Mentewe,
-                Kabupaten Tanah Bumbu,
-                Provinsi Kalimantan Selatan.
-            </p>
-
-        </div>
-
-        <div class="location-wrapper">
-
-            <div class="location-map">
-
-                <!-- Ganti src dengan Embed Google Maps Desa Bulurejo -->
-
-                <iframe
-                    src="https://www.google.com/maps/embed?pb="
-                    width="100%"
-                    height="450"
-                    style="border:0;"
-                    loading="lazy"
-                    allowfullscreen>
-
-                </iframe>
-
-            </div>
-
-            <div class="location-info">
-
-                <div class="info-box">
-
-                    <i class="fa-solid fa-location-dot"></i>
-
-                    <div>
-
-                        <h3>Alamat</h3>
-
-                        <p>
-                            Desa Bulurejo,
-                            Kecamatan Mentewe,
-                            Kabupaten Tanah Bumbu,
-                            Kalimantan Selatan
-                        </p>
-
-                    </div>
-
-                </div>
-
-                <div class="info-box">
-
-                    <i class="fa-solid fa-phone"></i>
-
-                    <div>
-
-                        <h3>Telepon</h3>
-
-                        <p>(0518) xxxx-xxxx</p>
-
-                    </div>
-
-                </div>
-
-                <div class="info-box">
-
-                    <i class="fa-solid fa-envelope"></i>
-
-                    <div>
-
-                        <h3>Email</h3>
-
-                        <p>desabulurejo@email.com</p>
-
-                    </div>
-
-                </div>
-
-                <div class="info-box">
-
-                    <i class="fa-solid fa-clock"></i>
-
-                    <div>
-
-                        <h3>Jam Pelayanan</h3>
-
-                        <p>
-
-                            Senin - Jumat
-
-                            <br>
-
-                            08.00 - 15.00 WITA
-
-                        </p>
-
-                    </div>
-
-                </div>
-
-            </div>
-
-        </div>
-
-    </div>
-
-</section>
-
-<!-- ===================================================== -->
 <!-- FOOTER -->
-<!-- ===================================================== -->
 
-<footer>
+<div class="footer">
 
-    <div class="footer-top">
+© 2026 Sistem Informasi POKLAHSAR |
+Fakultas Perikanan dan Ilmu Kelautan
 
-        <div class="container footer-grid">
+</div>
 
-            <div class="footer-about">
+</div>
+<!-- END CONTENT -->
 
-                <img
-                    src="images/logo/logo-desa.png"
-                    alt="Logo Desa">
+</div>
+<!-- END MAIN -->
 
-                <h2>Desa Bulurejo</h2>
+<script>
 
-                <p>
+function toggleMenu(menuId, element){
 
-                    Website resmi Pemerintah Desa Bulurejo sebagai
-                    media informasi, pelayanan publik, transparansi,
-                    dan promosi potensi desa.
+    const menu =
+    document.getElementById(menuId);
 
-                </p>
+    const icon =
+    element.querySelector("i.fa-chevron-down, i.fa-chevron-up");
 
-            </div>
+    if(menu.style.display === "block"){
 
-            <div>
+        menu.style.display = "none";
 
-                <h3>Menu</h3>
+        icon.classList.remove("fa-chevron-up");
+        icon.classList.add("fa-chevron-down");
 
-                <ul>
+    }else{
 
-                    <li><a href="#">Beranda</a></li>
+        menu.style.display = "block";
 
-                    <li><a href="#">Profil Desa</a></li>
+        icon.classList.remove("fa-chevron-down");
+        icon.classList.add("fa-chevron-up");
 
-                    <li><a href="#">SIGAP Desa</a></li>
+    }
 
-                    <li><a href="#">Potensi Desa</a></li>
+}
 
-                    <li><a href="#">Berita</a></li>
-
-                    <li><a href="#">Galeri</a></li>
-
-                </ul>
-
-            </div>
-
-            <div>
-
-                <h3>Layanan</h3>
-
-                <ul>
-
-                    <li><a href="#">Pelayanan Desa</a></li>
-
-                    <li><a href="#">Administrasi</a></li>
-
-                    <li><a href="#">Peta Desa</a></li>
-
-                    <li><a href="#">Data Desa</a></li>
-
-                    <li><a href="#">Dokumen</a></li>
-
-                </ul>
-
-            </div>
-
-            <div>
-
-                <h3>Ikuti Kami</h3>
-
-                <div class="social-media">
-
-                    <a href="#">
-
-                        <i class="fab fa-facebook-f"></i>
-
-                    </a>
-
-                    <a href="#">
-
-                        <i class="fab fa-instagram"></i>
-
-                    </a>
-
-                    <a href="#">
-
-                        <i class="fab fa-youtube"></i>
-
-                    </a>
-
-                    <a href="#">
-
-                        <i class="fab fa-whatsapp"></i>
-
-                    </a>
-
-                </div>
-
-            </div>
-
-        </div>
-
-    </div>
-
-    <div class="footer-bottom">
-
-        <div class="container">
-
-            <p>
-
-                © 2026 Pemerintah Desa Bulurejo.
-
-                Seluruh Hak Cipta Dilindungi.
-
-            </p>
-
-            <p>
-
-                Dikembangkan oleh
-
-                <strong>
-
-                    Kelompok 8 KKN Tematik Lingkungan Hidup
-                    Universitas Lambung Mangkurat
-
-                </strong>
-
-            </p>
-
-        </div>
-
-    </div>
-
-</footer>
-
-<!-- ===================================================== -->
-<!-- BACK TO TOP -->
-<!-- ===================================================== -->
-
-<button id="backToTop">
-
-    <i class="fa-solid fa-arrow-up"></i>
-
-</button>
-
-<!-- ===================================================== -->
-<!-- JAVASCRIPT -->
-<!-- ===================================================== -->
-
-<script src="js/script.js"></script>
+</script>
 
 </body>
-
 </html>
