@@ -56,11 +56,9 @@ scroll-behavior:smooth;
 }
 
 body{
-
 background:#F5F7FA;
 color:var(--dark);
 overflow-x:hidden;
-
 }
 
 /* ===========================
@@ -486,7 +484,31 @@ font-size:13px;
 color:#666;
 line-height:1.8;
 }
+ 
+/* ===========================
+HIASAN DAUN
+=========================== */
 
+.leaf{
+position:fixed;
+width:180px;
+height:180px;
+opacity:.08;
+z-index:-1;
+background:url("leaf.png") center/contain no-repeat;
+}
+
+.leaf.left{
+top:180px;
+left:-40px;
+}
+
+.leaf.right{
+bottom:80px;
+right:-40px;
+transform:rotate(180deg);
+}
+ 
 /* ===========================
 RESPONSIVE
 =========================== */
@@ -611,6 +633,9 @@ font-size:13px;
 
 <body>
 
+<div class="leaf left"></div>
+<div class="leaf right"></div>
+ 
 <header class="header">
 
 <div class="logo">
