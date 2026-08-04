@@ -453,6 +453,175 @@ font-size:14px;
 line-height:1.8;
 color:#666;
 }
+
+/* ===========================
+FOOTER
+=========================== */
+
+.footer{
+margin-top:50px;
+background:var(--primary);
+color:white;
+padding:45px 35px;
+border-radius:25px 25px 0 0;
+}
+
+.footer-content{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+gap:30px;
+margin-bottom:30px;
+}
+
+.footer-box h3{
+margin-bottom:15px;
+font-size:18px;
+}
+
+.footer-box i{
+margin-right:8px;
+}
+
+.footer-box p{
+line-height:1.8;
+font-size:14px;
+}
+
+.footer hr{
+border:none;
+border-top:1px solid rgba(255,255,255,.25);
+margin:20px 0;
+}
+
+.copyright{
+text-align:center;
+line-height:2;
+font-size:14px;
+}
+
+/* ===========================
+RESPONSIVE
+=========================== */
+
+@media(max-width:992px){
+
+.nav-menu{
+display:none;
+}
+
+.menu-toggle{
+display:block;
+}
+
+.main{
+margin-left:0;
+padding:25px;
+}
+
+.sidebar{
+display:none;
+}
+
+.hero img{
+height:300px;
+}
+
+.hero-content{
+width:90%;
+}
+
+.hero-content h1{
+font-size:32px;
+}
+
+.hero-content p{
+font-size:16px;
+}
+
+}
+
+@media(max-width:768px){
+
+.header{
+padding:0 20px;
+height:70px;
+}
+
+.logo img{
+width:48px;
+height:48px;
+}
+
+.logo-text h2{
+font-size:18px;
+}
+
+.logo-text p{
+font-size:11px;
+}
+
+.main{
+margin-top:70px;
+padding:18px;
+}
+
+.hero img{
+height:220px;
+}
+
+.hero-content img{
+width:60px;
+height:60px;
+}
+
+.hero-content h1{
+font-size:24px;
+margin-bottom:8px;
+}
+
+.hero-content p{
+font-size:14px;
+margin-bottom:18px;
+}
+
+.hero-btn{
+padding:10px 20px;
+font-size:14px;
+}
+
+.welcome,
+.about,
+.card{
+
+padding:25px;
+}
+
+.section-title h2{
+font-size:26px;
+}
+
+.stats{
+grid-template-columns:repeat(2,1fr);
+}
+
+}
+
+@media(max-width:480px){
+
+.stats{
+grid-template-columns:1fr;
+}
+
+.service-grid{
+grid-template-columns:1fr;
+}
+
+.footer-content{
+grid-template-columns:1fr;
+text-align:center;
+}
+
+}
  
 <body>
 
@@ -542,11 +711,11 @@ color:#666;
 
 <section class="hero">
 
-<img src="kantor-desa.jpg" alt="Kantor Desa Bulurejo">
+<img src="kantor desa.jpg" alt="Kantor Desa Bulurejo">
 
 <div class="hero-content">
 
-<img src="logo-desa.png" alt="Logo Desa">
+<img src="logo desa.jpg" alt="Logo Desa">
 
 <h1>Website Resmi Desa Bulurejo</h1>
 
@@ -792,3 +961,242 @@ Data statistik Desa Bulurejo.
 
 </section>
  
+<!-- =====================================
+FOOTER
+====================================== -->
+
+<footer class="footer">
+
+<div class="footer-content">
+
+<div class="footer-box">
+
+<h3>
+
+<i class="fas fa-map-marker-alt"></i>
+
+Alamat Kantor Desa
+
+</h3>
+
+<p>
+
+Jl. Transmigrasi KM 37<br>
+
+Desa Bulurejo<br>
+
+Kecamatan Mentewe<br>
+
+Kabupaten Tanah Bumbu
+
+</p>
+
+</div>
+
+<div class="footer-box">
+
+<h3>
+
+<i class="fas fa-envelope"></i>
+
+Email
+
+</h3>
+
+<p>
+
+desabulurejo@email.com
+
+</p>
+
+</div>
+
+<div class="footer-box">
+
+<h3>
+
+<i class="fas fa-phone"></i>
+
+Telepon
+
+</h3>
+
+<p>
+
+(0518) XXXXXXX
+
+</p>
+
+</div>
+
+<div class="footer-box">
+
+<h3>
+
+<i class="fas fa-clock"></i>
+
+Jam Pelayanan
+
+</h3>
+
+<p>
+
+Senin - Jumat
+
+08.00 - 15.00 WITA
+
+</p>
+
+</div>
+
+</div>
+
+<hr>
+
+<p class="copyright">
+
+© 2026 Pemerintah Desa Bulurejo
+
+<br>
+
+Kecamatan Mentewe • Kabupaten Tanah Bumbu
+
+<br>
+
+Website dikembangkan oleh
+
+KKNT-LH Kelompok 8 Universitas Lambung Mangkurat
+
+</p>
+
+</footer>
+
+</main>
+
+<script>
+
+/* ===========================
+HAMBURGER MENU
+=========================== */
+
+const menuToggle =
+document.querySelector(".menu-toggle");
+
+const mobileMenu =
+document.querySelector(".mobile-menu");
+
+menuToggle.addEventListener("click",function(){
+
+mobileMenu.classList.toggle("active");
+
+if(mobileMenu.classList.contains("active")){
+
+menuToggle.innerHTML='<i class="fas fa-times"></i>';
+
+}else{
+
+menuToggle.innerHTML='<i class="fas fa-bars"></i>';
+
+}
+
+});
+
+/* ===========================
+SUBMENU
+=========================== */
+
+function toggleMenu(menuId,element){
+
+const menu=document.getElementById(menuId);
+
+const icon=element.querySelector("i.fa-chevron-down, i.fa-chevron-up");
+
+if(menu.style.display==="block"){
+
+menu.style.display="none";
+
+if(icon){
+
+icon.classList.remove("fa-chevron-up");
+icon.classList.add("fa-chevron-down");
+
+}
+
+}else{
+
+menu.style.display="block";
+
+if(icon){
+
+icon.classList.remove("fa-chevron-down");
+icon.classList.add("fa-chevron-up");
+
+}
+
+}
+
+}
+
+/* ===========================
+TUTUP MENU SAAT LINK DIKLIK
+=========================== */
+
+document.querySelectorAll(".mobile-menu a").forEach(link=>{
+
+link.addEventListener("click",()=>{
+
+mobileMenu.classList.remove("active");
+
+menuToggle.innerHTML='<i class="fas fa-bars"></i>';
+
+});
+
+});
+
+/* ===========================
+HEADER SAAT SCROLL
+=========================== */
+
+window.addEventListener("scroll",()=>{
+
+const header=document.querySelector(".header");
+
+if(window.scrollY>40){
+
+header.style.boxShadow="0 10px 30px rgba(0,0,0,.12)";
+
+}else{
+
+header.style.boxShadow="0 4px 20px rgba(0,0,0,.08)";
+
+}
+
+});
+
+/* ===========================
+ANIMASI CARD
+=========================== */
+
+const cards=document.querySelectorAll(".card,.service-card");
+
+cards.forEach(card=>{
+
+card.addEventListener("mouseenter",()=>{
+
+card.style.transform="translateY(-8px)";
+
+});
+
+card.addEventListener("mouseleave",()=>{
+
+card.style.transform="translateY(0px)";
+
+});
+
+});
+
+</script>
+
+</body>
+
+</html>
