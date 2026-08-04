@@ -427,6 +427,164 @@ line-height:2;
 color:var(--text);
 }
 
+/* ===========================
+FOOTER
+=========================== */
+
+.footer{
+margin-top:50px;
+background:linear-gradient(135deg,#2E7D32,#43A047);
+color:white;
+padding:45px;
+border-radius:25px;
+}
+
+.footer-content{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(350px,1fr));
+gap:40px;
+}
+
+.footer-box h3{
+font-size:22px;
+margin-bottom:18px;
+}
+
+.footer-box p{
+line-height:1.9;
+font-size:15px;
+}
+
+.footer hr{
+margin:30px 0;
+border:none;
+border-top:1px solid rgba(255,255,255,.3);
+}
+
+.copyright{
+text-align:center;
+font-size:14px;
+line-height:1.8;
+}
+
+/* ===========================
+RESPONSIVE
+=========================== */
+
+@media(max-width:992px){
+
+.nav-menu{
+display:none;
+}
+
+.menu-toggle{
+display:block;
+}
+
+.hero img{
+height:300px;
+}
+
+.hero-content h1{
+font-size:34px;
+}
+
+.hero-content p{
+font-size:16px;
+}
+
+}
+
+@media(max-width:768px){
+
+.header{
+padding:0 18px;
+height:70px;
+}
+
+.mobile-menu{
+top:70px;
+height:calc(100vh - 70px);
+}
+
+.logo img{
+width:48px;
+height:48px;
+}
+
+.logo-text h2{
+font-size:18px;
+}
+
+.logo-text p{
+font-size:11px;
+}
+
+.main{
+margin-top:90px;
+padding:18px;
+}
+
+.hero img{
+height:230px;
+}
+
+.hero-content img{
+width:60px;
+height:60px;
+}
+
+.hero-content h1{
+font-size:26px;
+}
+
+.hero-content p{
+font-size:14px;
+}
+
+.hero-btn{
+padding:10px 20px;
+font-size:14px;
+}
+
+.welcome{
+padding:25px;
+}
+
+.welcome h2{
+font-size:24px;
+}
+
+.footer{
+padding:30px 20px;
+}
+
+.footer-content{
+grid-template-columns:1fr;
+}
+
+}
+
+@media(max-width:480px){
+
+.hero img{
+height:200px;
+}
+
+.hero-content{
+width:95%;
+}
+
+.hero-content h1{
+font-size:22px;
+}
+
+.hero-content p{
+font-size:13px;
+}
+
+}
+
 </style>
 
 </head>
@@ -531,7 +689,8 @@ color:var(--text);
 
 <a href="profil.html" class="hero-btn">
 
-Jelajahi Desa
+<i class="fas fa-arrow-right"></i>
+ Jelajahi Desa
 
 </a>
 
