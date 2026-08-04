@@ -4,14 +4,17 @@
 <head>
 
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<meta name="viewport"
+content="width=device-width, initial-scale=1.0">
 
 <title>Website Resmi Desa Bulurejo</title>
 
 <meta name="description"
 content="Website Resmi Desa Bulurejo Kecamatan Mentewe Kabupaten Tanah Bumbu">
 
-<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect"
+href="https://fonts.googleapis.com">
 
 <link rel="preconnect"
 href="https://fonts.gstatic.com"
@@ -30,8 +33,8 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
 margin:0;
 padding:0;
 box-sizing:border-box;
-scroll-behavior:smooth;
 font-family:'Poppins',sans-serif;
+scroll-behavior:smooth;
 
 }
 
@@ -42,11 +45,9 @@ font-family:'Poppins',sans-serif;
 --secondary:#E8F5E9;
 --accent:#D4AF37;
 
---white:#ffffff;
-
+--white:#FFFFFF;
 --dark:#263238;
-
---text:#555;
+--text:#616161;
 
 --border:#E5E7EB;
 
@@ -55,9 +56,11 @@ font-family:'Poppins',sans-serif;
 }
 
 body{
+
 background:#F5F7FA;
 color:var(--dark);
 overflow-x:hidden;
+
 }
 
 /* ===========================
@@ -65,18 +68,28 @@ HEADER
 =========================== */
 
 .header{
+
 position:fixed;
 top:0;
 left:0;
+
 width:100%;
 height:80px;
-background:#fff;
+
 display:flex;
 justify-content:space-between;
 align-items:center;
-padding:0 30px;
+
+padding:0 35px;
+
+background:rgba(255,255,255,.97);
+
+backdrop-filter:blur(10px);
+
 box-shadow:0 4px 20px rgba(0,0,0,.08);
+
 z-index:9999;
+
 }
 
 /* ===========================
@@ -84,26 +97,65 @@ LOGO
 =========================== */
 
 .logo{
+
 display:flex;
 align-items:center;
 gap:15px;
+
 }
 
 .logo img{
-width:58px;
-height:58px;
+
+width:60px;
+height:60px;
 object-fit:contain;
+
 }
 
 .logo-text h2{
+
 font-size:24px;
 font-weight:700;
 color:var(--primary);
+
 }
 
 .logo-text p{
+
 font-size:13px;
 color:#666;
+
+}
+
+/* ===========================
+MENU DESKTOP
+=========================== */
+
+.nav-menu{
+
+display:flex;
+align-items:center;
+gap:28px;
+
+}
+
+.nav-menu a{
+
+text-decoration:none;
+
+font-size:15px;
+font-weight:600;
+
+color:var(--dark);
+
+transition:.30s;
+
+}
+
+.nav-menu a:hover{
+
+color:var(--primary);
+
 }
 
 /* ===========================
@@ -111,93 +163,126 @@ HAMBURGER
 =========================== */
 
 .menu-toggle{
+
+display:none;
+
 font-size:28px;
+
 cursor:pointer;
+
 color:var(--primary);
-display:none;
+
 }
 
 /* ===========================
-SIDEBAR
+MENU MOBILE
 =========================== */
 
-.sidebar{
+.mobile-menu{
+
 position:fixed;
+
 top:80px;
-left:0;
-width:290px;
+right:-100%;
+
+width:300px;
 height:calc(100vh - 80px);
-background:white;
+
+background:#FFFFFF;
+
+box-shadow:-5px 0 20px rgba(0,0,0,.10);
+
+padding:25px;
+
 overflow-y:auto;
-border-right:1px solid var(--border);
-box-shadow:var(--shadow);
-padding:20px;
+
 transition:.35s;
-z-index:999;
+
+z-index:9998;
+
 }
 
-.sidebar ul{
+.mobile-menu.active{
+
+right:0;
+
+}
+
+.mobile-menu ul{
+
 list-style:none;
+
 }
 
-.sidebar li{
-margin-bottom:8px;
+.mobile-menu li{
+
+margin-bottom:10px;
+
 }
 
-.sidebar a{
+.mobile-menu a{
+
 display:flex;
-align-items:center;
+
 justify-content:space-between;
-padding:13px 16px;
-border-radius:14px;
+align-items:center;
+
+padding:13px 15px;
+
 text-decoration:none;
+
 color:#444;
-font-size:15px;
+
+border-radius:12px;
+
 font-weight:500;
+
 transition:.30s;
+
 }
 
-.sidebar a:hover{
+.mobile-menu a:hover{
+
 background:var(--primary);
+
 color:white;
+
 }
 
-.sidebar a i:first-child{
-margin-right:12px;
-width:20px;
-}
+.mobile-submenu{
 
-/* ===========================
-SUBMENU
-=========================== */
-
-.submenu{
 display:none;
+
 padding-left:18px;
+
 margin-top:8px;
+
 }
 
-.submenu a{
-font-size:14px;
+.mobile-submenu a{
+
 background:#F8FAFC;
-margin-bottom:6px;
-border-left:4px solid var(--primary);
-}
 
-.submenu a:hover{
-background:var(--primary2);
+border-left:4px solid var(--primary);
+
+font-size:14px;
+
+margin-bottom:6px;
+
 }
 
 /* ===========================
-CONTENT
+MAIN
 =========================== */
 
 .main{
-margin-left:290px;
-margin-top:80px;
+
+max-width:1400px;
+
+margin:100px auto 40px auto;
+
 padding:35px;
-transition:.35s;
-min-height:100vh;
+
 }
 
 /* ===========================
@@ -205,90 +290,9 @@ SECTION
 =========================== */
 
 section{
+
 margin-bottom:45px;
-}
-/* ===========================
-HEADER MENU
-=========================== */
 
-.nav-menu{
-display:flex;
-align-items:center;
-gap:30px;
-}
-
-.nav-menu a{
-
-text-decoration:none;
-color:var(--dark);
-font-weight:600;
-font-size:15px;
-transition:.3s;
-
-}
-
-.nav-menu a:hover{
-color:var(--primary);
-}
-
-/* ===========================
-MOBILE MENU
-=========================== */
-
-.mobile-menu{
-position:fixed;
-top:80px;
-right:-100%;
-width:300px;
-height:calc(100vh - 80px);
-background:#fff;
-box-shadow:-5px 0 20px rgba(0,0,0,.10);
-padding:25px;
-transition:.35s;
-overflow-y:auto;
-z-index:9999;
-}
-
-.mobile-menu.active{
-right:0;
-}
-
-.mobile-menu ul{
-list-style:none;
-}
-
-.mobile-menu li{
-margin-bottom:10px;
-}
-
-.mobile-menu a{
-display:flex;
-align-items:center;
-justify-content:space-between;
-padding:13px 15px;
-text-decoration:none;
-color:#444;
-border-radius:12px;
-transition:.3s;
-font-weight:500;
-}
-
-.mobile-menu a:hover{
-background:var(--primary);
-color:white;
-}
-
-.mobile-submenu{
-display:none;
-padding-left:18px;
-margin-top:8px;
-}
-
-.mobile-submenu a{
-background:#F8FAFC;
-font-size:14px;
-margin-bottom:6px;
-border-left:4px solid var(--primary);
 }
 
 /* ===========================
@@ -296,77 +300,123 @@ HERO
 =========================== */
 
 .hero{
+
 position:relative;
-border-radius:22px;
+
 overflow:hidden;
+
+border-radius:24px;
+
 box-shadow:var(--shadow);
-margin-bottom:40px;
+
 }
 
 .hero img{
+
 width:100%;
-height:370px;
+
+height:380px;
+
 object-fit:cover;
+
 display:block;
+
 }
 
 .hero::before{
+
 content:"";
+
 position:absolute;
+
 top:0;
 left:0;
+
 width:100%;
 height:100%;
-background:rgba(0,0,0,.28);
+
+background:rgba(0,0,0,.30);
+
 }
 
 .hero-content{
+
 position:absolute;
+
 top:50%;
 left:50%;
+
 transform:translate(-50%,-50%);
+
 text-align:center;
-width:80%;
+
+width:85%;
+
 color:white;
-z-index:10;
+
+z-index:5;
+
 }
 
 .hero-content img{
+
 width:80px;
 height:80px;
-object-fit:contain;
-margin-bottom:18px;
+
 background:white;
-border-radius:50%;
+
 padding:8px;
+
+border-radius:50%;
+
+margin-bottom:20px;
+
+object-fit:contain;
+
 }
 
 .hero-content h1{
+
 font-size:42px;
+
+margin-bottom:15px;
+
 font-weight:700;
-margin-bottom:12px;
+
 }
 
 .hero-content p{
+
 font-size:18px;
-font-weight:400;
+
 margin-bottom:25px;
+
 }
 
 .hero-btn{
+
 display:inline-block;
-padding:14px 32px;
+
+padding:14px 30px;
+
 background:var(--primary);
+
 color:white;
+
 text-decoration:none;
+
 border-radius:50px;
+
 font-weight:600;
-transition:.3s;
+
+transition:.30s;
+
 }
 
 .hero-btn:hover{
+
 background:var(--primary2);
-transform:translateY(-3px);
+
 }
 
 /* ===========================
@@ -374,268 +424,86 @@ WELCOME
 =========================== */
 
 .welcome{
+
 background:white;
+
 padding:35px;
+
 border-radius:20px;
+
 box-shadow:var(--shadow);
-margin-bottom:35px;
+
 }
 
 .welcome h2{
+
 font-size:32px;
+
+margin-bottom:18px;
+
 color:var(--primary);
-margin-bottom:20px;
+
 }
 
 .welcome p{
+
 line-height:2;
-font-size:16px;
-color:#555;
-}
 
- /* ===========================
-SECTION TITLE
-=========================== */
+color:var(--text);
 
-.section-title{
-margin-bottom:25px;
-}
-
-.section-title h2{
-font-size:32px;
-color:var(--primary);
-margin-bottom:10px;
-}
-
-.section-title p{
-color:#666;
 }
 
 /* ===========================
-LAYANAN CEPAT
+ABOUT
 =========================== */
 
-.service-grid{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(230px,1fr));
-gap:25px;
-margin-bottom:40px;
-}
+.about{
 
-.service-card{
 background:white;
-padding:30px;
+
+padding:35px;
+
 border-radius:20px;
+
 box-shadow:var(--shadow);
-text-decoration:none;
-color:#333;
-transition:.35s;
-text-align:center;
+
 }
 
-.service-card:hover{
-transform:translateY(-8px);
-}
+.about h2{
 
-.service-card i{
-font-size:48px;
-color:var(--primary);
-margin-bottom:18px;
-}
-
-.service-card h3{
-margin-bottom:10px;
-color:var(--primary);
-}
-
-.service-card p{
-font-size:14px;
-line-height:1.8;
-color:#666;
-}
-
-/* ===========================
-FOOTER
-=========================== */
-
-.footer{
-margin-top:50px;
-background:var(--primary);
-color:white;
-padding:45px 35px;
-border-radius:25px 25px 0 0;
-}
-
-.footer-content{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-gap:30px;
-margin-bottom:30px;
-}
-
-.footer-box h3{
-margin-bottom:15px;
-font-size:18px;
-}
-
-.footer-box i{
-margin-right:8px;
-}
-
-.footer-box p{
-line-height:1.8;
-font-size:14px;
-}
-
-.footer hr{
-border:none;
-border-top:1px solid rgba(255,255,255,.25);
-margin:20px 0;
-}
-
-.copyright{
-text-align:center;
-line-height:2;
-font-size:14px;
-}
-
-/* ===========================
-RESPONSIVE
-=========================== */
-
-@media(max-width:992px){
-
-.nav-menu{
-display:none;
-}
-
-.menu-toggle{
-display:block;
-}
-
-.main{
-margin-left:0;
-padding:25px;
-}
-
-.sidebar{
-display:none;
-}
-
-.hero img{
-height:300px;
-}
-
-.hero-content{
-width:90%;
-}
-
-.hero-content h1{
 font-size:32px;
-}
 
-.hero-content p{
-font-size:16px;
-}
+margin-bottom:20px;
 
-}
-
-@media(max-width:768px){
-
-.header{
-padding:0 20px;
-height:70px;
-}
-
-.logo img{
-width:48px;
-height:48px;
-}
-
-.logo-text h2{
-font-size:18px;
-}
-
-.logo-text p{
-font-size:11px;
-}
-
-.main{
-margin-top:70px;
-padding:18px;
-}
-
-.hero img{
-height:220px;
-}
-
-.hero-content img{
-width:60px;
-height:60px;
-}
-
-.hero-content h1{
-font-size:24px;
-margin-bottom:8px;
-}
-
-.hero-content p{
-font-size:14px;
-margin-bottom:18px;
-}
-
-.hero-btn{
-padding:10px 20px;
-font-size:14px;
-}
-
-.welcome,
-.about,
-.card{
-
-padding:25px;
-}
-
-.section-title h2{
-font-size:26px;
-}
-
-.stats{
-grid-template-columns:repeat(2,1fr);
-}
+color:var(--primary);
 
 }
 
-@media(max-width:480px){
+.about p{
 
-.stats{
-grid-template-columns:1fr;
-}
+line-height:2;
 
-.service-grid{
-grid-template-columns:1fr;
-}
-
-.footer-content{
-grid-template-columns:1fr;
-text-align:center;
-}
+color:var(--text);
 
 }
- 
+
+</style>
+
+</head>
+
 <body>
 
 <header class="header">
 
 <div class="logo">
 
-<img src="logo-desa.png" alt="Logo Desa">
+<img src="logo desa.jpeg" alt="Logo Desa">
 
 <div class="logo-text">
 
 <h2>Desa Bulurejo</h2>
 
-<p>Kecamatan Mentewe • Kabupaten Tanah Bumbu</p>
+<p>Kecamatan Mantewe • Kabupaten Tanah Bumbu</p>
 
 </div>
 
