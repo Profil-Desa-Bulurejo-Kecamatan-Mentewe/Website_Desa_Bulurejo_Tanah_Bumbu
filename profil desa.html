@@ -329,6 +329,526 @@ text-align:justify;
 color:#555;
 }
 
+/* ===================================
+TABEL PROFIL
+=================================== */
+
+.profile-table{
+width:100%;
+border-collapse:collapse;
+margin-top:25px;
+overflow:hidden;
+border-radius:16px;
+box-shadow:0 8px 20px rgba(0,0,0,.05);
+}
+
+.profile-table thead{
+background:linear-gradient(90deg,#2E7D32,#43A047);
+color:white;
+}
+
+.profile-table th{
+padding:16px;
+font-size:15px;
+}
+
+.profile-table td{
+padding:15px;
+text-align:center;
+border-bottom:1px solid #EAEAEA;
+}
+
+.profile-table tbody tr:nth-child(even){
+background:#F7FBF8;
+}
+
+.profile-table tbody tr:hover{
+background:#E8F5E9;
+transition:.3s;
+}
+  
 </style>
 
 </head>
+
+<body>
+
+<!-- ===================================
+HIASAN DAUN
+=================================== -->
+
+<div class="leaf left"></div>
+<div class="leaf right"></div>
+
+<!-- ===================================
+HEADER
+=================================== -->
+
+<header class="header">
+
+<div class="logo">
+
+<img src="images/logo desa.jpeg" alt="Logo Desa">
+
+<div class="logo-text">
+
+<h2>Desa Bulurejo</h2>
+
+<p>Kecamatan Mantewe • Kabupaten Tanah Bumbu</p>
+
+</div>
+
+</div>
+
+<!-- ==========================
+MENU DESKTOP
+========================== -->
+
+<nav class="nav-menu">
+
+<a href="index.html">Beranda</a>
+
+<a href="profil.html" style="color:#2E7D32;">
+Profil Desa
+</a>
+
+<a href="struktur.html">
+Struktur Pemerintah
+</a>
+
+<a href="wilayah.html">
+Wilayah Desa
+</a>
+
+<a href="potensi.html">
+Potensi Desa
+</a>
+
+<a href="berita.html">
+Berita
+</a>
+
+<a href="layanan.html">
+Layanan
+</a>
+
+</nav>
+
+<!-- ==========================
+HAMBURGER
+========================== -->
+
+<div class="menu-toggle">
+
+<i class="fas fa-bars"></i>
+
+</div>
+
+</header>
+
+<!-- ===================================
+MENU MOBILE
+=================================== -->
+
+<div class="mobile-menu">
+
+<ul>
+
+<li>
+
+<a href="index.html">
+
+🏠 Beranda
+
+</a>
+
+</li>
+
+<li>
+
+<a href="#"
+onclick="toggleMenu('profilMenu',this);return false;">
+
+📖 Profil Desa
+
+<i class="fas fa-chevron-down"></i>
+
+</a>
+
+<ul id="profilMenu"
+class="mobile-submenu">
+
+<li>
+
+<a href="#sejarah">
+
+Sejarah Desa
+
+</a>
+
+</li>
+
+<li>
+
+<a href="#data">
+
+Data Profil Desa
+
+</a>
+
+</li>
+
+<li>
+
+<a href="#visi">
+
+Visi Desa
+
+</a>
+
+</li>
+
+<li>
+
+<a href="#misi">
+
+Misi Desa
+
+</a>
+
+</li>
+
+</ul>
+
+</li>
+
+<li>
+
+<a href="struktur.html">
+
+👥 Struktur Pemerintah
+
+</a>
+
+</li>
+
+<li>
+
+<a href="wilayah.html">
+
+🗺 Wilayah Desa
+
+</a>
+
+</li>
+
+<li>
+
+<a href="potensi.html">
+
+🌿 Potensi Desa
+
+</a>
+
+</li>
+
+<li>
+
+<a href="berita.html">
+
+📰 Berita
+
+</a>
+
+</li>
+
+<li>
+
+<a href="layanan.html">
+
+☎️ Layanan
+
+</a>
+
+</li>
+
+</ul>
+
+</div>
+
+<!-- ===================================
+MAIN
+=================================== -->
+
+<main class="main">
+
+<!-- ===================================
+HERO
+=================================== -->
+
+<section class="hero">
+
+<img src="images/kantor desa.jpeg"
+alt="Kantor Desa Bulurejo">
+
+<div class="hero-content">
+
+<img src="images/logo desa.jpeg"
+alt="Logo Desa">
+
+<h1>
+
+Profil Desa Bulurejo
+
+</h1>
+
+<p>
+
+Sejarah, Identitas, Visi dan Misi
+Pemerintah Desa Bulurejo
+
+</p>
+
+</div>
+
+</section>
+
+<!-- ===================================
+PEMBUKA
+=================================== -->
+
+<section class="section">
+
+<div class="section-title">
+
+<h2>
+
+Profil Desa Bulurejo
+
+</h2>
+
+<div class="line"></div>
+
+</div>
+
+<p>
+
+Halaman ini menyajikan informasi mengenai sejarah terbentuknya Desa Bulurejo, identitas desa, data profil desa, serta visi dan misi Pemerintah Desa Bulurejo sebagai pedoman dalam mewujudkan pelayanan publik yang berkualitas dan pembangunan desa yang berkelanjutan.
+
+</p>
+
+</section>
+
+<!-- =====================================
+SEJARAH DESA
+====================================== -->
+
+<section class="section" id="sejarah">
+
+<div class="section-title">
+
+<h2>
+
+<i class="fas fa-landmark"></i>
+
+Sejarah Desa
+
+</h2>
+
+<div class="line"></div>
+
+</div>
+
+<p>
+
+Asal usul Desa Bulurejo terbentuk melalui Program Transmigrasi Umum dengan membentuk satu wilayah hukum yang disebut Unit Pemukiman Transmigrasi (UPT). Penduduk awal berasal dari berbagai daerah di Pulau Jawa seperti Jawa Tengah, Jawa Timur, Nusa Tenggara Barat, serta masyarakat lokal Kalimantan Selatan. Keberagaman tersebut menjadi dasar terbentuknya masyarakat Desa Bulurejo yang hidup rukun, saling menghargai, dan bergotong royong.
+
+</p>
+
+<p>
+
+Pada awal pembentukannya, pemerintahan desa berada di bawah SKPD Departemen Transmigrasi yang dipimpin oleh Kepala Unit Pemukiman Transmigrasi (KUPT). KUPT bertanggung jawab mengelola administrasi pemerintahan sekaligus memenuhi kebutuhan hidup para transmigran selama satu tahun pertama masa penempatan.
+
+</p>
+
+<p>
+
+Pada tahun 1981 wilayah ini diusulkan kepada Pemerintah Daerah Tingkat II Kotabaru sebagai Desa Persiapan dengan nama <strong>Desa Buluhrejo</strong>. Selanjutnya pada tahun 1987 Desa Bulurejo resmi menjadi desa definitif berdasarkan Surat Keputusan Bupati Kotabaru dan masuk dalam wilayah Kecamatan Batulicin, Kabupaten Kotabaru, Provinsi Kalimantan Selatan. Kini Desa Bulurejo menjadi bagian dari Kecamatan Mantewe, Kabupaten Tanah Bumbu.
+
+</p>
+
+</section>
+
+<!-- =====================================
+ASAL TRANSMIGRAN
+====================================== -->
+
+<section class="section">
+
+<div class="section-title">
+
+<h2>
+
+<i class="fas fa-users"></i>
+
+Asal Transmigran Awal
+
+</h2>
+
+<div class="line"></div>
+
+<p>
+
+Penduduk awal Desa Bulurejo berasal dari beberapa daerah di Indonesia melalui Program Transmigrasi Umum.
+
+</p>
+
+</div>
+
+<table class="profile-table">
+
+<thead>
+
+<tr>
+
+<th>No</th>
+
+<th>Daerah Asal</th>
+
+<th>Provinsi</th>
+
+<th>Jumlah KK</th>
+
+</tr>
+
+</thead>
+
+<tbody>
+
+<tr>
+
+<td>1</td>
+
+<td>Kabupaten Batang</td>
+
+<td>Jawa Tengah</td>
+
+<td>56 KK</td>
+
+</tr>
+
+<tr>
+
+<td>2</td>
+
+<td>Kabupaten Blora</td>
+
+<td>Jawa Tengah</td>
+
+<td>61 KK</td>
+
+</tr>
+
+<tr>
+
+<td>3</td>
+
+<td>Kabupaten Kendal</td>
+
+<td>Jawa Tengah</td>
+
+<td>142 KK</td>
+
+</tr>
+
+<tr>
+
+<td>4</td>
+
+<td>Kabupaten Wonosobo</td>
+
+<td>Jawa Tengah</td>
+
+<td>59 KK</td>
+
+</tr>
+
+<tr>
+
+<td>5</td>
+
+<td>Kabupaten Banyumas</td>
+
+<td>Jawa Tengah</td>
+
+<td>36 KK</td>
+
+</tr>
+
+<tr>
+
+<td>6</td>
+
+<td>Kabupaten Nganjuk</td>
+
+<td>Jawa Timur</td>
+
+<td>47 KK</td>
+
+</tr>
+
+<tr>
+
+<td>7</td>
+
+<td>Kabupaten Ngawi</td>
+
+<td>Jawa Timur</td>
+
+<td>21 KK</td>
+
+</tr>
+
+<tr>
+
+<td>8</td>
+
+<td>Kabupaten Lombok Timur</td>
+
+<td>Nusa Tenggara Barat</td>
+
+<td>46 KK</td>
+
+</tr>
+
+<tr>
+
+<td>9</td>
+
+<td>Kabupaten Lombok Barat</td>
+
+<td>Nusa Tenggara Barat</td>
+
+<td>5 KK</td>
+
+</tr>
+
+<tr>
+
+<td>10</td>
+
+<td>Kabupaten Kotabaru</td>
+
+<td>Kalimantan Selatan</td>
+
+<td>5 KK</td>
+
+</tr>
+
+</tbody>
+
+</table>
+
+</section>
+
+
