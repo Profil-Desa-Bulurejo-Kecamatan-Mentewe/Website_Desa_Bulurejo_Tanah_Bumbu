@@ -66,28 +66,19 @@ HEADER
 =========================== */
 
 .header{
-
 position:fixed;
 top:0;
 left:0;
-
 width:100%;
 height:80px;
-
 display:flex;
 justify-content:space-between;
 align-items:center;
-
 padding:0 35px;
-
 background:rgba(255,255,255,.97);
-
 backdrop-filter:blur(10px);
-
 box-shadow:0 4px 20px rgba(0,0,0,.08);
-
 z-index:9999;
-
 }
 
 /* ===========================
@@ -142,6 +133,19 @@ transition:.30s;
 
 .nav-menu a:hover{
 color:var(--primary);
+}
+
+.nav-menu a::after{
+content:"";
+display:block;
+width:0;
+height:2px;
+background:var(--primary);
+transition:.3s;
+}
+
+.nav-menu a:hover::after{
+width:100%;
 }
 
 /* ===========================
@@ -260,7 +264,11 @@ box-shadow:var(--shadow);
 }
 
 .hero img{
-height:210px;
+width:100%;
+height:380px;
+display:block;
+object-fit:cover;
+object-position:center;
 }
 
 .hero::before{
@@ -294,9 +302,10 @@ margin:0 auto 18px;
 }
  
 .hero-content h1{
-font-size:42px;
-margin-bottom:15px;
+font-size:48px;
 font-weight:700;
+letter-spacing:.5px;
+text-shadow:0 3px 15px rgba(0,0,0,.35);
 }
 
 .hero-content p{
@@ -431,103 +440,52 @@ color:var(--text);
 /* ===========================
 FOOTER
 =========================== */
-
 .footer{
 margin-top:45px;
-background:rgba(255,255,255,.75);
+background:rgba(255,255,255,.82);
 backdrop-filter:blur(15px);
+border-radius:22px;
+padding:22px 28px;
+box-shadow:0 6px 20px rgba(0,0,0,.05);
 border:1px solid rgba(46,125,50,.12);
-border-radius:24px;
-padding:30px 40px;
-box-shadow:0 8px 25px rgba(0,0,0,.05);
-}
- 
-.footer-content{
-width:100%;
-}
-
-.footer-box{
-width:100%;
-}
- 
-.footer-box h3{
-font-size:30px;
-color:var(--primary);
-margin-bottom:22px;
-font-weight:700;
-}
-
-.footer-box p{
-display:flex;
-align-items:flex-start;
-gap:18px;
-margin:0;
-padding:10px 0;
-font-size:15px;
-line-height:1.6;
-border-bottom:1px solid #EAEAEA;
-}
-
-.footer-box p:last-child{
-border:none;
-}
-
-.footer-box strong{
-min-width:130px;
-font-weight:700;
-color:var(--primary);
-}
-
-.footer hr{
-margin:30px 0;
-border:none;
-border-top:1px solid rgba(255,255,255,.3);
-}
-
-.footer-box strong{
-display:inline-block;
-width:150px;
-color:var(--primary);
-font-weight:700;
-}
- 
-.copyright{
-margin-top:25px;
-padding-top:18px;
-border-top:1px solid rgba(0,0,0,.08);
-text-align:center;
-font-size:13px;
-color:#666;
-line-height:1.8;
-}
-
-.footer-box p{
-display:block;
-padding:8px 0;
-}
-
-.footer-box strong{
-display:block;
-margin-bottom:4px;
-min-width:unset;
-}
-
-.footer{
-padding:22px;
 }
 
 .footer-box h3{
 font-size:24px;
+margin-bottom:18px;
+color:var(--primary);
 }
 
-.leaf{
-display:none;
+.footer-box p{
+margin:8px 0;
+font-size:15px;
+line-height:1.7;
+color:#555;
+}
+
+.footer-box strong{
+color:var(--primary);
+margin-right:6px;
+}
+
+.copyright{
+margin-top:20px;
+padding-top:15px;
+border-top:1px solid rgba(0,0,0,.08);
+text-align:center;
+font-size:13px;
+line-height:1.8;
+color:#777;
 }
  
 /* ===========================
 HIASAN DAUN
 =========================== */
 
+.leaf{
+display:none;
+}
+ 
 .leaf{
 position:fixed;
 width:170px;
@@ -679,6 +637,14 @@ font-size:13px;
 
 }
 
+.line{
+width:80px;
+height:4px;
+background:var(--primary);
+border-radius:50px;
+margin:15px 0 25px;
+}
+ 
 </style>
 
 </head>
@@ -832,29 +798,24 @@ Informasi Kantor Desa
 </h3>
 
 <p>
-
-<strong>Alamat</strong>
-Jl. Transmigrasi Km 37, Desa Bulurejo, Kecamatan Mantewe, Kabupaten Tanah Bumbu, Kalimantan Selatan 72211
-
-</p>
-
-<strong>Telepon</strong>
-Belum tersedia
-
+<strong>Alamat :</strong>
+Jl. Transmigrasi Km 37, Desa Bulurejo, Kecamatan Mantewe,
+Kabupaten Tanah Bumbu, Kalimantan Selatan 72211
 </p>
 
 <p>
-
-<strong>Email</strong>
+<strong>Telepon :</strong>
 Belum tersedia
-
 </p>
 
 <p>
+<strong>Email :</strong>
+Belum tersedia
+</p>
 
-<strong>Jam Pelayanan</strong>
+<p>
+<strong>Jam Pelayanan :</strong>
 Senin–Jumat | 08.00–15.00 WITA
-
 </p>
  
 </div>
