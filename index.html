@@ -104,6 +104,11 @@ gap:15px;
 width:60px;
 height:60px;
 object-fit:contain;
+transition:.4s;
+}
+
+.logo img:hover{
+transform:rotate(10deg) scale(1.08);
 }
 
 .logo-text h2{
@@ -115,14 +120,6 @@ color:var(--primary);
 .logo-text p{
 font-size:13px;
 color:#666;
-}
- 
-.logo img{
-transition:.4s;
-}
-
-.logo img:hover{
-transform:rotate(10deg) scale(1.08);
 }
  
 /* ===========================
@@ -239,6 +236,8 @@ MAIN
 max-width:1400px;
 margin:100px auto 40px auto;
 padding:35px;
+position:relative;
+z-index:2;
 }
 
 /* ===========================
@@ -261,10 +260,7 @@ box-shadow:var(--shadow);
 }
 
 .hero img{
-width:100%;
-height:380px;
-object-fit:cover;
-display:block;
+height:210px;
 }
 
 .hero::before{
@@ -289,15 +285,14 @@ z-index:5;
 }
 
 .hero-content img{
-width:80px;
-height:80px;
-background:white;
-padding:8px;
-border-radius:50%;
-margin-bottom:20px;
+width:75px;
+height:75px;
 object-fit:contain;
+aspect-ratio:1/1;
+display:block;
+margin:0 auto 18px;
 }
-
+ 
 .hero-content h1{
 font-size:42px;
 margin-bottom:15px;
@@ -463,16 +458,24 @@ font-weight:700;
 }
 
 .footer-box p{
-font-size:16px;
-line-height:2;
-color:#444;
-margin-bottom:10px;
+display:flex;
+align-items:flex-start;
+gap:18px;
+margin:0;
+padding:10px 0;
+font-size:15px;
+line-height:1.6;
+border-bottom:1px solid #EAEAEA;
+}
+
+.footer-box p:last-child{
+border:none;
 }
 
 .footer-box strong{
-display:inline-block;
-width:120px;
-color:#2E7D32;
+min-width:130px;
+font-weight:700;
+color:var(--primary);
 }
 
 .footer hr{
@@ -497,6 +500,29 @@ font-size:13px;
 color:#666;
 line-height:1.8;
 }
+
+.footer-box p{
+display:block;
+padding:8px 0;
+}
+
+.footer-box strong{
+display:block;
+margin-bottom:4px;
+min-width:unset;
+}
+
+.footer{
+padding:22px;
+}
+
+.footer-box h3{
+font-size:24px;
+}
+
+.leaf{
+display:none;
+}
  
 /* ===========================
 HIASAN DAUN
@@ -504,10 +530,11 @@ HIASAN DAUN
 
 .leaf{
 position:fixed;
-width:180px;
-height:180px;
-opacity:.08;
-z-index:-1;
+width:170px;
+height:170px;
+opacity:.18;
+pointer-events:none;
+z-index:1;
 background:url("leaf.png") center/contain no-repeat;
 }
 
@@ -520,6 +547,18 @@ left:-40px;
 bottom:80px;
 right:-40px;
 transform:rotate(180deg);
+}
+
+.leaf.bottom-left{
+left:-35px;
+bottom:90px;
+transform:rotate(45deg);
+}
+
+.leaf.top-right{
+right:-30px;
+top:120px;
+transform:rotate(220deg);
 }
  
 /* ===========================
@@ -611,7 +650,7 @@ font-size:24px;
 }
 
 .footer{
-padding:30px 20px;
+padding:25px 28px;
 }
 
 .footer-content{
@@ -648,6 +687,8 @@ font-size:13px;
 
 <div class="leaf left"></div>
 <div class="leaf right"></div>
+<div class="leaf bottom-left"></div>
+<div class="leaf top-right"></div>
  
 <header class="header">
 
@@ -796,15 +837,6 @@ Informasi Kantor Desa
 Jl. Transmigrasi Km 37, Desa Bulurejo, Kecamatan Mantewe, Kabupaten Tanah Bumbu, Kalimantan Selatan 72211
 
 </p>
-
-<p>
-
-<strong>Alamat</strong>
-Jl. Transmigrasi Km 37, Desa Bulurejo, Kecamatan Mantewe, Kabupaten Tanah Bumbu, Kalimantan Selatan 72211
-
-</p>
-
-<p>
 
 <strong>Telepon</strong>
 Belum tersedia
