@@ -410,6 +410,415 @@ letter-spacing:.5px;
 
 }
 
+/*====================================
+PROFIL KEPALA DESA
+====================================*/
+
+.leader-section{
+
+margin-top:55px;
+
+}
+
+.section-title{
+
+text-align:center;
+margin-bottom:40px;
+
+}
+
+.section-title h2{
+
+font-size:38px;
+color:var(--primary);
+margin-bottom:15px;
+
+}
+
+.section-title p{
+
+color:#666;
+font-size:17px;
+
+}
+
+.line{
+
+width:90px;
+height:4px;
+background:var(--primary);
+border-radius:50px;
+margin:15px auto 22px;
+
+}
+
+.leader-card{
+
+display:grid;
+grid-template-columns:350px 1fr;
+
+gap:45px;
+
+background:rgba(255,255,255,.88);
+
+backdrop-filter:blur(12px);
+
+padding:45px;
+
+border-radius:30px;
+
+box-shadow:var(--shadow);
+
+position:relative;
+
+overflow:hidden;
+
+}
+
+.leader-card::before{
+
+content:"";
+
+position:absolute;
+
+inset:0;
+
+background:url("foto bersama perangkat desa.jpeg")
+center/cover;
+
+opacity:.08;
+
+z-index:0;
+
+}
+
+.leader-photo,
+.leader-info{
+
+position:relative;
+z-index:2;
+
+}
+
+.leader-photo{
+
+display:flex;
+justify-content:center;
+align-items:flex-start;
+
+}
+
+.leader-photo img{
+
+width:290px;
+height:370px;
+
+object-fit:cover;
+
+border-radius:25px;
+
+border:6px solid white;
+
+box-shadow:0 20px 35px rgba(0,0,0,.15);
+
+}
+
+.leader-info h2{
+
+font-size:42px;
+color:var(--primary);
+
+margin-bottom:8px;
+
+}
+
+.leader-position{
+
+display:inline-block;
+
+padding:10px 22px;
+
+background:var(--primary);
+
+color:white;
+
+border-radius:50px;
+
+font-size:15px;
+
+margin-bottom:35px;
+
+}
+
+.leader-detail{
+
+display:grid;
+
+grid-template-columns:1fr;
+
+gap:22px;
+
+}
+
+.detail-item{
+
+display:flex;
+
+gap:18px;
+
+align-items:flex-start;
+
+}
+
+.detail-item i{
+
+width:58px;
+height:58px;
+
+border-radius:50%;
+
+display:flex;
+
+justify-content:center;
+align-items:center;
+
+background:var(--secondary);
+
+color:var(--primary);
+
+font-size:24px;
+
+flex-shrink:0;
+
+}
+
+.detail-item h4{
+
+font-size:17px;
+
+margin-bottom:5px;
+
+color:var(--primary);
+
+}
+
+.detail-item p{
+
+font-size:16px;
+
+color:#555;
+
+line-height:1.7;
+
+}
+
+.leader-message{
+
+margin-top:35px;
+
+padding:25px;
+
+border-left:5px solid var(--primary);
+
+background:#F8FFF8;
+
+border-radius:15px;
+
+font-style:italic;
+
+line-height:2;
+
+color:#555;
+
+}
+
+.leader-message i{
+
+font-size:28px;
+
+color:var(--primary);
+
+margin-bottom:10px;
+
+}
+
+/*======================================
+STRUKTUR PEMERINTAHAN
+=======================================*/
+
+.structure-section{
+
+margin-top:70px;
+
+}
+
+.structure-bg{
+
+background:rgba(255,255,255,.88);
+
+backdrop-filter:blur(15px);
+
+padding:60px;
+
+border-radius:35px;
+
+box-shadow:var(--shadow);
+
+position:relative;
+
+overflow:hidden;
+
+}
+
+.structure-bg::before{
+
+content:"";
+
+position:absolute;
+
+inset:0;
+
+background:url("foto bersama perangkat desa.jpeg")
+center/cover;
+
+opacity:.05;
+
+z-index:0;
+
+}
+
+.structure-bg>*{
+
+position:relative;
+
+z-index:2;
+
+}
+
+.tree-level{
+
+display:flex;
+
+justify-content:center;
+
+margin-bottom:40px;
+
+}
+
+.tree-row{
+
+display:flex;
+
+justify-content:space-between;
+
+margin:40px 0;
+
+}
+
+.tree-grid{
+
+display:grid;
+
+grid-template-columns:repeat(3,1fr);
+
+gap:30px;
+
+margin-top:35px;
+
+}
+
+.tree-grid.dusun{
+
+margin-top:45px;
+
+}
+
+.person-card{
+
+background:white;
+
+border-radius:22px;
+
+padding:22px;
+
+text-align:center;
+
+box-shadow:0 12px 25px rgba(0,0,0,.08);
+
+transition:.35s;
+
+position:relative;
+
+}
+
+.person-card:hover{
+
+transform:translateY(-8px);
+
+}
+
+.person-card img{
+
+width:120px;
+
+height:120px;
+
+border-radius:50%;
+
+object-fit:cover;
+
+border:5px solid var(--secondary);
+
+margin-bottom:18px;
+
+}
+
+.person-card h3{
+
+font-size:18px;
+
+color:var(--primary);
+
+margin-bottom:8px;
+
+}
+
+.person-card span{
+
+display:inline-block;
+
+background:var(--secondary);
+
+padding:8px 18px;
+
+border-radius:30px;
+
+font-size:14px;
+
+font-weight:600;
+
+color:var(--primary);
+
+}
+
+.leader{
+
+width:320px;
+
+}
+
+.secretary{
+
+width:320px;
+
+}
+
+.side{
+
+width:240px;
+
+}
+  
 /*=========================
 RESPONSIVE
 =========================*/
@@ -521,6 +930,36 @@ font-size:14px;
 
 }
 
+.structure-bg{
+
+padding:25px;
+
+}
+
+.tree-row{
+
+flex-direction:column;
+
+gap:20px;
+
+align-items:center;
+
+}
+
+.tree-grid{
+
+grid-template-columns:1fr;
+
+}
+
+.leader,
+.secretary,
+.side{
+
+width:100%;
+
+}
+  
 }
 
 </style>
@@ -610,3 +1049,306 @@ Kecamatan Mantewe • Kabupaten Tanah Bumbu
 </div>
 
 </section>
+
+<!-- =====================================
+PROFIL KEPALA DESA
+====================================== -->
+
+<section class="leader-section">
+
+<div class="section-title">
+
+<h2>
+<i class="fas fa-user-tie"></i>
+Kepala Desa Bulurejo
+</h2>
+
+<div class="line"></div>
+
+<p>
+Pemimpin Pemerintahan Desa Bulurejo Periode 2026
+</p>
+
+</div>
+
+<div class="leader-card">
+
+<div class="leader-photo">
+
+<img src="foto kepala desa.jpeg"
+alt="Kepala Desa Bulurejo">
+
+</div>
+
+<div class="leader-info">
+
+<h2>SUTOPO</h2>
+
+<span class="leader-position">
+Kepala Desa Bulurejo
+</span>
+
+<div class="leader-detail">
+
+<div class="detail-item">
+
+<i class="fas fa-location-dot"></i>
+
+<div>
+
+<h4>Tempat, Tanggal Lahir</h4>
+
+<p>Kotabaru, 11 Oktober 1983</p>
+
+</div>
+
+</div>
+
+<div class="detail-item">
+
+<i class="fas fa-mosque"></i>
+
+<div>
+
+<h4>Agama</h4>
+
+<p>Islam</p>
+
+</div>
+
+</div>
+
+<div class="detail-item">
+
+<i class="fas fa-user-check"></i>
+
+<div>
+
+<h4>Jabatan</h4>
+
+<p>Kepala Desa Bulurejo</p>
+
+</div>
+
+</div>
+
+</div>
+
+<div class="leader-message">
+
+<i class="fas fa-quote-left"></i>
+
+<p>
+
+"Pemerintahan Desa Bulurejo berkomitmen
+memberikan pelayanan yang profesional,
+transparan, dan berorientasi pada kesejahteraan
+masyarakat melalui semangat gotong royong,
+kebersamaan, dan pembangunan yang
+berkelanjutan."
+
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- =====================================
+STRUKTUR PEMERINTAHAN
+====================================== -->
+
+<section class="structure-section">
+
+<div class="section-title">
+
+<h2>
+<i class="fas fa-sitemap"></i>
+Struktur Organisasi Pemerintahan Desa
+</h2>
+
+<div class="line"></div>
+
+<p>
+Susunan Organisasi Pemerintahan Desa Bulurejo Tahun 2026
+</p>
+
+</div>
+
+
+<div class="structure-bg">
+
+<!-- Kepala Desa -->
+
+<div class="tree-level center">
+
+<div class="person-card leader">
+
+<img src="foto kepala desa.jpeg">
+
+<h3>SUTOPO</h3>
+
+<span>Kepala Desa</span>
+
+</div>
+
+</div>
+
+
+<!-- BPD & LPM -->
+
+<div class="tree-row">
+
+<div class="person-card side">
+
+<h3>BPD</h3>
+
+<span>Badan Permusyawaratan Desa</span>
+
+</div>
+
+<div class="person-card side">
+
+<h3>LPM</h3>
+
+<span>Lembaga Pemberdayaan Masyarakat</span>
+
+</div>
+
+</div>
+
+
+<!-- Sekretaris -->
+
+<div class="tree-level center">
+
+<div class="person-card secretary">
+
+<img src="sekretaris desa.jpeg">
+
+<h3>ABDUL ROHMAN ZULIANTO</h3>
+
+<span>Sekretaris Desa</span>
+
+</div>
+
+</div>
+
+
+<!-- Kasi -->
+
+<div class="tree-grid">
+
+<div class="person-card">
+
+<img src="kasi pemerintahan.jpeg">
+
+<h3>CAHYA NANDA WATI</h3>
+
+<span>Kasi Pemerintahan</span>
+
+</div>
+
+
+<div class="person-card">
+
+<img src="kasi kesejahteraan.jpeg">
+
+<h3>BAYU SAPUTRA</h3>
+
+<span>Kasi Kesejahteraan</span>
+
+</div>
+
+
+<div class="person-card">
+
+<img src="kasi pelayanan.jpeg">
+
+<h3>DICKY YULIAWAN</h3>
+
+<span>Kasi Pelayanan</span>
+
+</div>
+
+
+<div class="person-card">
+
+<img src="kaur umum.jpeg">
+
+<h3>WIDYA LESTARI, S.M.</h3>
+
+<span>Kaur TU & Umum</span>
+
+</div>
+
+
+<div class="person-card">
+
+<img src="kaur keuangan.jpeg">
+
+<h3>IKA NUR AFRIANA</h3>
+
+<span>Kaur Keuangan</span>
+
+</div>
+
+
+<div class="person-card">
+
+<img src="kaur perencanaan.jpeg">
+
+<h3>MUHAMMAD FATONI, S.H.</h3>
+
+<span>Kaur Perencanaan</span>
+
+</div>
+
+</div>
+
+
+<!-- Kepala Dusun -->
+
+<div class="tree-grid dusun">
+
+<div class="person-card">
+
+<img src="kadus1.jpeg">
+
+<h3>MUHAMMAD NUR SAID</h3>
+
+<span>Kepala Dusun I</span>
+
+</div>
+
+
+<div class="person-card">
+
+<img src="kadus2.jpeg">
+
+<h3>BADARUDIN</h3>
+
+<span>Kepala Dusun II</span>
+
+</div>
+
+
+<div class="person-card">
+
+<img src="kadus3.jpeg">
+
+<h3>-</h3>
+
+<span>Kepala Dusun III</span>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
