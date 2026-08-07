@@ -1,11 +1,4 @@
-<!DOCTYPE html>
-<html lang="id">
-
-<head>
-
-<meta charset="UTF-8">
-
-<meta name="viewport"
+meta name="viewport"
 content="width=device-width, initial-scale=1.0">
 
 <title>Website Resmi Desa Bulurejo</title>
@@ -441,41 +434,101 @@ color:var(--text);
 FOOTER
 =========================== */
 .footer{
-margin-top:45px;
-background:rgba(255,255,255,.82);
-backdrop-filter:blur(15px);
-border-radius:22px;
-padding:22px 28px;
-box-shadow:0 6px 20px rgba(0,0,0,.05);
-border:1px solid rgba(46,125,50,.12);
+
+margin-top:60px;
+
+padding:25px 0;
+
+background:transparent;
+
+box-shadow:none;
+
+border:none;
+
 }
 
-.footer-box h3{
-font-size:24px;
-margin-bottom:18px;
+.footer h3{
+
+font-size:30px;
+
 color:var(--primary);
+
+margin-bottom:25px;
+
+text-align:center;
+
 }
 
-.footer-box p{
-margin:8px 0;
+.office-grid{
+
+display:grid;
+
+grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+
+gap:22px;
+
+margin-bottom:45px;
+
+}
+
+.office-card{
+
+background:white;
+
+padding:25px;
+
+border-radius:18px;
+
+box-shadow:0 10px 30px rgba(0,0,0,.06);
+
+transition:.3s;
+
+}
+
+.office-card:hover{
+
+transform:translateY(-8px);
+
+}
+
+.office-card i{
+
+font-size:30px;
+
+color:var(--primary);
+
+margin-bottom:15px;
+
+}
+
+.office-card h4{
+
+font-size:22px;
+
+margin-bottom:10px;
+
+color:var(--primary);
+
+}
+
+.office-card p{
+
 font-size:15px;
-line-height:1.7;
-color:#555;
-}
 
-.footer-box strong{
-color:var(--primary);
-margin-right:6px;
+line-height:1.8;
+
+color:#555;
+
 }
 
 .copyright{
-margin-top:20px;
-padding-top:15px;
-border-top:1px solid rgba(0,0,0,.08);
 text-align:center;
-font-size:13px;
-line-height:1.8;
-color:#777;
+background:none;
+padding:0;
+margin-top:10px;
+font-size:15px;
+line-height:2;
+color:#666;
 }
  
 /* ===========================
