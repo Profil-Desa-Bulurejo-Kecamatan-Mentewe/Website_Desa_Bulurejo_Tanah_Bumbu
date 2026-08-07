@@ -818,6 +818,208 @@ width:320px;
 width:240px;
 
 }
+
+/*==================================
+GARIS STRUKTUR ORGANISASI
+==================================*/
+
+.tree-level,
+.tree-row,
+.tree-grid{
+
+position:relative;
+
+}
+
+.tree-level::after{
+
+content:"";
+
+position:absolute;
+
+bottom:-22px;
+left:50%;
+
+width:3px;
+height:22px;
+
+background:#66BB6A;
+
+transform:translateX(-50%);
+
+}
+
+.tree-row::before{
+
+content:"";
+
+position:absolute;
+
+top:-22px;
+left:50%;
+
+width:3px;
+height:22px;
+
+background:#66BB6A;
+
+transform:translateX(-50%);
+
+}
+
+.tree-grid::before{
+
+content:"";
+
+position:absolute;
+
+top:-18px;
+left:10%;
+
+width:80%;
+height:3px;
+
+background:#66BB6A;
+
+border-radius:50px;
+
+}
+
+.tree-grid::after{
+
+content:"";
+
+position:absolute;
+
+top:-18px;
+left:50%;
+
+width:3px;
+height:18px;
+
+background:#66BB6A;
+
+transform:translateX(-50%);
+
+}
+
+/*===========================
+EFEK CARD
+===========================*/
+
+.person-card{
+
+transition:.35s;
+
+}
+
+.person-card:hover{
+
+transform:translateY(-10px);
+
+box-shadow:0 20px 35px rgba(46,125,50,.18);
+
+}
+
+.person-card img{
+
+transition:.35s;
+
+}
+
+.person-card:hover img{
+
+transform:scale(1.06);
+
+border-color:#43A047;
+
+}
+
+/*=====================================
+FOOTER
+======================================*/
+
+.footer{
+
+margin-top:70px;
+
+padding:35px;
+
+background:rgba(255,255,255,.82);
+
+backdrop-filter:blur(18px);
+
+border-radius:28px;
+
+box-shadow:0 12px 30px rgba(0,0,0,.05);
+
+}
+
+.footer-top h3{
+
+font-size:28px;
+
+margin-bottom:28px;
+
+color:var(--primary);
+
+text-align:center;
+
+}
+
+.info-list{
+
+display:flex;
+
+flex-direction:column;
+
+gap:12px;
+
+}
+
+.info-item{
+
+display:flex;
+
+gap:18px;
+
+padding:8px 0;
+
+}
+
+.label{
+
+min-width:135px;
+
+font-weight:700;
+
+color:var(--primary);
+
+}
+
+.value{
+
+flex:1;
+
+line-height:1.8;
+
+color:#555;
+
+}
+
+.copyright{
+
+margin-top:35px;
+
+text-align:center;
+
+font-size:14px;
+
+color:#777;
+
+line-height:2;
+
+}
   
 /*=========================
 RESPONSIVE
@@ -957,6 +1159,32 @@ grid-template-columns:1fr;
 .side{
 
 width:100%;
+
+}
+
+.info-item{
+
+display:block;
+
+}
+
+.label{
+
+display:block;
+
+margin-bottom:4px;
+
+}
+
+.value{
+
+display:block;
+
+}
+
+.footer{
+
+padding:22px;
 
 }
   
@@ -1352,3 +1580,304 @@ Susunan Organisasi Pemerintahan Desa Bulurejo Tahun 2026
 
 </section>
 
+<!--====================================
+FOOTER
+=====================================-->
+
+<footer class="footer">
+
+<div class="footer-top">
+
+<h3>
+
+<i class="fas fa-map-marker-alt"></i>
+
+Informasi Kantor Desa
+
+</h3>
+
+<div class="info-list">
+
+<div class="info-item">
+
+<span class="label">
+Alamat
+</span>
+
+<span class="value">
+
+Jl. Transmigrasi Km 37,
+Desa Bulurejo,
+Kecamatan Mantewe,
+Kabupaten Tanah Bumbu,
+Kalimantan Selatan 72211
+
+</span>
+
+</div>
+
+<div class="info-item">
+
+<span class="label">
+
+Telepon
+
+</span>
+
+<span class="value">
+
+Belum tersedia
+
+</span>
+
+</div>
+
+<div class="info-item">
+
+<span class="label">
+
+Email
+
+</span>
+
+<span class="value">
+
+Belum tersedia
+
+</span>
+
+</div>
+
+<div class="info-item">
+
+<span class="label">
+
+Jam Pelayanan
+
+</span>
+
+<span class="value">
+
+Senin – Jumat
+08.00 – 15.00 WITA
+
+</span>
+
+</div>
+
+</div>
+
+</div>
+
+<p class="copyright">
+
+© 2026 Pemerintah Desa Bulurejo
+
+<br>
+
+Kecamatan Mantewe • Kabupaten Tanah Bumbu
+
+<br>
+
+Website dikembangkan oleh
+
+KKNT-LH Kelompok 8 Universitas Lambung Mangkurat
+
+</p>
+
+</footer>
+
+</main>
+
+<script>
+
+/*==========================================
+HAMBURGER MENU
+==========================================*/
+
+const menuToggle = document.querySelector(".menu-toggle");
+const mobileMenu = document.querySelector(".mobile-menu");
+
+menuToggle.addEventListener("click",()=>{
+
+mobileMenu.classList.toggle("active");
+
+if(mobileMenu.classList.contains("active")){
+
+menuToggle.innerHTML='<i class="fas fa-times"></i>';
+
+}else{
+
+menuToggle.innerHTML='<i class="fas fa-bars"></i>';
+
+}
+
+});
+
+
+/*==========================================
+SUB MENU MOBILE
+==========================================*/
+
+function toggleMenu(menuId,element){
+
+const menu=document.getElementById(menuId);
+
+const icon=element.querySelector("i");
+
+if(!menu)return;
+
+if(menu.style.display==="block"){
+
+menu.style.display="none";
+
+if(icon){
+
+icon.classList.remove("fa-chevron-up");
+icon.classList.add("fa-chevron-down");
+
+}
+
+}else{
+
+menu.style.display="block";
+
+if(icon){
+
+icon.classList.remove("fa-chevron-down");
+icon.classList.add("fa-chevron-up");
+
+}
+
+}
+
+}
+
+
+/*==========================================
+HEADER SCROLL
+==========================================*/
+
+window.addEventListener("scroll",()=>{
+
+const header=document.querySelector(".header");
+
+if(window.scrollY>40){
+
+header.style.background="rgba(255,255,255,.98)";
+header.style.boxShadow="0 10px 28px rgba(0,0,0,.10)";
+
+}else{
+
+header.style.background="rgba(255,255,255,.95)";
+header.style.boxShadow="0 4px 18px rgba(0,0,0,.08)";
+
+}
+
+});
+
+
+/*==========================================
+ANIMASI MUNCUL
+==========================================*/
+
+const observer=new IntersectionObserver((entries)=>{
+
+entries.forEach(entry=>{
+
+if(entry.isIntersecting){
+
+entry.target.style.opacity="1";
+entry.target.style.transform="translateY(0)";
+
+}
+
+});
+
+},{
+threshold:0.12
+});
+
+document.querySelectorAll(
+
+".hero,.leader-section,.structure-section,.footer,.person-card,.leader-card"
+
+).forEach(el=>{
+
+el.style.opacity="0";
+el.style.transform="translateY(40px)";
+el.style.transition="all .8s ease";
+
+observer.observe(el);
+
+});
+
+
+/*==========================================
+EFEK HOVER CARD
+==========================================*/
+
+document.querySelectorAll(".person-card").forEach(card=>{
+
+card.addEventListener("mouseenter",()=>{
+
+card.style.transform="translateY(-10px)";
+
+});
+
+card.addEventListener("mouseleave",()=>{
+
+card.style.transform="translateY(0px)";
+
+});
+
+});
+
+
+/*==========================================
+MENU MOBILE OTOMATIS TUTUP
+==========================================*/
+
+document.querySelectorAll(".mobile-menu a").forEach(link=>{
+
+link.addEventListener("click",()=>{
+
+mobileMenu.classList.remove("active");
+
+menuToggle.innerHTML='<i class="fas fa-bars"></i>';
+
+});
+
+});
+
+
+/*==========================================
+SMOOTH SCROLL
+==========================================*/
+
+document.querySelectorAll('a[href^="#"]').forEach(anchor=>{
+
+anchor.addEventListener("click",function(e){
+
+e.preventDefault();
+
+const tujuan=document.querySelector(this.getAttribute("href"));
+
+if(tujuan){
+
+tujuan.scrollIntoView({
+
+behavior:"smooth"
+
+});
+
+}
+
+});
+
+});
+
+</script>
+
+</body>
+</html>
