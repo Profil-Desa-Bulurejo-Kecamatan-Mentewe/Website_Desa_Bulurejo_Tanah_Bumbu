@@ -4,13 +4,13 @@
 <head>
 
 <meta charset="UTF-8">
-meta name="viewport"
-content="width=device-width, initial-scale=1.0">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>Website Resmi Desa Bulurejo</title>
 
 <meta name="description"
-content="Website Resmi Desa Bulurejo Kecamatan Mentewe Kabupaten Tanah Bumbu">
+content="Website Resmi Desa Bulurejo Kecamatan Mantewe Kabupaten Tanah Bumbu">
 
 <link rel="preconnect"
 href="https://fonts.googleapis.com">
@@ -28,440 +28,1061 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
 <style>
 
 *{
-
 margin:0;
 padding:0;
 box-sizing:border-box;
 font-family:'Poppins',sans-serif;
 scroll-behavior:smooth;
-
 }
 
 :root{
 
 --primary:#2E7D32;
 --primary2:#43A047;
+--primary3:#81C784;
+
 --secondary:#E8F5E9;
+
 --accent:#D4AF37;
 
---white:#FFFFFF;
+--white:#ffffff;
+
 --dark:#263238;
+
 --text:#616161;
 
 --border:#E5E7EB;
 
---shadow:0 10px 30px rgba(0,0,0,.08);
+--shadow:
+0 15px 40px rgba(0,0,0,.08);
 
 }
 
 body{
-background:#F5F7FA;
+
+background:
+linear-gradient(
+180deg,
+#ffffff 0%,
+#f8fcf8 25%,
+#eef8ef 50%,
+#ffffff 100%);
+
 color:var(--dark);
+
 overflow-x:hidden;
+
+position:relative;
+
 }
 
-/* ===========================
-HEADER
-=========================== */
+/*==========================
+SCROLL BAR
+==========================*/
+
+::-webkit-scrollbar{
+
+width:10px;
+
+}
+
+::-webkit-scrollbar-thumb{
+
+background:var(--primary);
+
+border-radius:20px;
+
+}
+
+::-webkit-scrollbar-track{
+
+background:#edf7ed;
+
+}
+
+/*==========================
+LOADING SCREEN
+==========================*/
+
+#loader{
+
+position:fixed;
+
+top:0;
+
+left:0;
+
+width:100%;
+
+height:100%;
+
+background:linear-gradient(135deg,#2E7D32,#43A047);
+
+display:flex;
+
+justify-content:center;
+
+align-items:center;
+
+flex-direction:column;
+
+z-index:999999;
+
+transition:1s;
+
+}
+
+#loader img{
+
+width:120px;
+
+animation:logoZoom 2s infinite alternate;
+
+}
+
+#loader h2{
+
+color:white;
+
+margin-top:25px;
+
+font-size:34px;
+
+font-weight:700;
+
+letter-spacing:1px;
+
+}
+
+#loader p{
+
+color:#E8F5E9;
+
+margin-top:10px;
+
+font-size:15px;
+
+}
+
+.loading-bar{
+
+margin-top:35px;
+
+width:240px;
+
+height:6px;
+
+background:rgba(255,255,255,.25);
+
+border-radius:20px;
+
+overflow:hidden;
+
+}
+
+.loading-bar span{
+
+display:block;
+
+height:100%;
+
+width:0;
+
+background:white;
+
+animation:loading 2.5s linear forwards;
+
+}
+
+/*==========================
+PROGRESS BAR
+==========================*/
+
+.progress-bar{
+
+position:fixed;
+
+top:0;
+
+left:0;
+
+height:4px;
+
+width:0;
+
+background:linear-gradient(to right,#66BB6A,#2E7D32);
+
+z-index:999999;
+
+}
+
+/*==========================
+BACKGROUND ORNAMENT
+==========================*/
+
+.bg-circle{
+
+position:fixed;
+
+border-radius:50%;
+
+filter:blur(90px);
+
+opacity:.20;
+
+pointer-events:none;
+
+z-index:-3;
+
+}
+
+.bg-circle.one{
+
+width:280px;
+
+height:280px;
+
+background:#A5D6A7;
+
+top:-60px;
+
+left:-60px;
+
+}
+
+.bg-circle.two{
+
+width:320px;
+
+height:320px;
+
+background:#C8E6C9;
+
+right:-80px;
+
+top:300px;
+
+}
+
+.bg-circle.three{
+
+width:260px;
+
+height:260px;
+
+background:#AED581;
+
+left:40%;
+
+bottom:-100px;
+
+}
+
+/*==========================
+FLOATING LEAF
+==========================*/
+
+.leaf{
+
+position:fixed;
+
+width:170px;
+
+opacity:.08;
+
+pointer-events:none;
+
+z-index:-2;
+
+animation:floating 8s ease-in-out infinite;
+
+}
+
+.leaf1{
+
+top:80px;
+
+left:-40px;
+
+transform:rotate(15deg);
+
+}
+
+.leaf2{
+
+right:-50px;
+
+top:250px;
+
+transform:rotate(210deg);
+
+}
+
+.leaf3{
+
+left:-70px;
+
+bottom:120px;
+
+transform:rotate(40deg);
+
+}
+
+.leaf4{
+
+right:-70px;
+
+bottom:40px;
+
+transform:rotate(190deg);
+
+}
+
+/*==========================
+ANIMATION
+==========================*/
+
+@keyframes floating{
+
+0%{
+
+transform:translateY(0px);
+
+}
+
+50%{
+
+transform:translateY(-20px);
+
+}
+
+100%{
+
+transform:translateY(0px);
+
+}
+
+}
+
+@keyframes loading{
+
+100%{
+
+width:100%;
+
+}
+
+}
+
+@keyframes logoZoom{
+
+0%{
+
+transform:scale(1);
+
+}
+
+100%{
+
+transform:scale(1.08);
+
+}
+
+}
+/*==================================================
+HEADER PREMIUM
+==================================================*/
 
 .header{
+
 position:fixed;
+
 top:0;
 left:0;
+
 width:100%;
-height:80px;
+height:82px;
+
 display:flex;
 justify-content:space-between;
 align-items:center;
-padding:0 35px;
-background:rgba(255,255,255,.97);
-backdrop-filter:blur(10px);
-box-shadow:0 4px 20px rgba(0,0,0,.08);
+
+padding:0 40px;
+
+background:rgba(255,255,255,.78);
+
+backdrop-filter:blur(18px);
+
+-webkit-backdrop-filter:blur(18px);
+
+border-bottom:1px solid rgba(255,255,255,.45);
+
+box-shadow:0 8px 30px rgba(0,0,0,.08);
+
+transition:.4s;
+
 z-index:9999;
+
 }
 
-/* ===========================
+.header.scrolled{
+
+height:74px;
+
+background:rgba(255,255,255,.92);
+
+box-shadow:0 12px 35px rgba(0,0,0,.12);
+
+}
+
+/*==================================================
 LOGO
-=========================== */
+==================================================*/
 
 .logo{
+
 display:flex;
+
 align-items:center;
-gap:15px;
+
+gap:16px;
+
 }
 
 .logo img{
-width:60px;
-height:60px;
+
+width:62px;
+
+height:62px;
+
 object-fit:contain;
-transition:.4s;
+
+transition:.5s;
+
+filter:drop-shadow(0 5px 12px rgba(46,125,50,.25));
+
 }
 
-.logo img:hover{
-transform:rotate(10deg) scale(1.08);
+.logo:hover img{
+
+transform:rotate(-8deg) scale(1.08);
+
 }
 
 .logo-text h2{
-font-size:24px;
+
+font-size:25px;
+
 font-weight:700;
+
 color:var(--primary);
+
 }
 
 .logo-text p{
+
 font-size:13px;
+
 color:#666;
+
+margin-top:3px;
+
 }
- 
-/* ===========================
+
+/*==================================================
 MENU DESKTOP
-=========================== */
+==================================================*/
 
 .nav-menu{
+
 display:flex;
+
 align-items:center;
-gap:28px;
+
+gap:30px;
+
 }
 
 .nav-menu a{
+
+position:relative;
+
 text-decoration:none;
+
 font-size:15px;
+
 font-weight:600;
-color:var(--dark);
-transition:.30s;
+
+color:#2b2b2b;
+
+padding:8px 0;
+
+transition:.35s;
+
 }
 
 .nav-menu a:hover{
+
 color:var(--primary);
+
 }
 
 .nav-menu a::after{
+
 content:"";
-display:block;
+
+position:absolute;
+
+left:50%;
+
+bottom:-2px;
+
 width:0;
-height:2px;
-background:var(--primary);
-transition:.3s;
+
+height:3px;
+
+border-radius:20px;
+
+background:linear-gradient(90deg,#66BB6A,#2E7D32);
+
+transition:.35s;
+
+transform:translateX(-50%);
+
 }
 
 .nav-menu a:hover::after{
+
 width:100%;
+
 }
 
-/* ===========================
+/*==================================================
 HAMBURGER
-=========================== */
+==================================================*/
 
 .menu-toggle{
+
 display:none;
-font-size:28px;
+
+font-size:30px;
+
 cursor:pointer;
+
 color:var(--primary);
+
+transition:.3s;
+
 }
 
-/* ===========================
+.menu-toggle:hover{
+
+transform:rotate(90deg);
+
+}
+
+/*==================================================
 MENU MOBILE
-=========================== */
+==================================================*/
 
 .mobile-menu{
+
 position:fixed;
-top:80px;
+
+top:82px;
+
 right:-100%;
 
-width:300px;
-height:calc(100vh - 80px);
+width:320px;
 
-background:#FFFFFF;
+height:calc(100vh - 82px);
 
-box-shadow:-5px 0 20px rgba(0,0,0,.10);
+background:rgba(255,255,255,.96);
+
+backdrop-filter:blur(18px);
 
 padding:25px;
 
 overflow-y:auto;
 
-transition:.35s;
+transition:.45s;
+
+box-shadow:-10px 0 35px rgba(0,0,0,.12);
 
 z-index:9998;
+
 }
 
 .mobile-menu.active{
+
 right:0;
+
 }
 
 .mobile-menu ul{
+
 list-style:none;
+
 }
 
 .mobile-menu li{
+
 margin-bottom:10px;
+
 }
 
 .mobile-menu a{
+
 display:flex;
-justify-content:space-between;
+
 align-items:center;
 
-padding:13px 15px;
+padding:14px 18px;
+
+border-radius:14px;
 
 text-decoration:none;
+
+font-weight:600;
 
 color:#444;
 
-border-radius:12px;
+transition:.35s;
 
-font-weight:500;
-
-transition:.30s;
 }
 
 .mobile-menu a:hover{
-background:var(--primary);
+
+background:linear-gradient(135deg,#43A047,#2E7D32);
+
 color:white;
+
+padding-left:24px;
+
 }
 
-.mobile-submenu{
-display:none;
-padding-left:18px;
-margin-top:8px;
-}
-
-.mobile-submenu a{
-background:#F8FAFC;
-border-left:4px solid var(--primary);
-font-size:14px;
-margin-bottom:6px;
-}
-
-/* ===========================
+/*==================================================
 MAIN
-=========================== */
+==================================================*/
 
 .main{
-max-width:1400px;
-margin:100px auto 40px auto;
+
+max-width:1450px;
+
+margin:110px auto 50px;
+
 padding:35px;
+
 position:relative;
+
 z-index:2;
+
 }
 
-/* ===========================
+/*==================================================
 SECTION
-=========================== */
+==================================================*/
 
 section{
-margin-bottom:45px;
+
+margin-bottom:55px;
+
 }
 
-/* ===========================
+/*==================================================
 HERO
-=========================== */
+==================================================*/
 
 .hero{
+
 position:relative;
+
 overflow:hidden;
-border-radius:24px;
-box-shadow:var(--shadow);
+
+border-radius:30px;
+
+box-shadow:0 20px 45px rgba(0,0,0,.12);
+
 }
 
 .hero img{
+
 width:100%;
-height:380px;
+
+height:420px;
+
 display:block;
+
 object-fit:cover;
-object-position:center;
+
+transition:8s;
+
+}
+
+.hero:hover img{
+
+transform:scale(1.08);
+
 }
 
 .hero::before{
+
 content:"";
+
 position:absolute;
+
 top:0;
+
 left:0;
+
 width:100%;
+
 height:100%;
-background:rgba(0,0,0,.30);
+
+background:linear-gradient(
+
+to bottom,
+
+rgba(0,0,0,.18),
+
+rgba(0,0,0,.48)
+
+);
+
+z-index:1;
+
+}
+
+.hero::after{
+
+content:"";
+
+position:absolute;
+
+bottom:-1px;
+
+left:0;
+
+width:100%;
+
+height:130px;
+
+background:linear-gradient(
+
+to top,
+
+rgba(255,255,255,.98),
+
+transparent
+
+);
+
+z-index:2;
+
 }
 
 .hero-content{
+
 position:absolute;
+
 top:50%;
+
 left:50%;
+
 transform:translate(-50%,-50%);
+
 text-align:center;
-width:85%;
+
+width:90%;
+
 color:white;
-z-index:5;
+
+z-index:3;
+
+animation:heroFade 1.5s;
+
 }
 
 .hero-content img{
-width:75px;
-height:75px;
+
+width:90px;
+
+height:90px;
+
 object-fit:contain;
-aspect-ratio:1/1;
-display:block;
-margin:0 auto 18px;
+
+margin-bottom:22px;
+
+filter:drop-shadow(0 8px 20px rgba(0,0,0,.3));
+
 }
- 
+
 .hero-content h1{
-font-size:48px;
-font-weight:700;
-letter-spacing:.5px;
-text-shadow:0 3px 15px rgba(0,0,0,.35);
+
+font-size:52px;
+
+font-weight:800;
+
+text-shadow:0 8px 25px rgba(0,0,0,.35);
+
+margin-bottom:12px;
+
 }
 
 .hero-content p{
-font-size:18px;
-margin-bottom:25px;
+
+font-size:19px;
+
+letter-spacing:1px;
+
+opacity:.95;
+
 }
 
-.hero-btn{
-display:inline-block;
-padding:14px 30px;
-background:var(--primary);
-color:white;
-text-decoration:none;
-border-radius:50px;
-font-weight:600;
-transition:.30s;
+@keyframes heroFade{
+
+from{
+
+opacity:0;
+
+transform:translate(-50%,-40%);
+
 }
 
-.hero-btn:hover{
-background:var(--primary2);
+to{
+
+opacity:1;
+
+transform:translate(-50%,-50%);
+
 }
 
-/* ===========================
-WELCOME
-=========================== */
+}
+/*==================================================
+WELCOME SECTION
+==================================================*/
 
 .welcome{
-background:white;
-padding:35px;
-border-radius:20px;
-box-shadow:var(--shadow);
+
+position:relative;
+
+background:rgba(255,255,255,.88);
+
+backdrop-filter:blur(18px);
+
+padding:45px;
+
+border-radius:28px;
+
+overflow:hidden;
+
+box-shadow:
+0 15px 40px rgba(0,0,0,.08);
+
+transition:.45s;
+
+}
+
+.welcome:hover{
+
+transform:translateY(-6px);
+
+box-shadow:
+0 25px 55px rgba(46,125,50,.15);
+
+}
+
+.welcome::before{
+
+content:"";
+
+position:absolute;
+
+width:260px;
+
+height:260px;
+
+background:radial-gradient(circle,
+rgba(76,175,80,.18),
+transparent 70%);
+
+top:-120px;
+
+right:-120px;
+
+border-radius:50%;
+
+}
+
+.welcome::after{
+
+content:"";
+
+position:absolute;
+
+background:url("leaf.png") no-repeat center;
+
+background-size:contain;
+
+width:180px;
+
+height:180px;
+
+bottom:-45px;
+
+left:-45px;
+
+opacity:.06;
+
+transform:rotate(25deg);
+
+pointer-events:none;
+
 }
 
 .welcome h2{
-font-size:32px;
-margin-bottom:18px;
+
+font-size:34px;
+
 color:var(--primary);
+
+margin-bottom:22px;
+
+font-weight:700;
+
+position:relative;
+
+}
+
+.welcome h2::after{
+
+content:"";
+
+display:block;
+
+width:90px;
+
+height:4px;
+
+margin-top:12px;
+
+border-radius:30px;
+
+background:linear-gradient(to right,#43A047,#A5D6A7);
+
 }
 
 .welcome p{
-line-height:2;
-color:var(--text);
-}
 
-/* ===========================
-SECTION TITLE
-=========================== */
-
-.section-title{
-text-align:center;
-margin-bottom:35px;
-}
-
-.section-title h2{
-font-size:34px;
-color:var(--primary);
-margin-bottom:10px;
-font-weight:700;
-}
-
-.section-title p{
 font-size:16px;
-color:#666;
+
+line-height:2.1;
+
+text-align:justify;
+
+color:#555;
+
 }
 
-/* ===========================
-LAYANAN CEPAT
-=========================== */
+/*==================================================
+CARD PREMIUM
+==================================================*/
 
-.service-grid{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-gap:25px;
-margin-top:25px;
-}
+.card{
 
-.service-card{
-background:#fff;
-padding:30px;
-border-radius:18px;
-box-shadow:var(--shadow);
-text-align:center;
-text-decoration:none;
-transition:.35s;
-color:inherit;
-}
+position:relative;
 
-.service-card:hover{
-transform:translateY(-8px);
-}
+background:rgba(255,255,255,.90);
 
-.service-card i{
-font-size:50px;
-color:var(--primary);
-margin-bottom:18px;
-}
+backdrop-filter:blur(15px);
 
-.service-card h3{
-font-size:22px;
-margin-bottom:12px;
-color:var(--primary);
-}
+border-radius:24px;
 
-.service-card p{
-line-height:1.8;
-font-size:15px;
-color:#666;
-}
- 
-/* ===========================
-ABOUT
-=========================== */
-
-.about{
-background:white;
 padding:35px;
-border-radius:20px;
-box-shadow:var(--shadow);
+
+box-shadow:
+
+0 10px 35px rgba(0,0,0,.07);
+
+transition:.4s;
+
+overflow:hidden;
+
 }
 
-.about h2{
-font-size:32px;
-margin-bottom:20px;
-color:var(--primary);
+.card::before{
+
+content:"";
+
+position:absolute;
+
+left:0;
+
+top:0;
+
+width:5px;
+
+height:100%;
+
+background:linear-gradient(
+
+to bottom,
+
+#43A047,
+
+#A5D6A7);
+
 }
 
-.about p{
-line-height:2;
-color:var(--text);
+.card:hover{
+
+transform:translateY(-8px);
+
+box-shadow:
+
+0 20px 45px rgba(46,125,50,.16);
+
 }
 
-/* ===========================
-FOOTER
-=========================== */
+/*==================================================
+INFORMASI KANTOR
+==================================================*/
+
 .footer{
 
 margin-top:60px;
 
-padding:25px 0;
-
 background:transparent;
+
+padding:0;
 
 box-shadow:none;
 
-border:none;
+}
+
+.footer-title{
+
+text-align:center;
+
+margin-bottom:35px;
 
 }
 
-.footer h3{
+.footer-title h2{
 
-font-size:30px;
+font-size:34px;
 
 color:var(--primary);
 
-margin-bottom:25px;
+margin-bottom:10px;
 
-text-align:center;
+}
+
+.footer-title p{
+
+color:#777;
+
+font-size:16px;
 
 }
 
@@ -469,41 +1090,76 @@ text-align:center;
 
 display:grid;
 
-grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+grid-template-columns:
+repeat(auto-fit,minmax(240px,1fr));
 
-gap:22px;
-
-margin-bottom:45px;
+gap:25px;
 
 }
 
 .office-card{
 
-background:white;
+position:relative;
 
-padding:25px;
+background:rgba(255,255,255,.90);
 
-border-radius:18px;
+backdrop-filter:blur(15px);
 
-box-shadow:0 10px 30px rgba(0,0,0,.06);
+padding:35px 25px;
 
-transition:.3s;
+border-radius:22px;
+
+overflow:hidden;
+
+box-shadow:
+
+0 12px 35px rgba(0,0,0,.07);
+
+transition:.4s;
+
+}
+
+.office-card::before{
+
+content:"";
+
+position:absolute;
+
+top:0;
+
+left:0;
+
+width:100%;
+
+height:5px;
+
+background:linear-gradient(
+
+90deg,
+
+#43A047,
+
+#81C784);
 
 }
 
 .office-card:hover{
 
-transform:translateY(-8px);
+transform:translateY(-10px);
+
+box-shadow:
+
+0 22px 50px rgba(46,125,50,.18);
 
 }
 
 .office-card i{
 
-font-size:30px;
+font-size:34px;
 
 color:var(--primary);
 
-margin-bottom:15px;
+margin-bottom:18px;
 
 }
 
@@ -511,7 +1167,7 @@ margin-bottom:15px;
 
 font-size:22px;
 
-margin-bottom:10px;
+margin-bottom:12px;
 
 color:var(--primary);
 
@@ -527,201 +1183,539 @@ color:#555;
 
 }
 
+/*==================================================
+COPYRIGHT
+==================================================*/
+
 .copyright{
+
+margin-top:45px;
+
 text-align:center;
-background:none;
-padding:0;
-margin-top:10px;
-font-size:15px;
+
 line-height:2;
+
 color:#666;
+
+font-size:14px;
+
+padding-bottom:35px;
+
 }
- 
-/* ===========================
-HIASAN DAUN
-=========================== */
 
-.leaf{
+.copyright p{
 
-position:fixed;
+margin:5px 0;
 
-width:190px;
+}
 
-height:190px;
+/*==================================================
+EFEK SCROLL
+==================================================*/
 
-opacity:.10;
+.reveal{
 
-background:url("leaf.png") center center/contain no-repeat;
+opacity:0;
+
+transform:translateY(60px);
+
+transition:1s;
+
+}
+
+.reveal.active{
+
+opacity:1;
+
+transform:translateY(0);
+
+}
+
+/*==================================================
+EFEK FOTO
+==================================================*/
+
+img{
+
+transition:.5s;
+
+}
+
+img:hover{
+
+transform:scale(1.02);
+
+}
+
+/*==================================================
+ORNAMEN TAMBAHAN
+==================================================*/
+
+.decoration-left{
+
+position:absolute;
+
+left:-70px;
+
+top:50%;
+
+width:220px;
+
+opacity:.05;
 
 pointer-events:none;
 
-z-index:-1;
-
 }
- 
-.leaf{
-position:fixed;
-width:170px;
-height:170px;
-opacity:.18;
+
+.decoration-right{
+
+position:absolute;
+
+right:-70px;
+
+bottom:10%;
+
+width:220px;
+
+opacity:.05;
+
 pointer-events:none;
-z-index:1;
-background:url("leaf.png") center/contain no-repeat;
+
+}
+/*==================================================
+PRELOADER
+==================================================*/
+
+#loader.hide{
+
+opacity:0;
+
+visibility:hidden;
+
 }
 
-.leaf.left{
-top:180px;
-left:-40px;
+.loader-logo{
+
+animation:logoFloat 2s ease-in-out infinite;
+
 }
 
-.leaf.right{
-bottom:80px;
-right:-40px;
-transform:rotate(180deg);
+@keyframes logoFloat{
+
+0%{
+
+transform:translateY(0px);
+
 }
 
-.leaf.bottom-left{
-left:-35px;
-bottom:90px;
-transform:rotate(45deg);
+50%{
+
+transform:translateY(-12px);
+
 }
 
-.leaf.top-right{
-right:-30px;
+100%{
+
+transform:translateY(0px);
+
+}
+
+}
+
+/*==================================================
+BACK TO TOP
+==================================================*/
+
+.back-top{
+
+position:fixed;
+
+right:28px;
+
+bottom:28px;
+
+width:58px;
+
+height:58px;
+
+border-radius:50%;
+
+background:linear-gradient(135deg,#43A047,#2E7D32);
+
+color:white;
+
+display:flex;
+
+justify-content:center;
+
+align-items:center;
+
+font-size:22px;
+
+cursor:pointer;
+
+box-shadow:0 12px 35px rgba(46,125,50,.30);
+
+opacity:0;
+
+visibility:hidden;
+
+transition:.4s;
+
+z-index:999;
+
+}
+
+.back-top:hover{
+
+transform:translateY(-6px) rotate(360deg);
+
+}
+
+.back-top.show{
+
+opacity:1;
+
+visibility:visible;
+
+}
+
+/*==================================================
+FLOATING GLOW
+==================================================*/
+
+.glow{
+
+position:fixed;
+
+width:260px;
+
+height:260px;
+
+border-radius:50%;
+
+background:radial-gradient(circle,
+rgba(76,175,80,.18),
+transparent 70%);
+
+filter:blur(60px);
+
+pointer-events:none;
+
+z-index:-5;
+
+animation:glowMove 12s linear infinite alternate;
+
+}
+
+.glow.one{
+
+left:-120px;
+
 top:120px;
-transform:rotate(220deg);
+
 }
- 
-/* ===========================
-RESPONSIVE
-=========================== */
+
+.glow.two{
+
+right:-120px;
+
+bottom:100px;
+
+animation-delay:4s;
+
+}
+
+@keyframes glowMove{
+
+0%{
+
+transform:translateY(0px);
+
+}
+
+100%{
+
+transform:translateY(-80px);
+
+}
+
+}
+
+/*==================================================
+FLOATING LEAF
+==================================================*/
+
+.leaf{
+
+animation:leafMove 12s ease-in-out infinite;
+
+}
+
+@keyframes leafMove{
+
+0%{
+
+transform:translateY(0px) rotate(0deg);
+
+}
+
+50%{
+
+transform:translateY(-18px) rotate(8deg);
+
+}
+
+100%{
+
+transform:translateY(0px) rotate(0deg);
+
+}
+
+}
+
+/*==================================================
+CARD HOVER
+==================================================*/
+
+.office-card,
+.welcome,
+.service-card{
+
+transition:.45s;
+
+}
+
+.office-card:hover,
+.welcome:hover,
+.service-card:hover{
+
+transform:translateY(-10px);
+
+box-shadow:
+
+0 22px 50px rgba(46,125,50,.18);
+
+}
+
+/*==================================================
+IMAGE EFFECT
+==================================================*/
+
+.hero img,
+.office-card img{
+
+transition:1.2s;
+
+}
+
+.hero:hover img{
+
+transform:scale(1.08);
+
+}
+
+/*==================================================
+FADE ANIMATION
+==================================================*/
+
+.fade-up{
+
+opacity:0;
+
+transform:translateY(60px);
+
+transition:1s;
+
+}
+
+.fade-up.show{
+
+opacity:1;
+
+transform:translateY(0);
+
+}
+
+/*==================================================
+RESPONSIVE TABLET
+==================================================*/
 
 @media(max-width:992px){
 
-.nav-menu{
-display:none;
+.header{
+
+padding:0 22px;
+
 }
 
-.menu-toggle{
-display:block;
+.hero{
+
+border-radius:22px;
+
 }
 
 .hero img{
-height:300px;
+
+height:320px;
+
 }
 
 .hero-content h1{
+
 font-size:34px;
-}
-
-.hero-content p{
-font-size:16px;
-}
 
 }
+
+.office-grid{
+
+grid-template-columns:repeat(2,1fr);
+
+}
+
+}
+
+/*==================================================
+RESPONSIVE HP
+==================================================*/
 
 @media(max-width:768px){
 
 .header{
-padding:0 18px;
-height:70px;
-}
 
-.mobile-menu{
-top:70px;
-height:calc(100vh - 70px);
-}
+height:72px;
 
-.logo img{
-width:48px;
-height:48px;
-}
-
-.logo-text h2{
-font-size:18px;
-}
-
-.logo-text p{
-font-size:11px;
 }
 
 .main{
+
 margin-top:90px;
+
 padding:18px;
+
 }
 
 .hero img{
-height:230px;
+
+height:250px;
+
 }
 
 .hero-content img{
-width:60px;
-height:60px;
+
+width:70px;
+
+height:70px;
+
 }
 
 .hero-content h1{
-font-size:26px;
+
+font-size:27px;
+
+line-height:1.4;
+
 }
 
 .hero-content p{
-font-size:14px;
-}
 
-.hero-btn{
-padding:10px 20px;
 font-size:14px;
+
 }
 
 .welcome{
-padding:25px;
+
+padding:28px;
+
 }
 
 .welcome h2{
-font-size:24px;
+
+font-size:25px;
+
 }
 
-.footer{
-padding:25px 28px;
-}
+.office-grid{
 
-.footer-content{
 grid-template-columns:1fr;
+
+}
+
+.office-card{
+
+padding:25px;
+
+}
+
+.footer-title h2{
+
+font-size:28px;
+
+}
+
+.back-top{
+
+width:50px;
+
+height:50px;
+
+right:18px;
+
+bottom:18px;
+
 }
 
 }
+
+/*==================================================
+RESPONSIVE KECIL
+==================================================*/
 
 @media(max-width:480px){
 
 .hero img{
-height:200px;
-}
 
-.hero-content{
-width:95%;
+height:210px;
+
 }
 
 .hero-content h1{
+
 font-size:22px;
+
 }
 
 .hero-content p{
+
 font-size:13px;
-}
 
 }
 
-.line{
-width:80px;
-height:4px;
-background:var(--primary);
-border-radius:50px;
-margin:15px 0 25px;
+.logo img{
+
+width:48px;
+
+height:48px;
+
+}
+
+.logo-text h2{
+
+font-size:19px;
+
+}
+
+.logo-text p{
+
+font-size:11px;
+
+}
+
 }
  
 </style>
 
 </head>
-
 <body>
 
 <div class="leaf left"></div>
@@ -917,17 +1911,32 @@ Senin–Jumat<br>
 
 <script>
 
-/* ===========================
-HAMBURGER MENU
-=========================== */
+/*==========================================
+LOADING SCREEN
+==========================================*/
 
-const menuToggle =
-document.querySelector(".menu-toggle");
+window.addEventListener("load",()=>{
 
-const mobileMenu =
-document.querySelector(".mobile-menu");
+const loader=document.getElementById("loader");
 
-menuToggle.addEventListener("click",function(){
+setTimeout(()=>{
+
+loader.classList.add("hide");
+
+},2200);
+
+});
+
+
+/*==========================================
+MENU MOBILE
+==========================================*/
+
+const menuToggle=document.querySelector(".menu-toggle");
+
+const mobileMenu=document.querySelector(".mobile-menu");
+
+menuToggle.addEventListener("click",()=>{
 
 mobileMenu.classList.toggle("active");
 
@@ -943,45 +1952,183 @@ menuToggle.innerHTML='<i class="fas fa-bars"></i>';
 
 });
 
-/* ===========================
-SUBMENU
-=========================== */
 
-function toggleMenu(menuId,element){
+/*==========================================
+HEADER SCROLL
+==========================================*/
 
-const menu=document.getElementById(menuId);
+const header=document.querySelector(".header");
 
-const icon=element.querySelector("i.fa-chevron-down, i.fa-chevron-up");
+window.addEventListener("scroll",()=>{
 
-if(menu.style.display==="block"){
+if(window.scrollY>60){
 
-menu.style.display="none";
-
-if(icon){
-
-icon.classList.remove("fa-chevron-up");
-icon.classList.add("fa-chevron-down");
-
-}
+header.classList.add("scrolled");
 
 }else{
 
-menu.style.display="block";
-
-if(icon){
-
-icon.classList.remove("fa-chevron-down");
-icon.classList.add("fa-chevron-up");
+header.classList.remove("scrolled");
 
 }
 
-}
+});
+
+
+/*==========================================
+SCROLL PROGRESS
+==========================================*/
+
+const progress=document.querySelector(".progress-bar");
+
+window.addEventListener("scroll",()=>{
+
+const total=document.documentElement.scrollHeight-window.innerHeight;
+
+const progressWidth=(window.pageYOffset/total)*100;
+
+progress.style.width=progressWidth+"%";
+
+});
+
+
+/*==========================================
+BACK TO TOP
+==========================================*/
+
+const backTop=document.querySelector(".back-top");
+
+window.addEventListener("scroll",()=>{
+
+if(window.scrollY>400){
+
+backTop.classList.add("show");
+
+}else{
+
+backTop.classList.remove("show");
 
 }
 
-/* ===========================
-TUTUP MENU SAAT LINK DIKLIK
-=========================== */
+});
+
+backTop.onclick=()=>{
+
+window.scrollTo({
+
+top:0,
+
+behavior:"smooth"
+
+});
+
+};
+
+
+/*==========================================
+FADE UP
+==========================================*/
+
+const observer=new IntersectionObserver(entries=>{
+
+entries.forEach(entry=>{
+
+if(entry.isIntersecting){
+
+entry.target.classList.add("show");
+
+}
+
+});
+
+},
+
+{
+
+threshold:.15
+
+});
+
+document.querySelectorAll(
+
+"section,.office-card,.welcome,.service-card,.copyright"
+
+).forEach(el=>{
+
+el.classList.add("fade-up");
+
+observer.observe(el);
+
+});
+
+
+/*==========================================
+FLOATING GLOW
+==========================================*/
+
+document.addEventListener("mousemove",(e)=>{
+
+const glow=document.querySelector(".glow.one");
+
+if(glow){
+
+glow.style.left=(e.clientX/25)+"px";
+
+glow.style.top=(e.clientY/25)+"px";
+
+}
+
+});
+
+
+/*==========================================
+IMAGE PARALLAX
+==========================================*/
+
+window.addEventListener("scroll",()=>{
+
+const hero=document.querySelector(".hero img");
+
+if(hero){
+
+hero.style.transform="translateY("+
+
+window.scrollY*0.15+
+
+"px) scale(1.05)";
+
+}
+
+});
+
+
+/*==========================================
+CARD HOVER
+==========================================*/
+
+document.querySelectorAll(
+
+".office-card,.service-card,.welcome"
+
+).forEach(card=>{
+
+card.addEventListener("mouseenter",()=>{
+
+card.style.transform="translateY(-10px)";
+
+});
+
+card.addEventListener("mouseleave",()=>{
+
+card.style.transform="translateY(0px)";
+
+});
+
+});
+
+
+/*==========================================
+MENU CLOSE
+==========================================*/
 
 document.querySelectorAll(".mobile-menu a").forEach(link=>{
 
@@ -995,43 +2142,28 @@ menuToggle.innerHTML='<i class="fas fa-bars"></i>';
 
 });
 
-/* ===========================
-HEADER SAAT SCROLL
-=========================== */
 
-window.addEventListener("scroll",()=>{
+/*==========================================
+SMOOTH ANCHOR
+==========================================*/
 
-const header=document.querySelector(".header");
+document.querySelectorAll('a[href^="#"]').forEach(anchor=>{
 
-if(window.scrollY>40){
+anchor.addEventListener("click",function(e){
 
-header.style.boxShadow="0 10px 30px rgba(0,0,0,.12)";
+e.preventDefault();
 
-}else{
+const target=document.querySelector(this.getAttribute("href"));
 
-header.style.boxShadow="0 4px 20px rgba(0,0,0,.08)";
+if(target){
+
+target.scrollIntoView({
+
+behavior:"smooth"
+
+});
 
 }
-
-});
-
-/* ===========================
-ANIMASI CARD
-=========================== */
-
-const cards=document.querySelectorAll(".card,.service-card");
-
-cards.forEach(card=>{
-
-card.addEventListener("mouseenter",()=>{
-
-card.style.transform="translateY(-8px)";
-
-});
-
-card.addEventListener("mouseleave",()=>{
-
-card.style.transform="translateY(0px)";
 
 });
 
@@ -1040,5 +2172,4 @@ card.style.transform="translateY(0px)";
 </script>
 
 </body>
-
 </html>
