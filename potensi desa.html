@@ -1,1 +1,1101 @@
+<!DOCTYPE html>
+<html lang="id">
 
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport"
+content="width=device-width, initial-scale=1.0">
+
+<title>Potensi Desa | Desa Bulurejo</title>
+
+<meta name="description"
+content="Potensi Desa Bulurejo Kecamatan Mantewe Kabupaten Tanah Bumbu">
+
+<link rel="preconnect"
+href="https://fonts.googleapis.com">
+
+<link rel="preconnect"
+href="https://fonts.gstatic.com"
+crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+rel="stylesheet">
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+<style>
+
+*{
+
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+scroll-behavior:smooth;
+
+}
+
+:root{
+
+--primary:#2E7D32;
+--primary2:#43A047;
+--secondary:#E8F5E9;
+--dark:#263238;
+--text:#616161;
+--shadow:0 12px 35px rgba(0,0,0,.08);
+
+}
+
+body{
+
+background:#F5F7FA;
+overflow-x:hidden;
+color:var(--dark);
+
+}
+
+/*============================
+HIASAN DAUN
+=============================*/
+
+.leaf{
+
+position:fixed;
+
+width:180px;
+height:180px;
+
+background:url("leaf.png") center/contain no-repeat;
+
+opacity:.08;
+
+pointer-events:none;
+
+z-index:-1;
+
+}
+
+.leaf.left{
+
+left:-45px;
+top:170px;
+
+}
+
+.leaf.right{
+
+right:-45px;
+bottom:90px;
+
+transform:rotate(180deg);
+
+}
+
+.leaf.top-right{
+
+right:-35px;
+top:120px;
+
+transform:rotate(220deg);
+
+}
+
+.leaf.bottom-left{
+
+left:-35px;
+bottom:100px;
+
+transform:rotate(45deg);
+
+}
+
+/*============================
+HEADER
+=============================*/
+
+.header{
+
+position:fixed;
+
+top:0;
+left:0;
+
+width:100%;
+height:80px;
+
+display:flex;
+justify-content:space-between;
+align-items:center;
+
+padding:0 35px;
+
+background:rgba(255,255,255,.96);
+
+backdrop-filter:blur(10px);
+
+box-shadow:0 4px 18px rgba(0,0,0,.08);
+
+z-index:9999;
+
+}
+
+.logo{
+
+display:flex;
+align-items:center;
+gap:15px;
+
+}
+
+.logo img{
+
+width:60px;
+height:60px;
+
+object-fit:contain;
+
+}
+
+.logo-text h2{
+
+font-size:24px;
+font-weight:700;
+color:var(--primary);
+
+}
+
+.logo-text p{
+
+font-size:13px;
+color:#666;
+
+}
+
+/*============================
+MENU
+=============================*/
+
+.nav-menu{
+
+display:flex;
+gap:28px;
+
+}
+
+.nav-menu a{
+
+text-decoration:none;
+
+font-weight:600;
+
+font-size:15px;
+
+color:var(--dark);
+
+transition:.3s;
+
+position:relative;
+
+}
+
+.nav-menu a:hover{
+
+color:var(--primary);
+
+}
+
+.nav-menu a::after{
+
+content:"";
+
+position:absolute;
+
+left:0;
+bottom:-5px;
+
+width:0;
+
+height:2px;
+
+background:var(--primary);
+
+transition:.35s;
+
+}
+
+.nav-menu a:hover::after{
+
+width:100%;
+
+}
+
+.menu-toggle{
+
+display:none;
+
+font-size:28px;
+
+cursor:pointer;
+
+color:var(--primary);
+
+}
+
+/*============================
+MENU MOBILE
+=============================*/
+
+.mobile-menu{
+
+position:fixed;
+
+top:80px;
+right:-100%;
+
+width:300px;
+
+height:calc(100vh - 80px);
+
+background:white;
+
+padding:25px;
+
+overflow-y:auto;
+
+transition:.35s;
+
+box-shadow:-5px 0 20px rgba(0,0,0,.08);
+
+z-index:9998;
+
+}
+
+.mobile-menu.active{
+
+right:0;
+
+}
+
+.mobile-menu ul{
+
+list-style:none;
+
+}
+
+.mobile-menu li{
+
+margin-bottom:10px;
+
+}
+
+.mobile-menu a{
+
+display:flex;
+
+justify-content:space-between;
+
+align-items:center;
+
+padding:13px 15px;
+
+text-decoration:none;
+
+color:#444;
+
+border-radius:12px;
+
+transition:.3s;
+
+}
+
+.mobile-menu a:hover{
+
+background:var(--primary);
+
+color:white;
+
+}
+
+/*============================
+MAIN
+=============================*/
+
+.main{
+
+max-width:1400px;
+
+margin:105px auto 40px;
+
+padding:35px;
+
+}
+
+/*============================
+HERO
+=============================*/
+
+.hero{
+
+position:relative;
+
+height:430px;
+
+overflow:hidden;
+
+border-radius:28px;
+
+box-shadow:var(--shadow);
+
+}
+
+.hero img{
+
+width:100%;
+
+height:100%;
+
+object-fit:cover;
+
+filter:brightness(.55);
+
+}
+
+.hero::before{
+
+content:"";
+
+position:absolute;
+
+inset:0;
+
+background:linear-gradient(
+
+to right,
+
+rgba(0,0,0,.45),
+
+rgba(0,0,0,.20)
+
+);
+
+}
+
+.hero-content{
+
+position:absolute;
+
+top:50%;
+left:50%;
+
+transform:translate(-50%,-50%);
+
+text-align:center;
+
+width:90%;
+
+color:white;
+
+z-index:5;
+
+}
+
+.hero-content img{
+
+width:90px;
+height:90px;
+
+background:white;
+
+padding:8px;
+
+border-radius:50%;
+
+margin-bottom:20px;
+
+}
+
+.hero-content h1{
+
+font-size:48px;
+
+font-weight:800;
+
+margin-bottom:12px;
+
+}
+
+.hero-content p{
+
+font-size:20px;
+
+line-height:1.8;
+
+}
+
+/*============================
+RESPONSIVE
+=============================*/
+/*=================================================
+POTENSI DESA
+==================================================*/
+
+.intro-potensi{
+
+margin-top:50px;
+margin-bottom:50px;
+
+}
+
+.section-title{
+
+text-align:center;
+margin-bottom:35px;
+
+}
+
+.section-title h2{
+
+font-size:38px;
+color:var(--primary);
+margin-bottom:15px;
+
+}
+
+.line{
+
+width:90px;
+height:4px;
+
+background:var(--primary);
+
+margin:18px auto 25px;
+
+border-radius:30px;
+
+}
+
+.section-title p{
+
+max-width:900px;
+
+margin:auto;
+
+font-size:17px;
+
+line-height:2;
+
+color:#555;
+
+}
+
+.intro-box{
+
+margin-top:35px;
+
+background:linear-gradient(135deg,#2E7D32,#43A047);
+
+padding:35px;
+
+border-radius:22px;
+
+text-align:center;
+
+color:white;
+
+box-shadow:var(--shadow);
+
+}
+
+.intro-box i{
+
+font-size:60px;
+
+margin-bottom:20px;
+
+}
+
+.intro-box p{
+
+font-size:17px;
+
+line-height:2;
+
+max-width:900px;
+
+margin:auto;
+
+}
+
+/*==============================*/
+
+.kategori-grid{
+
+display:grid;
+
+grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+
+gap:28px;
+
+margin-top:20px;
+
+}
+
+.kategori-card{
+
+background:white;
+
+border-radius:22px;
+
+padding:35px 25px;
+
+text-align:center;
+
+text-decoration:none;
+
+color:inherit;
+
+box-shadow:var(--shadow);
+
+transition:.35s;
+
+position:relative;
+
+overflow:hidden;
+
+}
+
+.kategori-card::before{
+
+content:"";
+
+position:absolute;
+
+top:0;
+left:0;
+
+width:100%;
+
+height:5px;
+
+background:var(--primary);
+
+}
+
+.kategori-card:hover{
+
+transform:translateY(-10px);
+
+}
+
+.kategori-icon{
+
+width:90px;
+height:90px;
+
+margin:auto;
+
+border-radius:50%;
+
+display:flex;
+
+justify-content:center;
+
+align-items:center;
+
+background:#E8F5E9;
+
+margin-bottom:22px;
+
+}
+
+.kategori-icon i{
+
+font-size:42px;
+
+color:var(--primary);
+
+}
+
+.kategori-card h3{
+
+font-size:24px;
+
+margin-bottom:12px;
+
+color:var(--primary);
+
+}
+
+.kategori-card p{
+
+font-size:15px;
+
+line-height:1.8;
+
+color:#666;
+
+}
+
+@media(max-width:768px){
+
+.section-title h2{
+
+font-size:28px;
+
+}
+
+.intro-box{
+
+padding:25px;
+
+}
+
+.intro-box i{
+
+font-size:45px;
+
+}
+
+.intro-box p{
+
+font-size:15px;
+
+}
+
+}
+@media(max-width:992px){
+
+.nav-menu{
+
+display:none;
+
+}
+
+.menu-toggle{
+
+display:block;
+
+}
+
+}
+
+@media(max-width:768px){
+
+.header{
+
+height:70px;
+
+padding:0 18px;
+
+}
+
+.logo img{
+
+width:48px;
+height:48px;
+
+}
+
+.logo-text h2{
+
+font-size:18px;
+
+}
+
+.logo-text p{
+
+font-size:11px;
+
+}
+
+.mobile-menu{
+
+top:70px;
+
+height:calc(100vh - 70px);
+
+}
+
+.main{
+
+margin-top:90px;
+
+padding:18px;
+
+}
+
+.hero{
+
+height:300px;
+
+}
+
+.hero-content img{
+
+width:65px;
+height:65px;
+
+}
+
+.hero-content h1{
+
+font-size:28px;
+
+}
+
+.hero-content p{
+
+font-size:14px;
+
+}
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="leaf left"></div>
+<div class="leaf right"></div>
+<div class="leaf top-right"></div>
+<div class="leaf bottom-left"></div>
+
+<header class="header">
+
+<div class="logo">
+
+<img src="logo desa.jpeg">
+
+<div class="logo-text">
+
+<h2>Desa Bulurejo</h2>
+
+<p>Kecamatan Mantewe • Kabupaten Tanah Bumbu</p>
+
+</div>
+
+</div>
+
+<nav class="nav-menu">
+
+<a href="index.html">Beranda</a>
+
+<a href="profil desa.html">Profil Desa</a>
+
+<a href="struktur pemerintahan.html">Struktur Pemerintahan</a>
+
+<a href="wilayah.html">Wilayah Desa</a>
+
+<a href="potensi desa.html">Potensi Desa</a>
+
+<a href="berita.html">Berita</a>
+
+<a href="layanan.html">Layanan</a>
+
+</nav>
+
+<div class="menu-toggle">
+
+<i class="fas fa-bars"></i>
+
+</div>
+
+</header>
+
+<div class="mobile-menu">
+
+<ul>
+
+<li><a href="index.html">🏠 Beranda</a></li>
+
+<li><a href="profil desa.html">📖 Profil Desa</a></li>
+
+<li><a href="struktur pemerintahan.html">👥 Struktur Pemerintahan</a></li>
+
+<li><a href="wilayah.html">🗺 Wilayah Desa</a></li>
+
+<li><a href="potensi desa.html">🌿 Potensi Desa</a></li>
+
+<li><a href="berita.html">📰 Berita</a></li>
+
+<li><a href="layanan.html">☎️ Layanan</a></li>
+
+</ul>
+
+</div>
+
+<main class="main">
+
+<section class="hero">
+
+<img src="potensi desa.jpg" alt="Potensi Desa">
+
+<div class="hero-content">
+
+<img src="logo desa.jpeg" alt="Logo Desa">
+
+<h1>Potensi Desa Bulurejo</h1>
+
+<p>
+
+Potensi Pertanian, Perkebunan, Peternakan,
+Perikanan, dan Industri Rumah Tangga
+
+</p>
+
+</div>
+
+</section>
+
+<!-- ======================================================
+PENDAHULUAN POTENSI DESA
+======================================================= -->
+
+<section class="intro-potensi">
+
+<div class="section-title">
+
+<h2>Potensi Desa Bulurejo</h2>
+
+<div class="line"></div>
+
+<p>
+
+Desa Bulurejo memiliki berbagai potensi unggulan yang menjadi sumber penghidupan masyarakat. Potensi tersebut berkembang melalui sektor pertanian, perkebunan, peternakan, perikanan, serta industri rumah tangga yang dikelola secara berkelanjutan.
+
+</p>
+
+</div>
+
+<div class="intro-box">
+
+<i class="fas fa-seedling"></i>
+
+<p>
+
+Melalui pemanfaatan sumber daya alam yang dimiliki, masyarakat Desa Bulurejo terus berupaya meningkatkan produktivitas serta kesejahteraan. Setiap sektor memiliki karakteristik dan keunggulan tersendiri yang menjadi identitas desa.
+
+</p>
+
+</div>
+
+</section>
+
+<!-- ======================================================
+KATEGORI POTENSI
+======================================================= -->
+
+<section class="kategori-potensi">
+
+<div class="kategori-grid">
+
+<a href="#pertanian" class="kategori-card">
+
+<div class="kategori-icon">
+<i class="fas fa-wheat-awn"></i>
+</div>
+
+<h3>Pertanian</h3>
+
+<p>
+13 Dasawisma RT 1–RT 13
+</p>
+
+</a>
+
+<a href="#perkebunan" class="kategori-card">
+
+<div class="kategori-icon">
+<i class="fas fa-tree"></i>
+</div>
+
+<h3>Perkebunan</h3>
+
+<p>
+Karet & Kelapa Sawit
+</p>
+
+</a>
+
+<a href="#peternakan" class="kategori-card">
+
+<div class="kategori-icon">
+<i class="fas fa-cow"></i>
+</div>
+
+<h3>Peternakan</h3>
+
+<p>
+Sapi • Kambing • Ayam • Bebek
+</p>
+
+</a>
+
+<a href="#perikanan" class="kategori-card">
+
+<div class="kategori-icon">
+<i class="fas fa-fish"></i>
+</div>
+
+<h3>Perikanan</h3>
+
+<p>
+Kolam Tanah & Bioflok
+</p>
+
+</a>
+
+<a href="#industri" class="kategori-card">
+
+<div class="kategori-icon">
+<i class="fas fa-fire"></i>
+</div>
+
+<h3>Industri Rumah Tangga</h3>
+
+<p>
+Produksi Arang
+</p>
+
+</a>
+
+</div>
+
+</section>
+
+<!-- ======================================================
+PERTANIAN
+======================================================= -->
+
+<section id="pertanian" class="potensi-section">
+
+<div class="potensi-header">
+
+<span>🌾 POTENSI UNGGULAN</span>
+
+<h2>Pertanian Desa Bulurejo</h2>
+
+<div class="line"></div>
+
+<p>
+
+Sektor pertanian merupakan salah satu sumber mata pencaharian utama masyarakat Desa Bulurejo. Selain lahan pertanian yang produktif, masyarakat juga aktif mengembangkan kegiatan Dasawisma di setiap RT sebagai bentuk pemanfaatan pekarangan rumah untuk mendukung ketahanan pangan keluarga.
+
+</p>
+
+</div>
+
+<div class="gallery-grid">
+
+<div class="gallery-card">
+<img src="rt1.jpg" alt="RT 1">
+<div class="gallery-info">
+<h3>Dasawisma RT 1</h3>
+<p>Desa Bulurejo</p>
+</div>
+</div>
+
+<div class="gallery-card">
+<img src="rt2.jpg" alt="RT 2">
+<div class="gallery-info">
+<h3>Dasawisma RT 2</h3>
+<p>Desa Bulurejo</p>
+</div>
+</div>
+
+<div class="gallery-card">
+<img src="rt3.jpg" alt="RT 3">
+<div class="gallery-info">
+<h3>Dasawisma RT 3</h3>
+<p>Desa Bulurejo</p>
+</div>
+</div>
+
+<div class="gallery-card">
+<img src="rt4.jpg" alt="RT 4">
+<div class="gallery-info">
+<h3>Dasawisma RT 4</h3>
+<p>Desa Bulurejo</p>
+</div>
+</div>
+
+<div class="gallery-card">
+<img src="rt5.jpg" alt="RT 5">
+<div class="gallery-info">
+<h3>Dasawisma RT 5</h3>
+<p>Desa Bulurejo</p>
+</div>
+</div>
+
+<div class="gallery-card">
+<img src="rt6.jpg" alt="RT 6">
+<div class="gallery-info">
+<h3>Dasawisma RT 6</h3>
+<p>Desa Bulurejo</p>
+</div>
+</div>
+
+<div class="gallery-card">
+<img src="rt7.jpg" alt="RT 7">
+<div class="gallery-info">
+<h3>Dasawisma RT 7</h3>
+<p>Desa Bulurejo</p>
+</div>
+</div>
+
+<div class="gallery-card">
+<img src="rt8.jpg" alt="RT 8">
+<div class="gallery-info">
+<h3>Dasawisma RT 8</h3>
+<p>Desa Bulurejo</p>
+</div>
+</div>
+
+<div class="gallery-card">
+<img src="rt9.jpg" alt="RT 9">
+<div class="gallery-info">
+<h3>Dasawisma RT 9</h3>
+<p>Desa Bulurejo</p>
+</div>
+</div>
+
+<div class="gallery-card">
+<img src="rt10.jpg" alt="RT 10">
+<div class="gallery-info">
+<h3>Dasawisma RT 10</h3>
+<p>Desa Bulurejo</p>
+</div>
+</div>
+
+<div class="gallery-card">
+<img src="rt11.jpg" alt="RT 11">
+<div class="gallery-info">
+<h3>Dasawisma RT 11</h3>
+<p>Desa Bulurejo</p>
+</div>
+</div>
+
+<div class="gallery-card">
+<img src="rt12.jpg" alt="RT 12">
+<div class="gallery-info">
+<h3>Dasawisma RT 12</h3>
+<p>Desa Bulurejo</p>
+</div>
+</div>
+
+<div class="gallery-card">
+<img src="rt13.jpg" alt="RT 13">
+<div class="gallery-info">
+<h3>Dasawisma RT 13</h3>
+<p>Desa Bulurejo</p>
+</div>
+</div>
+
+</div>
+
+</section>
