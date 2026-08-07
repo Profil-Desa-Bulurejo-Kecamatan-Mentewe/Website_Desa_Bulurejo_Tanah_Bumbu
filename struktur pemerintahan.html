@@ -1,1 +1,612 @@
+<!DOCTYPE html>
+<html lang="id">
 
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Struktur Pemerintahan | Desa Bulurejo</title>
+
+<meta name="description"
+content="Struktur Pemerintahan Desa Bulurejo Kecamatan Mantewe Kabupaten Tanah Bumbu">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+rel="stylesheet">
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+scroll-behavior:smooth;
+}
+
+:root{
+
+--primary:#2E7D32;
+--primary2:#43A047;
+--secondary:#E8F5E9;
+--white:#ffffff;
+--dark:#263238;
+--text:#616161;
+--shadow:0 12px 35px rgba(0,0,0,.08);
+
+}
+
+body{
+
+background:#F5F7FA;
+color:var(--dark);
+overflow-x:hidden;
+
+}
+
+/*=========================
+HIASAN DAUN
+=========================*/
+
+.leaf{
+
+position:fixed;
+width:180px;
+height:180px;
+
+background:url("leaf.png") center/contain no-repeat;
+
+opacity:.08;
+
+pointer-events:none;
+
+z-index:-1;
+
+}
+
+.leaf.left{
+
+top:170px;
+left:-45px;
+
+}
+
+.leaf.right{
+
+bottom:80px;
+right:-45px;
+transform:rotate(180deg);
+
+}
+
+.leaf.top-right{
+
+top:120px;
+right:-35px;
+transform:rotate(220deg);
+
+}
+
+.leaf.bottom-left{
+
+left:-35px;
+bottom:120px;
+transform:rotate(45deg);
+
+}
+
+/*=========================
+HEADER
+=========================*/
+
+.header{
+
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:80px;
+
+display:flex;
+justify-content:space-between;
+align-items:center;
+
+padding:0 35px;
+
+background:rgba(255,255,255,.95);
+
+backdrop-filter:blur(10px);
+
+box-shadow:0 4px 20px rgba(0,0,0,.08);
+
+z-index:9999;
+
+}
+
+.logo{
+
+display:flex;
+align-items:center;
+gap:15px;
+
+}
+
+.logo img{
+
+width:60px;
+height:60px;
+object-fit:contain;
+
+}
+
+.logo-text h2{
+
+font-size:24px;
+color:var(--primary);
+font-weight:700;
+
+}
+
+.logo-text p{
+
+font-size:13px;
+color:#666;
+
+}
+
+/*=========================
+MENU
+=========================*/
+
+.nav-menu{
+
+display:flex;
+align-items:center;
+gap:28px;
+
+}
+
+.nav-menu a{
+
+text-decoration:none;
+color:var(--dark);
+font-size:15px;
+font-weight:600;
+transition:.3s;
+
+position:relative;
+
+}
+
+.nav-menu a:hover{
+
+color:var(--primary);
+
+}
+
+.nav-menu a::after{
+
+content:"";
+position:absolute;
+left:0;
+bottom:-6px;
+
+width:0%;
+height:2px;
+
+background:var(--primary);
+
+transition:.35s;
+
+}
+
+.nav-menu a:hover::after{
+
+width:100%;
+
+}
+
+.menu-toggle{
+
+display:none;
+font-size:28px;
+color:var(--primary);
+cursor:pointer;
+
+}
+
+/*=========================
+MENU MOBILE
+=========================*/
+
+.mobile-menu{
+
+position:fixed;
+
+top:80px;
+right:-100%;
+
+width:300px;
+height:calc(100vh - 80px);
+
+background:white;
+
+padding:25px;
+
+overflow-y:auto;
+
+transition:.35s;
+
+box-shadow:-5px 0 25px rgba(0,0,0,.08);
+
+z-index:9998;
+
+}
+
+.mobile-menu.active{
+
+right:0;
+
+}
+
+.mobile-menu ul{
+
+list-style:none;
+
+}
+
+.mobile-menu li{
+
+margin-bottom:10px;
+
+}
+
+.mobile-menu a{
+
+display:flex;
+justify-content:space-between;
+align-items:center;
+
+padding:13px 15px;
+
+text-decoration:none;
+
+color:#444;
+
+border-radius:12px;
+
+font-weight:500;
+
+transition:.3s;
+
+}
+
+.mobile-menu a:hover{
+
+background:var(--primary);
+color:white;
+
+}
+
+/*=========================
+MAIN
+=========================*/
+
+.main{
+
+max-width:1400px;
+margin:110px auto 40px;
+padding:35px;
+
+}
+
+/*=========================
+HERO
+=========================*/
+
+.hero{
+
+position:relative;
+
+height:480px;
+
+border-radius:28px;
+
+overflow:hidden;
+
+box-shadow:var(--shadow);
+
+}
+
+.hero img.bg{
+
+width:100%;
+height:100%;
+object-fit:cover;
+
+filter:brightness(.55);
+
+}
+
+.hero::after{
+
+content:"";
+
+position:absolute;
+inset:0;
+
+background:linear-gradient(
+to right,
+rgba(0,0,0,.55),
+rgba(0,0,0,.25)
+);
+
+}
+
+.hero-content{
+
+position:absolute;
+
+top:50%;
+left:50%;
+
+transform:translate(-50%,-50%);
+
+text-align:center;
+
+width:90%;
+
+color:white;
+
+z-index:5;
+
+}
+
+.hero-content .foto-kades{
+
+width:170px;
+height:170px;
+
+border-radius:50%;
+
+border:6px solid rgba(255,255,255,.95);
+
+object-fit:cover;
+
+box-shadow:0 15px 35px rgba(0,0,0,.35);
+
+margin-bottom:22px;
+
+}
+
+.hero-content h1{
+
+font-size:48px;
+font-weight:800;
+margin-bottom:10px;
+
+}
+
+.hero-content h3{
+
+font-size:28px;
+font-weight:600;
+margin-bottom:15px;
+
+color:#E8F5E9;
+
+}
+
+.hero-content p{
+
+font-size:18px;
+letter-spacing:.5px;
+
+}
+
+/*=========================
+RESPONSIVE
+=========================*/
+
+@media(max-width:992px){
+
+.nav-menu{
+
+display:none;
+
+}
+
+.menu-toggle{
+
+display:block;
+
+}
+
+.hero{
+
+height:430px;
+
+}
+
+.hero-content h1{
+
+font-size:34px;
+
+}
+
+.hero-content h3{
+
+font-size:22px;
+
+}
+
+}
+
+@media(max-width:768px){
+
+.header{
+
+height:70px;
+padding:0 18px;
+
+}
+
+.logo img{
+
+width:48px;
+height:48px;
+
+}
+
+.logo-text h2{
+
+font-size:18px;
+
+}
+
+.logo-text p{
+
+font-size:11px;
+
+}
+
+.mobile-menu{
+
+top:70px;
+height:calc(100vh - 70px);
+
+}
+
+.main{
+
+margin-top:90px;
+padding:18px;
+
+}
+
+.hero{
+
+height:520px;
+
+}
+
+.hero-content .foto-kades{
+
+width:130px;
+height:130px;
+
+}
+
+.hero-content h1{
+
+font-size:28px;
+
+}
+
+.hero-content h3{
+
+font-size:18px;
+
+}
+
+.hero-content p{
+
+font-size:14px;
+
+}
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="leaf left"></div>
+<div class="leaf right"></div>
+<div class="leaf top-right"></div>
+<div class="leaf bottom-left"></div>
+
+<header class="header">
+
+<div class="logo">
+
+<img src="logo desa.jpeg" alt="Logo Desa">
+
+<div class="logo-text">
+
+<h2>Desa Bulurejo</h2>
+<p>Kecamatan Mantewe • Kabupaten Tanah Bumbu</p>
+
+</div>
+
+</div>
+
+<nav class="nav-menu">
+
+<a href="index.html">Beranda</a>
+<a href="profil desa.html">Profil Desa</a>
+<a href="struktur pemerintahan.html">Struktur Pemerintahan</a>
+<a href="wilayah.html">Wilayah Desa</a>
+<a href="potensi desa.html">Potensi Desa</a>
+<a href="berita.html">Berita</a>
+<a href="layanan.html">Layanan</a>
+
+</nav>
+
+<div class="menu-toggle">
+
+<i class="fas fa-bars"></i>
+
+</div>
+
+</header>
+
+<div class="mobile-menu">
+
+<ul>
+
+<li><a href="index.html">🏠 Beranda</a></li>
+<li><a href="profil desa.html">📖 Profil Desa</a></li>
+<li><a href="struktur pemerintahan.html">👥 Struktur Pemerintahan</a></li>
+<li><a href="wilayah.html">🗺 Wilayah Desa</a></li>
+<li><a href="potensi desa.html">🌿 Potensi Desa</a></li>
+<li><a href="berita.html">📰 Berita</a></li>
+<li><a href="layanan.html">☎️ Layanan</a></li>
+
+</ul>
+
+</div>
+
+<main class="main">
+
+<section class="hero">
+
+<img src="foto bersama perangkat desa.jpeg"
+class="bg"
+alt="Perangkat Desa">
+
+<div class="hero-content">
+
+<img src="foto kepala desa.jpeg"
+class="foto-kades"
+alt="Kepala Desa">
+
+<h1>Struktur Pemerintahan</h1>
+
+<h3>Desa Bulurejo</h3>
+
+<p>
+Kecamatan Mantewe • Kabupaten Tanah Bumbu
+</p>
+
+</div>
+
+</section>
