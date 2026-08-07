@@ -1746,3 +1746,236 @@ Menciptakan masyarakat Desa Bulurejo yang aman, tertib, rukun, serta menjunjung 
 </div>
 
 </section>
+<!-- ======================================
+FOOTER
+====================================== -->
+
+<footer class="footer reveal">
+
+<div class="footer-title">
+
+<h2>
+
+<i class="fas fa-map-location-dot"></i>
+
+Informasi Kantor Desa
+
+</h2>
+
+</div>
+
+<div class="office-grid">
+
+<div class="office-card">
+
+<i class="fas fa-location-dot"></i>
+
+<h3>Alamat</h3>
+
+<p>
+
+Jl. Transmigrasi Km 37<br>
+
+Desa Bulurejo<br>
+
+Kecamatan Mantewe<br>
+
+Kabupaten Tanah Bumbu<br>
+
+Kalimantan Selatan 72211
+
+</p>
+
+</div>
+
+<div class="office-card">
+
+<i class="fas fa-phone"></i>
+
+<h3>Telepon</h3>
+
+<p>
+
+Belum tersedia
+
+</p>
+
+</div>
+
+<div class="office-card">
+
+<i class="fas fa-envelope"></i>
+
+<h3>Email</h3>
+
+<p>
+
+Belum tersedia
+
+</p>
+
+</div>
+
+<div class="office-card">
+
+<i class="fas fa-clock"></i>
+
+<h3>Jam Pelayanan</h3>
+
+<p>
+
+Senin – Jumat
+
+<br>
+
+08.00 – 15.00 WITA
+
+</p>
+
+</div>
+
+</div>
+
+</footer>
+
+<!-- COPYRIGHT -->
+
+<div class="copyright">
+
+<p>
+
+© 2026 Pemerintah Desa Bulurejo
+
+</p>
+
+<p>
+
+Kecamatan Mantewe • Kabupaten Tanah Bumbu
+
+</p>
+
+<p>
+
+Website dikembangkan oleh
+
+<strong>
+
+KKNT-LH Kelompok 8
+
+Universitas Lambung Mangkurat
+
+</strong>
+
+</p>
+
+</div>
+
+</main>
+
+<!-- BACK TO TOP -->
+
+<div class="back-top">
+
+<i class="fas fa-arrow-up"></i>
+
+</div>
+
+<script>
+
+/* MENU */
+
+const menu=document.querySelector(".menu-toggle");
+
+const mobile=document.querySelector(".mobile-menu");
+
+menu.onclick=function(){
+
+mobile.classList.toggle("active");
+
+menu.innerHTML=
+
+mobile.classList.contains("active")
+
+?
+
+'<i class="fas fa-times"></i>'
+
+:
+
+'<i class="fas fa-bars"></i>';
+
+};
+
+/* HEADER */
+
+window.addEventListener("scroll",()=>{
+
+document.querySelector(".header")
+
+.classList.toggle(
+
+"scrolled",
+
+window.scrollY>50
+
+);
+
+});
+
+/* BACK TO TOP */
+
+const topBtn=document.querySelector(".back-top");
+
+window.addEventListener("scroll",()=>{
+
+topBtn.style.display=
+
+window.scrollY>400
+
+?
+
+"flex"
+
+:
+
+"none";
+
+});
+
+topBtn.onclick=()=>{
+
+window.scrollTo({
+
+top:0,
+
+behavior:"smooth"
+
+});
+
+};
+
+/* REVEAL */
+
+const reveal=document.querySelectorAll(".reveal");
+
+const observer=new IntersectionObserver(entries=>{
+
+entries.forEach(entry=>{
+
+if(entry.isIntersecting){
+
+entry.target.classList.add("show");
+
+}
+
+});
+
+});
+
+reveal.forEach(el=>observer.observe(el));
+
+</script>
+
+</body>
+
+</html>
