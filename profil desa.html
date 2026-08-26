@@ -837,6 +837,101 @@ text-align:left;
 }
 
 /*==============================
+ASAL TRANSMIGRAN
+==============================*/
+
+.origin-grid{
+    display:grid;
+    grid-template-columns:repeat(5,1fr);
+    gap:18px;
+    margin-top:25px;
+}
+
+.origin-card{
+    background:#F8FBF8;
+    padding:22px 18px;
+    border-radius:16px;
+    border:1px solid #E5EEE5;
+    min-height:180px;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    transition:.3s;
+}
+
+.origin-card:hover{
+    transform:translateY(-5px);
+    box-shadow:0 10px 25px rgba(46,125,50,.12);
+}
+
+.origin-card h3{
+    font-size:17px;
+    color:var(--dark);
+    margin-bottom:8px;
+    font-weight:700;
+}
+
+.origin-card p{
+    margin:0 0 14px;
+    color:#666;
+    font-size:15px;
+    line-height:1.5;
+    text-align:left;
+}
+
+.origin-card span{
+    display:inline-block;
+    width:max-content;
+    padding:5px 12px;
+    border-radius:20px;
+    background:#E8F5E9;
+    color:var(--primary);
+    font-size:14px;
+    font-weight:700;
+}
+
+/* TABLET */
+@media(max-width:1100px){
+
+    .origin-grid{
+        grid-template-columns:repeat(3,1fr);
+    }
+
+}
+
+/* HP */
+@media(max-width:768px){
+
+    .origin-grid{
+        grid-template-columns:repeat(2,1fr);
+        gap:14px;
+    }
+
+    .origin-card{
+        min-height:150px;
+        padding:18px 15px;
+    }
+
+    .origin-card h3{
+        font-size:15px;
+    }
+
+    .origin-card p{
+        font-size:14px;
+    }
+
+}
+
+/* HP KECIL */
+@media(max-width:480px){
+
+    .origin-grid{
+        grid-template-columns:1fr;
+    }
+
+}
+    
+/*==============================
 FOOTER
 ==============================*/
 
