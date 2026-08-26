@@ -910,95 +910,98 @@ border-color:#43A047;
 }
 
 /*=====================================
-FOOTER
-======================================*/
+FOOTER / INFORMASI KANTOR
+=====================================*/
 
 .footer{
-
-margin-top:70px;
-
-padding:35px;
-
-background:rgba(255,255,255,.82);
-
-backdrop-filter:blur(18px);
-
-border-radius:28px;
-
-box-shadow:0 12px 30px rgba(0,0,0,.05);
-
+    margin-top:70px;
+    padding:35px;
+    background:rgba(255,255,255,.88);
+    backdrop-filter:blur(18px);
+    border-radius:28px;
+    box-shadow:var(--shadow);
 }
 
 .footer-top h3{
-
-font-size:28px;
-
-margin-bottom:28px;
-
-color:var(--primary);
-
-text-align:center;
-
+    text-align:center;
+    font-size:34px;
+    color:var(--primary);
+    margin-bottom:35px;
 }
 
 .info-list{
-
-display:flex;
-
-flex-direction:column;
-
-gap:12px;
-
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:22px;
 }
 
 .info-item{
-
-display:flex;
-
-gap:18px;
-
-padding:8px 0;
-
+    background:#fff;
+    padding:25px 22px;
+    border-radius:20px;
+    box-shadow:0 10px 28px rgba(0,0,0,.07);
+    border-top:4px solid var(--primary2);
+    min-height:170px;
 }
 
-.label{
-
-min-width:135px;
-
-font-weight:700;
-
-color:var(--primary);
-
+.info-item .label{
+    display:block;
+    min-width:0;
+    font-size:18px;
+    font-weight:700;
+    color:var(--primary);
+    margin-bottom:12px;
 }
 
-.value{
+.info-item .label::before{
+    font-family:"Font Awesome 6 Free";
+    font-weight:900;
+    margin-right:9px;
+}
 
-flex:1;
+.info-item:nth-child(1) .label::before{
+    content:"\f3c5";
+}
 
-line-height:1.8;
+.info-item:nth-child(2) .label::before{
+    content:"\f095";
+}
 
-color:#555;
+.info-item:nth-child(3) .label::before{
+    content:"\f0e0";
+}
 
+.info-item:nth-child(4) .label::before{
+    content:"\f017";
+}
+
+.info-item .value{
+    display:block;
+    color:#666;
+    line-height:1.8;
+    font-size:15px;
 }
 
 .copyright{
-
-margin-top:35px;
-
-text-align:center;
-
-font-size:14px;
-
-color:#777;
-
-line-height:2;
-
+    margin-top:40px;
+    padding-top:25px;
+    border-top:1px solid #eee;
+    text-align:center;
+    font-size:14px;
+    color:#777;
+    line-height:2;
 }
   
 /*=========================
 RESPONSIVE
 =========================*/
+@media(max-width:992px){
 
+    .info-list{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+}
 @media(max-width:992px){
 
 .nav-menu{
@@ -1161,9 +1164,20 @@ display:block;
 padding:22px;
 
 }
-  
+
+.info-list{
+    grid-template-columns:1fr;
 }
 
+.info-item{
+    min-height:auto;
+}
+
+.footer-top h3{
+    font-size:26px;
+}
+}
+  
 </style>
 
 </head>
