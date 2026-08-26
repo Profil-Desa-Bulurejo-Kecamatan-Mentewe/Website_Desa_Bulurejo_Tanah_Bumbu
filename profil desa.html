@@ -5,7 +5,8 @@
 
 <meta charset="UTF-8">
 
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport"
+content="width=device-width, initial-scale=1.0">
 
 <title>Profil Desa Bulurejo</title>
 
@@ -27,1107 +28,1163 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
 
 <style>
 
-*{
-margin:0;
-padding:0;
-box-sizing:border-box;
-font-family:'Poppins',sans-serif;
-scroll-behavior:smooth;
+/* =========================================
+RESET
+========================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    scroll-behavior: smooth;
 }
 
-:root{
+:root {
 
---primary:#2E7D32;
---primary2:#43A047;
---secondary:#E8F5E9;
---accent:#A5D6A7;
+    --primary: #2E7D32;
+    --primary2: #43A047;
+    --secondary: #E8F5E9;
+    --accent: #A5D6A7;
 
---white:#ffffff;
---dark:#263238;
---text:#616161;
+    --white: #ffffff;
+    --dark: #263238;
+    --text: #616161;
 
---shadow:0 12px 35px rgba(0,0,0,.08);
-
-}
-
-body{
-
-background:#F5F7FA;
-color:var(--dark);
-overflow-x:hidden;
+    --shadow: 0 12px 35px rgba(0,0,0,.08);
 
 }
 
-/*==============================
-HIASAN BACKGROUND
-==============================*/
+body {
 
-body::before{
-
-content:"";
-
-position:fixed;
-
-top:-120px;
-left:-120px;
-
-width:420px;
-height:420px;
-
-background:radial-gradient(circle,
-rgba(67,160,71,.12),
-transparent 70%);
-
-z-index:-3;
+    background: #F5F7FA;
+    color: var(--dark);
+    overflow-x: hidden;
 
 }
 
-body::after{
+/* =========================================
+BACKGROUND
+========================================= */
 
-content:"";
+body::before {
 
-position:fixed;
+    content: "";
 
-right:-150px;
-bottom:-120px;
+    position: fixed;
 
-width:420px;
-height:420px;
+    top: -120px;
+    left: -120px;
 
-background:radial-gradient(circle,
-rgba(165,214,167,.18),
-transparent 70%);
+    width: 420px;
+    height: 420px;
 
-z-index:-3;
+    background: radial-gradient(
+        circle,
+        rgba(67,160,71,.12),
+        transparent 70%
+    );
+
+    z-index: -3;
 
 }
 
-/*==============================
+body::after {
+
+    content: "";
+
+    position: fixed;
+
+    right: -150px;
+    bottom: -120px;
+
+    width: 420px;
+    height: 420px;
+
+    background: radial-gradient(
+        circle,
+        rgba(165,214,167,.18),
+        transparent 70%
+    );
+
+    z-index: -3;
+
+}
+
+/* =========================================
 HEADER
-==============================*/
+========================================= */
 
-.header{
+.header {
 
-position:fixed;
+    position: fixed;
 
-top:0;
-left:0;
+    top: 0;
+    left: 0;
 
-width:100%;
-height:80px;
+    width: 100%;
+    height: 80px;
 
-display:flex;
-justify-content:space-between;
-align-items:center;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 
-padding:0 35px;
+    padding: 0 35px;
 
-background:rgba(255,255,255,.92);
+    background: rgba(255,255,255,.92);
 
-backdrop-filter:blur(14px);
+    backdrop-filter: blur(14px);
 
-box-shadow:0 5px 18px rgba(0,0,0,.08);
+    box-shadow: 0 5px 18px rgba(0,0,0,.08);
 
-z-index:9999;
+    z-index: 9999;
 
-transition:.35s;
-
-}
-
-.header.scrolled{
-
-background:rgba(255,255,255,.97);
-
-box-shadow:0 12px 30px rgba(0,0,0,.10);
+    transition: .35s;
 
 }
 
-/*==============================
-LOGO
-==============================*/
+.header.scrolled {
 
-.logo{
+    background: rgba(255,255,255,.97);
 
-display:flex;
-align-items:center;
-gap:15px;
+    box-shadow: 0 12px 30px rgba(0,0,0,.10);
 
 }
 
-.logo img{
+/* =========================================
+LOGO HEADER
+========================================= */
 
-width:60px;
-height:60px;
+.logo {
 
-object-fit:contain;
-
-transition:.35s;
-
-}
-
-.logo img:hover{
-
-transform:scale(1.08);
+    display: flex;
+    align-items: center;
+    gap: 15px;
 
 }
 
-.logo-text h2{
+.logo img {
 
-font-size:24px;
+    width: 60px;
+    height: 60px;
 
-color:var(--primary);
+    object-fit: contain;
 
-font-weight:700;
-
-}
-
-.logo-text p{
-
-font-size:13px;
-
-color:#666;
+    transition: .35s;
 
 }
 
-/*==============================
-MENU
-==============================*/
+.logo img:hover {
 
-.nav-menu{
-
-display:flex;
-
-align-items:center;
-
-gap:28px;
+    transform: scale(1.08);
 
 }
 
-.nav-menu a{
+.logo-text h2 {
 
-text-decoration:none;
+    font-size: 24px;
 
-font-size:15px;
+    color: var(--primary);
 
-font-weight:600;
-
-color:#444;
-
-position:relative;
-
-transition:.3s;
+    font-weight: 700;
 
 }
 
-.nav-menu a:hover{
+.logo-text p {
 
-color:var(--primary);
+    font-size: 13px;
 
-}
-
-.nav-menu a.active{
-
-color:var(--primary);
+    color: #666;
 
 }
 
-.nav-menu a::after{
+/* =========================================
+NAVIGATION
+========================================= */
 
-content:"";
+.nav-menu {
 
-position:absolute;
+    display: flex;
 
-left:0;
-bottom:-6px;
+    align-items: center;
 
-width:0;
+    gap: 28px;
 
-height:3px;
+}
 
-background:var(--primary);
+.nav-menu a {
 
-border-radius:50px;
+    text-decoration: none;
 
-transition:.3s;
+    font-size: 15px;
+
+    font-weight: 600;
+
+    color: #444;
+
+    position: relative;
+
+    transition: .3s;
+
+}
+
+.nav-menu a:hover {
+
+    color: var(--primary);
+
+}
+
+.nav-menu a.active {
+
+    color: var(--primary);
+
+}
+
+.nav-menu a::after {
+
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+    bottom: -6px;
+
+    width: 0;
+    height: 3px;
+
+    background: var(--primary);
+
+    border-radius: 50px;
+
+    transition: .3s;
 
 }
 
 .nav-menu a:hover::after,
-.nav-menu a.active::after{
+.nav-menu a.active::after {
 
-width:100%;
-
-}
-
-/*==============================
-MENU MOBILE
-==============================*/
-
-.menu-toggle{
-
-display:none;
-
-font-size:28px;
-
-cursor:pointer;
-
-color:var(--primary);
+    width: 100%;
 
 }
 
-.mobile-menu{
+/* =========================================
+MOBILE MENU
+========================================= */
 
-position:fixed;
+.menu-toggle {
 
-top:80px;
-right:-100%;
+    display: none;
 
-width:290px;
+    font-size: 28px;
 
-height:calc(100vh - 80px);
+    cursor: pointer;
 
-background:white;
-
-padding:25px;
-
-overflow-y:auto;
-
-transition:.35s;
-
-box-shadow:-5px 0 25px rgba(0,0,0,.08);
-
-z-index:9998;
+    color: var(--primary);
 
 }
 
-.mobile-menu.active{
+.mobile-menu {
 
-right:0;
+    position: fixed;
 
-}
+    top: 80px;
+    right: -100%;
 
-.mobile-menu ul{
+    width: 290px;
 
-list-style:none;
+    height: calc(100vh - 80px);
 
-}
+    background: white;
 
-.mobile-menu li{
+    padding: 25px;
 
-margin-bottom:10px;
+    overflow-y: auto;
 
-}
+    transition: .35s;
 
-.mobile-menu a{
+    box-shadow: -5px 0 25px rgba(0,0,0,.08);
 
-display:block;
-
-padding:14px 16px;
-
-text-decoration:none;
-
-border-radius:12px;
-
-color:#444;
-
-font-weight:500;
-
-transition:.3s;
+    z-index: 9998;
 
 }
 
-.mobile-menu a:hover{
+.mobile-menu.active {
 
-background:var(--primary);
-
-color:white;
+    right: 0;
 
 }
 
-/*==============================
+.mobile-menu ul {
+
+    list-style: none;
+
+}
+
+.mobile-menu li {
+
+    margin-bottom: 10px;
+
+}
+
+.mobile-menu a {
+
+    display: block;
+
+    padding: 14px 16px;
+
+    text-decoration: none;
+
+    border-radius: 12px;
+
+    color: #444;
+
+    font-weight: 500;
+
+    transition: .3s;
+
+}
+
+.mobile-menu a:hover {
+
+    background: var(--primary);
+
+    color: white;
+
+}
+
+/* =========================================
 MAIN
-==============================*/
+========================================= */
 
-.main{
+.main {
 
-max-width:1350px;
+    max-width: 1350px;
 
-margin:105px auto 40px;
+    margin: 105px auto 40px;
 
-padding:35px;
+    padding: 35px;
 
 }
 
-/*==============================
+/* =========================================
 HERO
-==============================*/
+========================================= */
 
-.hero{
+.hero {
 
-position:relative;
+    position: relative;
 
-overflow:hidden;
+    overflow: hidden;
 
-border-radius:24px;
+    border-radius: 24px;
 
-box-shadow:var(--shadow);
+    box-shadow: var(--shadow);
 
-margin-bottom:35px;
-
-}
-
-.hero img{
-
-width:100%;
-
-height:290px;
-
-object-fit:cover;
-
-display:block;
+    margin-bottom: 35px;
 
 }
 
-.hero::before{
+.hero img {
 
-content:"";
+    width: 100%;
 
-position:absolute;
+    height: 290px;
 
-inset:0;
+    object-fit: cover;
 
-background:linear-gradient(
-
-rgba(0,0,0,.30),
-
-rgba(0,0,0,.35)
-
-);
+    display: block;
 
 }
 
-.hero-content{
+.hero::before {
 
-position:absolute;
+    content: "";
 
-top:50%;
-left:50%;
+    position: absolute;
 
-transform:translate(-50%,-50%);
+    inset: 0;
 
-text-align:center;
-
-color:white;
-
-width:90%;
+    background: linear-gradient(
+        rgba(0,0,0,.30),
+        rgba(0,0,0,.35)
+    );
 
 }
 
-.hero-content img{
+.hero-content {
 
-width:70px;
+    position: absolute;
 
-margin-bottom:18px;
+    top: 50%;
+    left: 50%;
 
-}
+    transform: translate(-50%,-50%);
 
-.hero-content h1{
+    text-align: center;
 
-font-size:42px;
+    color: white;
 
-font-weight:700;
+    width: 90%;
 
-margin-bottom:10px;
-
-text-shadow:0 3px 12px rgba(0,0,0,.30);
-
-}
-
-.hero-content p{
-
-font-size:18px;
-
-letter-spacing:1px;
+    z-index: 2;
 
 }
 
-/*==============================
+.hero-content h1 {
+
+    font-size: 42px;
+
+    font-weight: 700;
+
+    margin-bottom: 10px;
+
+    text-shadow: 0 3px 12px rgba(0,0,0,.30);
+
+}
+
+.hero-content p {
+
+    font-size: 18px;
+
+    letter-spacing: 1px;
+
+}
+
+/* =========================================
 CARD
-==============================*/
+========================================= */
 
-.card{
+.card {
 
-background:rgba(255,255,255,.90);
+    background: rgba(255,255,255,.90);
 
-backdrop-filter:blur(18px);
+    backdrop-filter: blur(18px);
 
-padding:35px;
+    padding: 35px;
 
-border-radius:22px;
+    border-radius: 22px;
 
-box-shadow:var(--shadow);
+    box-shadow: var(--shadow);
 
-margin-bottom:28px;
+    margin-bottom: 28px;
 
-transition:.35s;
+    transition: .35s;
 
-position:relative;
+    position: relative;
 
-overflow:hidden;
-
-}
-
-.card:hover{
-
-transform:translateY(-6px);
+    overflow: hidden;
 
 }
 
-.card::before{
+.card:hover {
 
-content:"";
-
-position:absolute;
-
-left:0;
-top:0;
-
-width:5px;
-height:100%;
-
-background:linear-gradient(
-
-to bottom,
-
-#43A047,
-
-#A5D6A7
-
-);
+    transform: translateY(-6px);
 
 }
 
-.card h2{
+.card::before {
 
-color:var(--primary);
+    content: "";
 
-font-size:30px;
+    position: absolute;
 
-margin-bottom:15px;
+    left: 0;
+    top: 0;
 
-}
+    width: 5px;
+    height: 100%;
 
-.card p{
-
-font-size:16px;
-
-line-height:2;
-
-color:#555;
-
-text-align:justify;
+    background: linear-gradient(
+        to bottom,
+        #43A047,
+        #A5D6A7
+    );
 
 }
 
-.line{
+.card h2 {
 
-width:80px;
+    color: var(--primary);
 
-height:4px;
+    font-size: 30px;
 
-background:var(--primary);
-
-border-radius:50px;
-
-margin:15px 0 25px;
+    margin-bottom: 15px;
 
 }
 
-/*==============================
-RESPONSIVE
-==============================*/
+.card p {
 
-@media(max-width:992px){
+    font-size: 16px;
 
-.nav-menu{
+    line-height: 2;
 
-display:none;
+    color: #555;
 
-}
-
-.menu-toggle{
-
-display:block;
+    text-align: justify;
 
 }
 
-.hero img{
+.line {
 
-height:240px;
+    width: 80px;
 
-}
+    height: 4px;
 
-.hero-content h1{
+    background: var(--primary);
 
-font-size:30px;
+    border-radius: 50px;
 
-}
-
-}
-
-@media(max-width:768px){
-
-.header{
-
-height:70px;
-
-padding:0 18px;
+    margin: 15px 0 25px;
 
 }
 
-.mobile-menu{
-
-top:70px;
-
-height:calc(100vh - 70px);
-
-}
-
-.logo img{
-
-width:48px;
-
-height:48px;
-
-}
-
-.logo-text h2{
-
-font-size:18px;
-
-}
-
-.logo-text p{
-
-font-size:11px;
-
-}
-
-.main{
-
-margin-top:90px;
-
-padding:18px;
-
-}
-
-.hero img{
-
-height:210px;
-
-}
-
-.hero-content img{
-
-width:60px;
-
-}
-
-.hero-content h1{
-
-font-size:24px;
-
-}
-
-.hero-content p{
-
-font-size:14px;
-
-}
-
-.card{
-
-padding:25px;
-
-}
-
-.card h2{
-
-font-size:24px;
-
-}
-
-.card p{
-
-font-size:15px;
-
-}
-
-}
-/*==============================
+/* =========================================
 DATA PROFIL
-==============================*/
+========================================= */
 
-.profile-grid{
+.profile-grid {
 
-display:grid;
+    display: grid;
 
-grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+    grid-template-columns: repeat(
+        auto-fit,
+        minmax(260px,1fr)
+    );
 
-gap:18px;
+    gap: 18px;
 
-margin-top:25px;
-
-}
-
-.profile-item{
-
-background:#F8FBF8;
-
-padding:18px 20px;
-
-border-left:5px solid var(--primary);
-
-border-radius:14px;
-
-transition:.3s;
+    margin-top: 25px;
 
 }
 
-.profile-item:hover{
+.profile-item {
 
-transform:translateY(-5px);
+    background: #F8FBF8;
 
-box-shadow:0 10px 25px rgba(46,125,50,.10);
+    padding: 18px 20px;
 
-}
+    border-left: 5px solid var(--primary);
 
-.profile-item span{
+    border-radius: 14px;
 
-display:block;
-
-font-size:13px;
-
-color:#777;
-
-margin-bottom:6px;
+    transition: .3s;
 
 }
 
-.profile-item strong{
+.profile-item:hover {
 
-font-size:16px;
+    transform: translateY(-5px);
 
-color:var(--dark);
+    box-shadow:
+        0 10px 25px
+        rgba(46,125,50,.10);
 
 }
 
-/*==============================
+.profile-item span {
+
+    display: block;
+
+    font-size: 13px;
+
+    color: #777;
+
+    margin-bottom: 6px;
+
+}
+
+.profile-item strong {
+
+    font-size: 16px;
+
+    color: var(--dark);
+
+}
+
+/* =========================================
 VISI
-==============================*/
+========================================= */
 
-.vision-box{
+.vision-box {
 
-background:linear-gradient(135deg,#2E7D32,#43A047);
+    background:
+        linear-gradient(
+            135deg,
+            #2E7D32,
+            #43A047
+        );
 
-color:#fff;
+    color: #fff;
 
-padding:35px;
+    padding: 35px;
 
-border-radius:20px;
+    border-radius: 20px;
 
-text-align:center;
-
-}
-
-.vision-box i{
-
-font-size:32px;
-
-margin-bottom:18px;
-
-opacity:.9;
+    text-align: center;
 
 }
 
-.vision-box p{
+.vision-box i {
 
-font-size:18px;
+    font-size: 32px;
 
-line-height:2;
+    margin-bottom: 18px;
 
-font-style:italic;
+    opacity: .9;
 
 }
 
-/*==============================
+.vision-box p {
+
+    font-size: 18px;
+
+    line-height: 2;
+
+    font-style: italic;
+
+    text-align: center;
+
+}
+
+/* =========================================
 MISI
-==============================*/
+========================================= */
 
-.mission-grid{
+.mission-grid {
 
-display:grid;
+    display: grid;
 
-grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+    grid-template-columns:
+        repeat(auto-fit,minmax(320px,1fr));
 
-gap:18px;
+    gap: 18px;
 
-margin-top:25px;
-
-}
-
-.mission-item{
-
-display:flex;
-
-gap:18px;
-
-padding:20px;
-
-background:#F8FBF8;
-
-border-radius:16px;
-
-transition:.3s;
+    margin-top: 25px;
 
 }
 
-.mission-item:hover{
+.mission-item {
 
-transform:translateY(-5px);
+    display: flex;
 
-box-shadow:0 10px 25px rgba(46,125,50,.10);
+    gap: 18px;
 
-}
+    padding: 20px;
 
-.number{
+    background: #F8FBF8;
 
-min-width:48px;
+    border-radius: 16px;
 
-height:48px;
-
-background:var(--primary);
-
-border-radius:50%;
-
-display:flex;
-
-align-items:center;
-
-justify-content:center;
-
-font-weight:700;
-
-color:white;
-
-font-size:18px;
+    transition: .3s;
 
 }
 
-.mission-item p{
+.mission-item:hover {
 
-margin:0;
+    transform: translateY(-5px);
 
-line-height:1.8;
-
-font-size:15px;
-
-text-align:left;
+    box-shadow:
+        0 10px 25px
+        rgba(46,125,50,.10);
 
 }
 
-/*==============================
+.number {
+
+    min-width: 48px;
+
+    height: 48px;
+
+    background: var(--primary);
+
+    border-radius: 50%;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    font-weight: 700;
+
+    color: white;
+
+    font-size: 18px;
+
+}
+
+.mission-item p {
+
+    margin: 0;
+
+    line-height: 1.8;
+
+    font-size: 15px;
+
+    text-align: left;
+
+}
+
+/* =========================================
 ASAL TRANSMIGRAN
-==============================*/
+========================================= */
 
-.origin-grid{
-    display:grid;
-    grid-template-columns:repeat(5,1fr);
-    gap:18px;
-    margin-top:25px;
-}
+.origin-grid {
 
-.origin-card{
-    background:#F8FBF8;
-    padding:22px 18px;
-    border-radius:16px;
-    border:1px solid #E5EEE5;
-    min-height:180px;
-    display:flex;
-    flex-direction:column;
-    justify-content:center;
-    transition:.3s;
-}
+    display: grid;
 
-.origin-card:hover{
-    transform:translateY(-5px);
-    box-shadow:0 10px 25px rgba(46,125,50,.12);
-}
+    grid-template-columns:
+        repeat(5,1fr);
 
-.origin-card h3{
-    font-size:17px;
-    color:var(--dark);
-    margin-bottom:8px;
-    font-weight:700;
-}
+    gap: 18px;
 
-.origin-card p{
-    margin:0 0 14px;
-    color:#666;
-    font-size:15px;
-    line-height:1.5;
-    text-align:left;
-}
-
-.origin-card span{
-    display:inline-block;
-    width:max-content;
-    padding:5px 12px;
-    border-radius:20px;
-    background:#E8F5E9;
-    color:var(--primary);
-    font-size:14px;
-    font-weight:700;
-}
-
-/* TABLET */
-@media(max-width:1100px){
-
-    .origin-grid{
-        grid-template-columns:repeat(3,1fr);
-    }
+    margin-top: 25px;
 
 }
 
-/* HP */
-@media(max-width:768px){
+.origin-card {
 
-    .origin-grid{
-        grid-template-columns:repeat(2,1fr);
-        gap:14px;
-    }
+    background: #F8FBF8;
 
-    .origin-card{
-        min-height:150px;
-        padding:18px 15px;
-    }
+    padding: 22px 18px;
 
-    .origin-card h3{
-        font-size:15px;
-    }
+    border-radius: 16px;
 
-    .origin-card p{
-        font-size:14px;
-    }
+    border: 1px solid #E5EEE5;
+
+    min-height: 180px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+
+    transition: .3s;
+
+}
+
+.origin-card:hover {
+
+    transform: translateY(-5px);
+
+    box-shadow:
+        0 10px 25px
+        rgba(46,125,50,.12);
 
 }
 
-/* HP KECIL */
-@media(max-width:480px){
+.origin-card h3 {
 
-    .origin-grid{
-        grid-template-columns:1fr;
-    }
+    font-size: 17px;
+
+    color: var(--dark);
+
+    margin-bottom: 8px;
+
+    font-weight: 700;
 
 }
-    
-/*==============================
+
+.origin-card p {
+
+    margin: 0 0 14px;
+
+    color: #666;
+
+    font-size: 15px;
+
+    line-height: 1.5;
+
+    text-align: left;
+
+}
+
+.origin-card span {
+
+    display: inline-block;
+
+    width: max-content;
+
+    padding: 5px 12px;
+
+    border-radius: 20px;
+
+    background: #E8F5E9;
+
+    color: var(--primary);
+
+    font-size: 14px;
+
+    font-weight: 700;
+
+}
+
+/* =========================================
 FOOTER
-==============================*/
+========================================= */
 
-.footer{
+.footer {
 
-margin-top:45px;
+    margin-top: 45px;
 
-padding:0;
+    padding: 0;
 
-background:transparent;
-
-box-shadow:none;
+    background: transparent;
 
 }
 
-.footer-title{
+.footer-title {
 
-text-align:center;
+    text-align: center;
 
-margin-bottom:35px;
-
-}
-
-.footer-title h2{
-
-font-size:34px;
-
-color:var(--primary);
+    margin-bottom: 35px;
 
 }
 
-.office-grid{
+.footer-title h2 {
 
-display:grid;
+    font-size: 34px;
 
-grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
-
-gap:25px;
+    color: var(--primary);
 
 }
 
-.office-card{
+.office-grid {
 
-background:white;
+    display: grid;
 
-padding:28px;
+    grid-template-columns:
+        repeat(auto-fit,minmax(240px,1fr));
 
-border-radius:20px;
-
-box-shadow:0 12px 35px rgba(0,0,0,.08);
-
-transition:.35s;
+    gap: 25px;
 
 }
 
-.office-card:hover{
+.office-card {
 
-transform:translateY(-8px);
+    background: white;
 
-}
+    padding: 28px;
 
-.office-card i{
+    border-radius: 20px;
 
-font-size:34px;
+    box-shadow:
+        0 12px 35px
+        rgba(0,0,0,.08);
 
-color:var(--primary);
-
-margin-bottom:15px;
-
-}
-
-.office-card h3{
-
-margin-bottom:12px;
-
-color:var(--primary);
+    transition: .35s;
 
 }
 
-.office-card p{
+.office-card:hover {
 
-line-height:1.9;
-
-color:#666;
+    transform: translateY(-8px);
 
 }
 
-.copyright{
+.office-card i {
 
-text-align:center;
+    font-size: 34px;
 
-margin-top:45px;
+    color: var(--primary);
 
-font-size:14px;
-
-line-height:2;
-
-color:#777;
+    margin-bottom: 15px;
 
 }
 
-.back-top{
+.office-card h3 {
 
-position:fixed;
+    margin-bottom: 12px;
 
-right:30px;
-
-bottom:30px;
-
-width:55px;
-
-height:55px;
-
-border-radius:50%;
-
-background:linear-gradient(
-
-135deg,
-
-#43A047,
-
-#2E7D32
-
-);
-
-display:flex;
-
-align-items:center;
-
-justify-content:center;
-
-color:white;
-
-font-size:22px;
-
-cursor:pointer;
-
-box-shadow:0 12px 30px rgba(46,125,50,.25);
-
-transition:.35s;
-
-z-index:999;
+    color: var(--primary);
 
 }
 
-.back-top:hover{
+.office-card p {
 
-transform:translateY(-6px);
+    line-height: 1.9;
+
+    color: #666;
 
 }
-    
+
+/* =========================================
+COPYRIGHT
+========================================= */
+
+.copyright {
+
+    text-align: center;
+
+    margin-top: 45px;
+
+    font-size: 14px;
+
+    line-height: 2;
+
+    color: #777;
+
+}
+
+/* =========================================
+BACK TO TOP
+========================================= */
+
+.back-top {
+
+    position: fixed;
+
+    right: 30px;
+    bottom: 30px;
+
+    width: 55px;
+    height: 55px;
+
+    border-radius: 50%;
+
+    background:
+        linear-gradient(
+            135deg,
+            #43A047,
+            #2E7D32
+        );
+
+    display: none;
+
+    align-items: center;
+    justify-content: center;
+
+    color: white;
+
+    font-size: 22px;
+
+    cursor: pointer;
+
+    box-shadow:
+        0 12px 30px
+        rgba(46,125,50,.25);
+
+    transition: .35s;
+
+    z-index: 999;
+
+}
+
+.back-top:hover {
+
+    transform: translateY(-6px);
+
+}
+
+/* =========================================
+ANIMATION REVEAL
+========================================= */
+
+.reveal {
+
+    opacity: 0;
+
+    transform: translateY(35px);
+
+    transition:
+        opacity .8s ease,
+        transform .8s ease;
+
+}
+
+.reveal.show {
+
+    opacity: 1;
+
+    transform: translateY(0);
+
+}
+
+/* =========================================
+TABLET
+========================================= */
+
+@media(max-width:1100px) {
+
+    .origin-grid {
+
+        grid-template-columns:
+            repeat(3,1fr);
+
+    }
+
+}
+
+/* =========================================
+RESPONSIVE
+========================================= */
+
+@media(max-width:992px) {
+
+    .nav-menu {
+
+        display: none;
+
+    }
+
+    .menu-toggle {
+
+        display: block;
+
+    }
+
+    .hero img {
+
+        height: 240px;
+
+    }
+
+    .hero-content h1 {
+
+        font-size: 30px;
+
+    }
+
+}
+
+/* =========================================
+MOBILE
+========================================= */
+
+@media(max-width:768px) {
+
+    .header {
+
+        height: 70px;
+
+        padding: 0 18px;
+
+    }
+
+    .mobile-menu {
+
+        top: 70px;
+
+        height: calc(100vh - 70px);
+
+    }
+
+    .logo img {
+
+        width: 48px;
+
+        height: 48px;
+
+    }
+
+    .logo-text h2 {
+
+        font-size: 18px;
+
+    }
+
+    .logo-text p {
+
+        font-size: 11px;
+
+    }
+
+    .main {
+
+        margin-top: 90px;
+
+        padding: 18px;
+
+    }
+
+    .hero img {
+
+        height: 210px;
+
+    }
+
+    .hero-content h1 {
+
+        font-size: 24px;
+
+    }
+
+    .hero-content p {
+
+        font-size: 14px;
+
+    }
+
+    .card {
+
+        padding: 25px;
+
+    }
+
+    .card h2 {
+
+        font-size: 24px;
+
+    }
+
+    .card p {
+
+        font-size: 15px;
+
+    }
+
+    .origin-grid {
+
+        grid-template-columns:
+            repeat(2,1fr);
+
+        gap: 14px;
+
+    }
+
+    .origin-card {
+
+        min-height: 150px;
+
+        padding: 18px 15px;
+
+    }
+
+    .origin-card h3 {
+
+        font-size: 15px;
+
+    }
+
+    .origin-card p {
+
+        font-size: 14px;
+
+    }
+
+}
+
+/* =========================================
+MOBILE KECIL
+========================================= */
+
+@media(max-width:480px) {
+
+    .origin-grid {
+
+        grid-template-columns: 1fr;
+
+    }
+
+}
+
 </style>
 
 </head>
 
 <body>
 
-<!-- ======================================
-     LOADING SCREEN
-====================================== -->
-
-<div id="loader">
-
-    <div class="loader-content">
-
-        <img src="logo desa.jpeg"
-             class="loader-logo"
-             alt="Logo Desa Bulurejo">
-
-        <h2>Desa Bulurejo</h2>
-
-        <p>Website Resmi Pemerintah Desa</p>
-
-        <div class="loading-bar">
-            <span></span>
-        </div>
-
-    </div>
-
-</div>
-
-<!-- PROGRESS SCROLL -->
-
-<div class="progress-bar"></div>
-
-<!-- BACKGROUND GLOW -->
-
-<div class="glow one"></div>
-<div class="glow two"></div>
-
-<!-- HIASAN DAUN CSS -->
-
-<div class="leaf leaf1"></div>
-<div class="leaf leaf2"></div>
-<div class="leaf leaf3"></div>
-<div class="leaf leaf4"></div>
 <!-- ======================================
 HEADER
 ====================================== -->
@@ -1136,13 +1193,17 @@ HEADER
 
     <div class="logo">
 
-        <img src="logo desa.jpeg" alt="Logo Desa">
+        <img
+            src="logo desa.jpeg"
+            alt="Logo Desa Bulurejo">
 
         <div class="logo-text">
 
             <h2>Desa Bulurejo</h2>
 
-            <p>Kecamatan Mantewe • Kabupaten Tanah Bumbu</p>
+            <p>
+                Kecamatan Mantewe • Kabupaten Tanah Bumbu
+            </p>
 
         </div>
 
@@ -1150,13 +1211,23 @@ HEADER
 
     <nav class="nav-menu">
 
-        <a href="index.html">Beranda</a>
+        <a href="index.html">
+            Beranda
+        </a>
 
-        <a href="profil desa.html" class="active">Profil Desa</a>
+        <a
+            href="profil desa.html"
+            class="active">
+            Profil Desa
+        </a>
 
-        <a href="struktur pemerintahan.html">Struktur Desa</a>
+        <a href="struktur pemerintahan.html">
+            Struktur Desa
+        </a>
 
-        <a href="potensi desa.html">Potensi Desa</a>
+        <a href="potensi desa.html">
+            Potensi Desa
+        </a>
 
     </nav>
 
@@ -1174,41 +1245,37 @@ MENU MOBILE
 
 <div class="mobile-menu">
 
-<ul>
+    <ul>
 
-<li>
-<a href="index.html">
-<i class="fas fa-house"></i>
-&nbsp;
-Beranda
-</a>
-</li>
+        <li>
+            <a href="index.html">
+                <i class="fas fa-house"></i>
+                &nbsp; Beranda
+            </a>
+        </li>
 
-<li>
-<a href="profil desa.html">
-<i class="fas fa-book-open"></i>
-&nbsp;
-Profil Desa
-</a>
-</li>
+        <li>
+            <a href="profil desa.html">
+                <i class="fas fa-book-open"></i>
+                &nbsp; Profil Desa
+            </a>
+        </li>
 
-<li>
-<a href="struktur pemerintahan.html">
-<i class="fas fa-users"></i>
-&nbsp;
-Struktur Desa
-</a>
-</li>
+        <li>
+            <a href="struktur pemerintahan.html">
+                <i class="fas fa-users"></i>
+                &nbsp; Struktur Desa
+            </a>
+        </li>
 
-<li>
-<a href="potensi desa.html">
-<i class="fas fa-seedling"></i>
-&nbsp;
-Potensi Desa
-</a>
-</li>
+        <li>
+            <a href="potensi desa.html">
+                <i class="fas fa-seedling"></i>
+                &nbsp; Potensi Desa
+            </a>
+        </li>
 
-</ul>
+    </ul>
 
 </div>
 
@@ -1224,17 +1291,21 @@ HERO
 
 <section class="hero">
 
-<img src="kantor desa.jpeg" alt="Kantor Desa">
+    <img
+        src="kantor desa.jpeg"
+        alt="Kantor Desa Bulurejo">
 
-<div class="hero-content">
+    <div class="hero-content">
 
-<h1>Profil Desa Bulurejo</h1>
+        <h1>
+            Profil Desa Bulurejo
+        </h1>
 
-    <p>
-        Sejarah Desa • Data Profil • Visi dan Misi
-    </p>
+        <p>
+            Sejarah Desa • Data Profil • Visi dan Misi
+        </p>
 
-</div>
+    </div>
 
 </section>
 
@@ -1244,34 +1315,34 @@ PEMBUKA
 
 <section class="card reveal">
 
-<h2>
+    <h2>
 
-<i class="fas fa-landmark"></i>
+        <i class="fas fa-landmark"></i>
 
-Profil Desa Bulurejo
+        Profil Desa Bulurejo
 
-</h2>
+    </h2>
 
-<div class="line"></div>
+    <div class="line"></div>
 
-<p>
+    <p>
 
-Desa Bulurejo merupakan salah satu desa di Kecamatan Mantewe,
-Kabupaten Tanah Bumbu, Provinsi Kalimantan Selatan.
-Desa ini berkembang melalui Program Transmigrasi Umum yang
-menghimpun masyarakat dari Pulau Jawa, Nusa Tenggara Barat,
-serta masyarakat lokal Kalimantan Selatan.
+        Desa Bulurejo merupakan salah satu desa di Kecamatan Mantewe,
+        Kabupaten Tanah Bumbu, Provinsi Kalimantan Selatan.
+        Desa ini berkembang melalui Program Transmigrasi Umum yang
+        menghimpun masyarakat dari Pulau Jawa, Nusa Tenggara Barat,
+        serta masyarakat lokal Kalimantan Selatan.
 
-</p>
+    </p>
 
-<p>
+    <p>
 
-Melalui keberagaman tersebut, masyarakat Desa Bulurejo tumbuh
-menjadi masyarakat yang menjunjung tinggi semangat gotong royong,
-kebersamaan, serta terus berupaya mewujudkan tata kelola pemerintahan
-desa yang baik, transparan, dan berorientasi pada pelayanan masyarakat.
+        Melalui keberagaman tersebut, masyarakat Desa Bulurejo tumbuh
+        menjadi masyarakat yang menjunjung tinggi semangat gotong royong,
+        kebersamaan, serta terus berupaya mewujudkan tata kelola pemerintahan
+        desa yang baik, transparan, dan berorientasi pada pelayanan masyarakat.
 
-</p>
+    </p>
 
 </section>
 
@@ -1281,138 +1352,129 @@ SEJARAH DESA
 
 <section class="card reveal">
 
-<div class="card-header">
+    <h2>
 
-<div>
+        <i class="fas fa-landmark"></i>
 
-<h2>
-<i class="fas fa-landmark"></i>
-Sejarah Desa
-</h2>
+        Sejarah Desa
 
-<div class="line"></div>
+    </h2>
 
-</div>
+    <div class="line"></div>
 
-</div>
+    <p>
 
-<p>
+        Desa Bulurejo terbentuk melalui Program Transmigrasi Umum
+        dengan membentuk satu wilayah hukum yang disebut Unit
+        Pemukiman Transmigrasi (UPT). Penduduk awal berasal dari
+        berbagai daerah di Pulau Jawa, Nusa Tenggara Barat serta
+        masyarakat lokal Kalimantan Selatan.
 
-Desa Bulurejo terbentuk melalui Program Transmigrasi Umum dengan membentuk
-satu wilayah hukum yang disebut Unit Pemukiman Transmigrasi (UPT).
-Penduduk awal berasal dari berbagai daerah di Pulau Jawa,
-Nusa Tenggara Barat serta masyarakat lokal Kalimantan Selatan.
+    </p>
 
-</p>
+    <p>
 
-<p>
+        Pada awalnya pemerintahan berada di bawah Departemen
+        Transmigrasi yang dipimpin oleh Kepala Unit Pemukiman
+        Transmigrasi (KUPT) yang bertugas mengurus administrasi
+        pemerintahan serta kebutuhan para transmigran.
 
-Pada awalnya pemerintahan berada di bawah Departemen Transmigrasi yang dipimpin
-oleh Kepala Unit Pemukiman Transmigrasi (KUPT) yang bertugas mengurus administrasi
-pemerintahan serta kebutuhan para transmigran.
+    </p>
 
-</p>
+    <p>
 
-<p>
+        Tahun 1981 wilayah ini diusulkan menjadi Desa Persiapan
+        dengan nama Desa Buluhrejo, kemudian pada tahun 1987 resmi
+        menjadi desa definitif berdasarkan Surat Keputusan Bupati
+        Kotabaru. Kini Desa Bulurejo berada di Kecamatan Mantewe,
+        Kabupaten Tanah Bumbu, Provinsi Kalimantan Selatan.
 
-Tahun 1981 wilayah ini diusulkan menjadi Desa Persiapan dengan nama
-Desa Buluhrejo, kemudian pada tahun 1987 resmi menjadi desa definitif
-berdasarkan Surat Keputusan Bupati Kotabaru.
-Kini Desa Bulurejo berada di Kecamatan Mantewe,
-Kabupaten Tanah Bumbu, Provinsi Kalimantan Selatan.
-
-</p>
+    </p>
 
 </section>
 
 <!-- ======================================
-TIMELINE SEJARAH
+TIMELINE
 ====================================== -->
 
 <section class="card reveal">
 
-<h2>
+    <h2>
 
-<i class="fas fa-clock-rotate-left"></i>
+        <i class="fas fa-clock-rotate-left"></i>
 
-Perjalanan Desa Bulurejo
+        Perjalanan Desa Bulurejo
 
-</h2>
+    </h2>
 
-<div class="line"></div>
+    <div class="line"></div>
 
-<div class="timeline">
+    <div class="timeline">
 
-<div class="timeline-item">
+        <div class="timeline-item">
 
-<div class="year">
+            <div class="year">
+                1981
+            </div>
 
-1981
+            <div class="timeline-content">
 
-</div>
+                <h4>
+                    Desa Persiapan
+                </h4>
 
-<div class="timeline-content">
+                <p>
+                    Wilayah diusulkan menjadi Desa Persiapan
+                    dengan nama Desa Buluhrejo.
+                </p>
 
-<h4>Desa Persiapan</h4>
+            </div>
 
-<p>
+        </div>
 
-Wilayah diusulkan menjadi Desa Persiapan dengan nama
-Desa Buluhrejo.
+        <div class="timeline-item">
 
-</p>
+            <div class="year">
+                1987
+            </div>
 
-</div>
+            <div class="timeline-content">
 
-</div>
+                <h4>
+                    Desa Definitif
+                </h4>
 
-<div class="timeline-item">
+                <p>
+                    Resmi menjadi desa definitif berdasarkan
+                    Keputusan Bupati Kotabaru.
+                </p>
 
-<div class="year">
+            </div>
 
-1987
+        </div>
 
-</div>
+        <div class="timeline-item">
 
-<div class="timeline-content">
+            <div class="year">
+                Sekarang
+            </div>
 
-<h4>Desa Definitif</h4>
+            <div class="timeline-content">
 
-<p>
+                <h4>
+                    Desa Bulurejo
+                </h4>
 
-Resmi menjadi desa definitif berdasarkan
-Keputusan Bupati Kotabaru.
+                <p>
+                    Menjadi bagian dari Kecamatan Mantewe,
+                    Kabupaten Tanah Bumbu.
+                </p>
 
-</p>
+            </div>
 
-</div>
+        </div>
 
-</div>
-
-<div class="timeline-item">
-
-<div class="year">
-
-Sekarang
-
-</div>
-
-<div class="timeline-content">
-
-<h4>Desa Bulurejo</h4>
-
-<p>
-
-Menjadi bagian dari Kecamatan Mantewe,
-Kabupaten Tanah Bumbu.
-
-</p>
-
-</div>
-
-</div>
-
-</div>
+    </div>
 
 </section>
 
@@ -1422,552 +1484,491 @@ ASAL TRANSMIGRAN
 
 <section class="card reveal">
 
-<h2>
+    <h2>
 
-<i class="fas fa-users"></i>
+        <i class="fas fa-users"></i>
 
-Asal Transmigran Awal
+        Asal Transmigran Awal
 
-</h2>
+    </h2>
 
-<div class="line"></div>
+    <div class="line"></div>
 
-<div class="origin-grid">
+    <div class="origin-grid">
 
-<div class="origin-card">
+        <div class="origin-card">
+            <h3>Jawa Tengah</h3>
+            <p>Batang</p>
+            <span>56 KK</span>
+        </div>
 
-<h3>Jawa Tengah</h3>
+        <div class="origin-card">
+            <h3>Jawa Tengah</h3>
+            <p>Blora</p>
+            <span>61 KK</span>
+        </div>
 
-<p>Batang</p>
+        <div class="origin-card">
+            <h3>Jawa Tengah</h3>
+            <p>Kendal</p>
+            <span>142 KK</span>
+        </div>
 
-<span>56 KK</span>
+        <div class="origin-card">
+            <h3>Jawa Tengah</h3>
+            <p>Wonosobo</p>
+            <span>59 KK</span>
+        </div>
 
-</div>
+        <div class="origin-card">
+            <h3>Jawa Tengah</h3>
+            <p>Banyumas</p>
+            <span>36 KK</span>
+        </div>
 
-<div class="origin-card">
+        <div class="origin-card">
+            <h3>Jawa Timur</h3>
+            <p>Nganjuk</p>
+            <span>47 KK</span>
+        </div>
 
-<h3>Jawa Tengah</h3>
+        <div class="origin-card">
+            <h3>Jawa Timur</h3>
+            <p>Ngawi</p>
+            <span>21 KK</span>
+        </div>
 
-<p>Blora</p>
+        <div class="origin-card">
+            <h3>NTB</h3>
+            <p>Lombok Timur</p>
+            <span>46 KK</span>
+        </div>
 
-<span>61 KK</span>
+        <div class="origin-card">
+            <h3>NTB</h3>
+            <p>Lombok Barat</p>
+            <span>5 KK</span>
+        </div>
 
-</div>
+        <div class="origin-card">
+            <h3>Kalimantan Selatan</h3>
+            <p>Kotabaru</p>
+            <span>5 KK</span>
+        </div>
 
-<div class="origin-card">
-
-<h3>Jawa Tengah</h3>
-
-<p>Kendal</p>
-
-<span>142 KK</span>
-
-</div>
-
-<div class="origin-card">
-
-<h3>Jawa Tengah</h3>
-
-<p>Wonosobo</p>
-
-<span>59 KK</span>
-
-</div>
-
-<div class="origin-card">
-
-<h3>Jawa Tengah</h3>
-
-<p>Banyumas</p>
-
-<span>36 KK</span>
-
-</div>
-
-<div class="origin-card">
-
-<h3>Jawa Timur</h3>
-
-<p>Nganjuk</p>
-
-<span>47 KK</span>
-
-</div>
-
-<div class="origin-card">
-
-<h3>Jawa Timur</h3>
-
-<p>Ngawi</p>
-
-<span>21 KK</span>
-
-</div>
-
-<div class="origin-card">
-
-<h3>NTB</h3>
-
-<p>Lombok Timur</p>
-
-<span>46 KK</span>
-
-</div>
-
-<div class="origin-card">
-
-<h3>NTB</h3>
-
-<p>Lombok Barat</p>
-
-<span>5 KK</span>
-
-</div>
-
-<div class="origin-card">
-
-<h3>Kalimantan Selatan</h3>
-
-<p>Kotabaru</p>
-
-<span>5 KK</span>
-
-</div>
-
-</div>
+    </div>
 
 </section>
 
 <!-- ======================================
-DATA PROFIL DESA
+DATA PROFIL
 ====================================== -->
 
 <section class="card reveal">
 
-<h2>
-<i class="fas fa-id-card"></i>
-Data Profil Desa
-</h2>
+    <h2>
 
-<div class="line"></div>
+        <i class="fas fa-id-card"></i>
 
-<div class="profile-grid">
+        Data Profil Desa
 
-<div class="profile-item">
-<span>Desa</span>
-<strong>Bulurejo</strong>
-</div>
+    </h2>
 
-<div class="profile-item">
-<span>Kecamatan</span>
-<strong>Mantewe</strong>
-</div>
+    <div class="line"></div>
 
-<div class="profile-item">
-<span>Kabupaten</span>
-<strong>Tanah Bumbu</strong>
-</div>
+    <div class="profile-grid">
 
-<div class="profile-item">
-<span>Provinsi</span>
-<strong>Kalimantan Selatan</strong>
-</div>
+        <div class="profile-item">
+            <span>Desa</span>
+            <strong>Bulurejo</strong>
+        </div>
 
-<div class="profile-item">
-<span>Tahun Pembentukan</span>
-<strong>1985</strong>
-</div>
+        <div class="profile-item">
+            <span>Kecamatan</span>
+            <strong>Mantewe</strong>
+        </div>
 
-<div class="profile-item">
-<span>Luas Wilayah</span>
-<strong>2.318 Ha</strong>
-</div>
+        <div class="profile-item">
+            <span>Kabupaten</span>
+            <strong>Tanah Bumbu</strong>
+        </div>
 
-<div class="profile-item">
-<span>Koordinat</span>
-<strong>115.82435 BT / -3.210038 LS</strong>
-</div>
+        <div class="profile-item">
+            <span>Provinsi</span>
+            <strong>Kalimantan Selatan</strong>
+        </div>
 
-<div class="profile-item">
-<span>Batas Utara</span>
-<strong>Desa Mantawakan Mulia</strong>
-</div>
+        <div class="profile-item">
+            <span>Tahun Pembentukan</span>
+            <strong>1985</strong>
+        </div>
 
-<div class="profile-item">
-<span>Batas Selatan</span>
-<strong>Desa Sidomulyo</strong>
-</div>
+        <div class="profile-item">
+            <span>Luas Wilayah</span>
+            <strong>2.318 Ha</strong>
+        </div>
 
-<div class="profile-item">
-<span>Batas Timur</span>
-<strong>Desa Sari Mulya</strong>
-</div>
+        <div class="profile-item">
+            <span>Koordinat</span>
+            <strong>115.82435 BT / -3.210038 LS</strong>
+        </div>
 
-<div class="profile-item">
-<span>Batas Barat</span>
-<strong>-</strong>
-</div>
+        <div class="profile-item">
+            <span>Batas Utara</span>
+            <strong>Desa Mantawakan Mulia</strong>
+        </div>
 
-</div>
+        <div class="profile-item">
+            <span>Batas Selatan</span>
+            <strong>Desa Sidomulyo</strong>
+        </div>
+
+        <div class="profile-item">
+            <span>Batas Timur</span>
+            <strong>Desa Sari Mulya</strong>
+        </div>
+
+        <div class="profile-item">
+            <span>Batas Barat</span>
+            <strong>-</strong>
+        </div>
+
+    </div>
 
 </section>
 
 <!-- ======================================
-VISI DESA
+VISI
 ====================================== -->
 
 <section class="card reveal">
 
-<h2>
+    <h2>
 
-<i class="fas fa-eye"></i>
+        <i class="fas fa-eye"></i>
 
-Visi Desa
+        Visi Desa
 
-</h2>
+    </h2>
 
-<div class="line"></div>
+    <div class="line"></div>
 
-<div class="vision-box">
+    <div class="vision-box">
 
-<i class="fas fa-quote-left"></i>
+        <i class="fas fa-quote-left"></i>
 
-<p>
+        <p>
 
-Terbangunnya Tata Kelola Pemerintahan Desa yang Baik dan Bersih
-dengan Mewujudkan Kehidupan Masyarakat Desa Bulurejo yang
-Adil, Makmur, dan Sejahtera.
+            Terbangunnya Tata Kelola Pemerintahan Desa yang Baik
+            dan Bersih dengan Mewujudkan Kehidupan Masyarakat
+            Desa Bulurejo yang Adil, Makmur, dan Sejahtera.
 
-</p>
+        </p>
 
-</div>
+    </div>
 
 </section>
 
 <!-- ======================================
-MISI DESA
+MISI
 ====================================== -->
 
 <section class="card reveal">
 
-<h2>
+    <h2>
 
-<i class="fas fa-list-check"></i>
+        <i class="fas fa-list-check"></i>
 
-Misi Desa
+        Misi Desa
 
-</h2>
+    </h2>
 
-<div class="line"></div>
+    <div class="line"></div>
 
-<div class="mission-grid">
+    <div class="mission-grid">
 
-<div class="mission-item">
+        <div class="mission-item">
+            <div class="number">1</div>
+            <p>
+                Melakukan reformasi birokrasi Pemerintah Desa
+                Bulurejo guna meningkatkan kualitas dan kemudahan
+                pelayanan kepada masyarakat.
+            </p>
+        </div>
 
-<div class="number">1</div>
+        <div class="mission-item">
+            <div class="number">2</div>
+            <p>
+                Menyelenggarakan pemerintahan yang bersih,
+                bebas dari korupsi, serta bentuk penyimpangan lainnya.
+            </p>
+        </div>
 
-<p>
+        <div class="mission-item">
+            <div class="number">3</div>
+            <p>
+                Menyelenggarakan pemerintahan desa secara terbuka,
+                transparan, dan bertanggung jawab sesuai peraturan
+                perundang-undangan.
+            </p>
+        </div>
 
-Melakukan reformasi birokrasi Pemerintah Desa Bulurejo guna meningkatkan kualitas dan kemudahan pelayanan kepada masyarakat.
+        <div class="mission-item">
+            <div class="number">4</div>
+            <p>
+                Meningkatkan perekonomian masyarakat melalui
+                pendampingan kepada UKM, wiraswasta, dan petani.
+            </p>
+        </div>
 
-</p>
+        <div class="mission-item">
+            <div class="number">5</div>
+            <p>
+                Meningkatkan kesejahteraan masyarakat menuju
+                Desa Bulurejo yang maju dan mandiri.
+            </p>
+        </div>
 
-</div>
+        <div class="mission-item">
+            <div class="number">6</div>
+            <p>
+                Mengoptimalkan fungsi dan keberadaan
+                BUMDes Berkah Abadi.
+            </p>
+        </div>
 
-<div class="mission-item">
+        <div class="mission-item">
+            <div class="number">7</div>
+            <p>
+                Menciptakan masyarakat Desa Bulurejo yang aman,
+                tertib, rukun, serta menjunjung tinggi semangat
+                gotong royong.
+            </p>
+        </div>
 
-<div class="number">2</div>
-
-<p>
-
-Menyelenggarakan pemerintahan yang bersih, bebas dari korupsi, serta bentuk penyimpangan lainnya.
-
-</p>
-
-</div>
-
-<div class="mission-item">
-
-<div class="number">3</div>
-
-<p>
-
-Menyelenggarakan pemerintahan desa secara terbuka, transparan, dan bertanggung jawab sesuai peraturan perundang-undangan.
-
-</p>
-
-</div>
-
-<div class="mission-item">
-
-<div class="number">4</div>
-
-<p>
-
-Meningkatkan perekonomian masyarakat melalui pendampingan kepada UKM, wiraswasta, dan petani.
-
-</p>
-
-</div>
-
-<div class="mission-item">
-
-<div class="number">5</div>
-
-<p>
-
-Meningkatkan kesejahteraan masyarakat menuju Desa Bulurejo yang maju dan mandiri.
-
-</p>
-
-</div>
-
-<div class="mission-item">
-
-<div class="number">6</div>
-
-<p>
-
-Mengoptimalkan fungsi dan keberadaan BUMDes Berkah Abadi.
-
-</p>
-
-</div>
-
-<div class="mission-item">
-
-<div class="number">7</div>
-
-<p>
-
-Menciptakan masyarakat Desa Bulurejo yang aman, tertib, rukun, serta menjunjung tinggi semangat gotong royong.
-
-</p>
-
-</div>
-
-</div>
+    </div>
 
 </section>
+
 <!-- ======================================
 FOOTER
 ====================================== -->
 
 <footer class="footer reveal">
 
-<div class="footer-title">
+    <div class="footer-title">
 
-<h2>
+        <h2>
 
-<i class="fas fa-map-location-dot"></i>
+            <i class="fas fa-map-location-dot"></i>
 
-Informasi Kantor Desa
+            Informasi Kantor Desa
 
-</h2>
-
-</div>
-
-<div class="office-grid">
-
-    <div class="office-card">
-
-        <i class="fas fa-location-dot"></i>
-
-        <h3>Alamat</h3>
-
-        <p>
-            Jl. Transmigrasi Km 37<br>
-            Desa Bulurejo<br>
-            Kecamatan Mantewe<br>
-            Kabupaten Tanah Bumbu<br>
-            Kalimantan Selatan 72211
-        </p>
+        </h2>
 
     </div>
 
+    <div class="office-grid">
 
-    <div class="office-card">
+        <div class="office-card">
 
-        <i class="fas fa-phone"></i>
+            <i class="fas fa-location-dot"></i>
 
-        <h3>Telepon</h3>
+            <h3>Alamat</h3>
 
-        <p>
-            +62 821-5099-2066
-        </p>
+            <p>
+                Jl. Transmigrasi Km 37<br>
+                Desa Bulurejo<br>
+                Kecamatan Mantewe<br>
+                Kabupaten Tanah Bumbu<br>
+                Kalimantan Selatan 72211
+            </p>
+
+        </div>
+
+        <div class="office-card">
+
+            <i class="fas fa-phone"></i>
+
+            <h3>Telepon</h3>
+
+            <p>
+                +62 821-5099-2066
+            </p>
+
+        </div>
+
+        <div class="office-card">
+
+            <i class="fas fa-clock"></i>
+
+            <h3>Jam Pelayanan</h3>
+
+            <p>
+                Senin&nbsp;&nbsp;&nbsp;: 08.00 – 15.00 WITA<br>
+                Selasa&nbsp;: 08.00 – 15.00 WITA<br>
+                Rabu&nbsp;&nbsp;&nbsp;: 08.00 – 15.00 WITA<br>
+                Kamis&nbsp;&nbsp;: 08.00 – 15.00 WITA<br>
+                Jumat&nbsp;&nbsp;: 08.00 – 11.00 WITA
+            </p>
+
+        </div>
 
     </div>
-
-
-    <div class="office-card">
-
-        <i class="fas fa-clock"></i>
-
-        <h3>Jam Pelayanan</h3>
-
-        <p>
-            Senin&nbsp;&nbsp;&nbsp;: 08.00 – 15.00 WITA<br>
-            Selasa&nbsp;: 08.00 – 15.00 WITA<br>
-            Rabu&nbsp;&nbsp;&nbsp;: 08.00 – 15.00 WITA<br>
-            Kamis&nbsp;&nbsp;: 08.00 – 15.00 WITA<br>
-            Jumat&nbsp;&nbsp;: 08.00 – 11.00 WITA
-        </p>
-
-    </div>
-
-</div>
 
 </footer>
 
-<!-- COPYRIGHT -->
+<!-- ======================================
+COPYRIGHT
+====================================== -->
 
 <div class="copyright">
 
-<p>
+    <p>
+        © 2026 Pemerintah Desa Bulurejo
+    </p>
 
-© 2026 Pemerintah Desa Bulurejo
+    <p>
+        Kecamatan Mantewe • Kabupaten Tanah Bumbu
+    </p>
 
-</p>
-
-<p>
-
-Kecamatan Mantewe • Kabupaten Tanah Bumbu
-
-</p>
-
-<p>
-
-Website dikembangkan oleh
-
-<strong>
-
-KKNT-LH Kelompok 8
-
-Universitas Lambung Mangkurat
-
-</strong>
-
-</p>
+    <p>
+        Website dikembangkan oleh
+        <strong>
+            KKNT-LH Kelompok 8
+            Universitas Lambung Mangkurat
+        </strong>
+    </p>
 
 </div>
 
 </main>
 
-<!-- BACK TO TOP -->
+<!-- ======================================
+BACK TO TOP
+====================================== -->
 
 <div class="back-top">
 
-<i class="fas fa-arrow-up"></i>
+    <i class="fas fa-arrow-up"></i>
 
 </div>
 
 <script>
-/*==========================================
-LOADING SCREEN
-==========================================*/
 
-window.addEventListener("load", function(){
+/* =========================================
+MENU MOBILE
+========================================= */
 
-    const loader = document.getElementById("loader");
+const menu = document.querySelector(".menu-toggle");
+const mobile = document.querySelector(".mobile-menu");
 
-    setTimeout(function(){
+menu.addEventListener("click", function() {
 
-        loader.classList.add("hide");
+    mobile.classList.toggle("active");
 
-    }, 1800);
-
-});
-/* MENU */
-
-const menu=document.querySelector(".menu-toggle");
-
-const mobile=document.querySelector(".mobile-menu");
-
-menu.onclick=function(){
-
-mobile.classList.toggle("active");
-
-menu.innerHTML=
-
-mobile.classList.contains("active")
-
-?
-
-'<i class="fas fa-times"></i>'
-
-:
-
-'<i class="fas fa-bars"></i>';
-
-};
-
-/* HEADER */
-
-window.addEventListener("scroll",()=>{
-
-document.querySelector(".header")
-
-.classList.toggle(
-
-"scrolled",
-
-window.scrollY>50
-
-);
+    menu.innerHTML =
+        mobile.classList.contains("active")
+        ? '<i class="fas fa-times"></i>'
+        : '<i class="fas fa-bars"></i>';
 
 });
 
-/* BACK TO TOP */
+/* =========================================
+TUTUP MENU MOBILE SAAT LINK DIKLIK
+========================================= */
 
-const topBtn=document.querySelector(".back-top");
+document.querySelectorAll(".mobile-menu a").forEach(link => {
 
-window.addEventListener("scroll",()=>{
+    link.addEventListener("click", function() {
 
-topBtn.style.display=
+        mobile.classList.remove("active");
 
-window.scrollY>400
+        menu.innerHTML =
+            '<i class="fas fa-bars"></i>';
 
-?
-
-"flex"
-
-:
-
-"none";
+    });
 
 });
 
-topBtn.onclick=()=>{
+/* =========================================
+HEADER SCROLL
+========================================= */
 
-window.scrollTo({
+window.addEventListener("scroll", function() {
 
-top:0,
-
-behavior:"smooth"
-
-});
-
-};
-
-/* REVEAL */
-
-const reveal=document.querySelectorAll(".reveal");
-
-const observer=new IntersectionObserver(entries=>{
-
-entries.forEach(entry=>{
-
-if(entry.isIntersecting){
-
-entry.target.classList.add("show");
-
-}
+    document
+        .querySelector(".header")
+        .classList.toggle(
+            "scrolled",
+            window.scrollY > 50
+        );
 
 });
 
+/* =========================================
+BACK TO TOP
+========================================= */
+
+const topBtn = document.querySelector(".back-top");
+
+window.addEventListener("scroll", function() {
+
+    topBtn.style.display =
+        window.scrollY > 400
+        ? "flex"
+        : "none";
+
 });
 
-reveal.forEach(el=>observer.observe(el));
+topBtn.addEventListener("click", function() {
+
+    window.scrollTo({
+
+        top: 0,
+
+        behavior: "smooth"
+
+    });
+
+});
+
+/* =========================================
+REVEAL ANIMATION
+========================================= */
+
+const reveal =
+    document.querySelectorAll(".reveal");
+
+const observer =
+    new IntersectionObserver(
+        entries => {
+
+            entries.forEach(entry => {
+
+                if (entry.isIntersecting) {
+
+                    entry.target.classList.add("show");
+
+                    observer.unobserve(
+                        entry.target
+                    );
+
+                }
+
+            });
+
+        },
+        {
+            threshold: 0.12
+        }
+    );
+
+reveal.forEach(el => {
+
+    observer.observe(el);
+
+});
 
 </script>
 
