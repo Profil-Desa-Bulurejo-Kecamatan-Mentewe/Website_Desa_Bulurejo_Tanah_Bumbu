@@ -734,73 +734,47 @@ margin-top:45px;
 }
 
 .person-card{
-
 background:white;
-
 border-radius:22px;
-
-padding:22px;
-
+padding:24px 20px;
+min-height:145px;
+display:flex;
+flex-direction:column;
+align-items:center;
+justify-content:center;
 text-align:center;
-
 box-shadow:0 12px 25px rgba(0,0,0,.08);
-
 transition:.35s;
-
 position:relative;
-
-}
-
-.person-card:hover{
-
-transform:translateY(-8px);
-
 }
 
 .person-card img{
-
 width:120px;
-
 height:120px;
-
 border-radius:50%;
-
 object-fit:cover;
-
 border:5px solid var(--secondary);
-
-margin-bottom:18px;
-
+margin-bottom:16px;
 }
 
 .person-card h3{
-
 font-size:18px;
-
 color:var(--primary);
-
 margin-bottom:8px;
-
+line-height:1.4;
 }
 
 .person-card span{
-
 display:inline-block;
-
 background:var(--secondary);
-
 padding:8px 18px;
-
 border-radius:30px;
-
 font-size:14px;
-
 font-weight:600;
-
 color:var(--primary);
-
+line-height:1.4;
 }
-
+  
 .leader{
 
 width:320px;
@@ -1222,7 +1196,6 @@ padding:22px;
 <a href="profil desa.html">Profil Desa</a>
 <a href="struktur pemerintahan.html">Struktur Desa</a>
 <a href="potensi desa.html">Potensi Desa</a>
-<a href="berita.html">Berita</a>
 
 </nav>
 
@@ -1242,7 +1215,6 @@ padding:22px;
 <li><a href="profil desa.html">📖 Profil Desa</a></li>
 <li><a href="struktur pemerintahan.html">👥 Struktur Desa</a></li>
 <li><a href="potensi desa.html">🌿 Potensi Desa</a></li>
-<li><a href="berita.html">📰 Berita</a></li>
 
 </ul>
 
@@ -1449,15 +1421,13 @@ Struktur Organisasi Desa Bulurejo Tahun 2026
 
 <div class="tree-level center">
 
-<div class="person-card secretary">
+    <div class="person-card secretary">
 
-<img src="sekretaris desa.jpeg">
+        <h3>ABDUL ROHMAN ZULIANTO</h3>
 
-<h3>ABDUL ROHMAN ZULIANTO</h3>
+        <span>Sekretaris Desa</span>
 
-<span>Sekretaris Desa</span>
-
-</div>
+    </div>
 
 </div>
 
@@ -1466,70 +1436,35 @@ Struktur Organisasi Desa Bulurejo Tahun 2026
 
 <div class="tree-grid">
 
-<div class="person-card">
+    <div class="person-card">
+        <h3>CAHYA NANDA WATI</h3>
+        <span>Kasi Pemerintahan</span>
+    </div>
 
-<img src="kasi pemerintahan.jpeg">
+    <div class="person-card">
+        <h3>BAYU SAPUTRA</h3>
+        <span>Kasi Kesejahteraan</span>
+    </div>
 
-<h3>CAHYA NANDA WATI</h3>
+    <div class="person-card">
+        <h3>DICKY YULIAWAN</h3>
+        <span>Kasi Pelayanan</span>
+    </div>
 
-<span>Kasi Pemerintahan</span>
+    <div class="person-card">
+        <h3>WIDYA LESTARI, S.M.</h3>
+        <span>Kaur TU & Umum</span>
+    </div>
 
-</div>
+    <div class="person-card">
+        <h3>IKA NUR AFRIANA</h3>
+        <span>Kaur Keuangan</span>
+    </div>
 
-
-<div class="person-card">
-
-<img src="kasi kesejahteraan.jpeg">
-
-<h3>BAYU SAPUTRA</h3>
-
-<span>Kasi Kesejahteraan</span>
-
-</div>
-
-
-<div class="person-card">
-
-<img src="kasi pelayanan.jpeg">
-
-<h3>DICKY YULIAWAN</h3>
-
-<span>Kasi Pelayanan</span>
-
-</div>
-
-
-<div class="person-card">
-
-<img src="kaur umum.jpeg">
-
-<h3>WIDYA LESTARI, S.M.</h3>
-
-<span>Kaur TU & Umum</span>
-
-</div>
-
-
-<div class="person-card">
-
-<img src="kaur keuangan.jpeg">
-
-<h3>IKA NUR AFRIANA</h3>
-
-<span>Kaur Keuangan</span>
-
-</div>
-
-
-<div class="person-card">
-
-<img src="kaur perencanaan.jpeg">
-
-<h3>MUHAMMAD FATONI, S.H.</h3>
-
-<span>Kaur Perencanaan</span>
-
-</div>
+    <div class="person-card">
+        <h3>MUHAMMAD FATONI, S.H.</h3>
+        <span>Kaur Perencanaan</span>
+    </div>
 
 </div>
 
@@ -1548,30 +1483,24 @@ Struktur Organisasi Desa Bulurejo Tahun 2026
 
 </div>
 
+<div class="tree-grid dusun">
 
-<div class="person-card">
+    <div class="person-card">
+        <h3>MUHAMMAD NUR SAID</h3>
+        <span>Kepala Dusun I</span>
+    </div>
 
-<img src="kadus2.jpeg">
+    <div class="person-card">
+        <h3>BADARUDIN</h3>
+        <span>Kepala Dusun II</span>
+    </div>
 
-<h3>BADARUDIN</h3>
-
-<span>Kepala Dusun II</span>
-
-</div>
-
-
-<div class="person-card">
-
-<img src="kadus3.jpeg">
-
-<h3>-</h3>
-
-<span>Kepala Dusun III</span>
+    <div class="person-card">
+        <h3>-</h3>
+        <span>Kepala Dusun III</span>
+    </div>
 
 </div>
-
-</div>
-
 </div>
 
 </section>
