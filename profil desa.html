@@ -1773,7 +1773,21 @@ Universitas Lambung Mangkurat
 </div>
 
 <script>
+/*==========================================
+LOADING SCREEN
+==========================================*/
 
+window.addEventListener("load", function(){
+
+    const loader = document.getElementById("loader");
+
+    setTimeout(function(){
+
+        loader.classList.add("hide");
+
+    }, 1800);
+
+});
 /* MENU */
 
 const menu=document.querySelector(".menu-toggle");
